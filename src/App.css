@@ -1,0 +1,121 @@
+/* Layout containers */
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.navbar {
+  background-color: #333;
+  padding: 10px;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+.main-layout {
+  display: flex;
+  flex: 1;
+}
+
+/* Example styles for App.css */
+.sidebar-title {
+  padding: 0.5rem 1rem; /* Adjust padding as needed */
+  margin-bottom: 0.4rem; /* Space below the title */
+  font-size: 1.3em; /* Adjust font size */
+  font-weight: bold;
+  color: white; /* Adjust color as needed */
+  /* Add any other styling you prefer */
+}
+
+.sidebar-subtitle {
+  color: white;
+  font-size: 0.9rem; /* Smaller than links */
+  font-weight: normal;
+  margin-top: 0.2rem; /* Space above the subtitle */
+  margin-bottom: 0.75rem; /* Space below the subtitle, before links */
+}
+
+
+/* Sidebar for Quiz button */
+.sidebar {
+  width: 160px;
+  background-color: #202020;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.sidebar-link {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.sidebar-link:hover {
+  background-color: #383838;
+}
+
+/* Main content area */
+.container {
+  flex: 1;
+  padding: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  background-color: #222;
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: #61dafb;
+}
+
+.container {
+  padding: 2rem;
+}
+*/
+
+
+
+
+
