@@ -1,8 +1,10 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 from chatbot import get_chat_response
-from basic_questions import get_basic_questions, get_basic_questions_public
+from basic_questions import get_basic_questions, get_basic_questions_public # type: ignore
 from core import get_dataset_questions, get_dataset_qa # type: ignore
+from step2basic import step2_basic_questions, step2_basic_questions_ans # type: ignore
+from step2core import get_sampletest_questions, get_sampletest_qa # type: ignore
 
 import os
 from flask_sqlalchemy import SQLAlchemy # type: ignore
@@ -175,6 +177,71 @@ def submit():
     full_data = get_dataset_qa()
 
     results = []
+    incorrect_answers_details = [] # Store details for AI feedback
+    score = 0
+
+    for q in full_data:
+        qid = str(q["id"])
+        user_answer = user_answers.get(qid)
+        correct = user_answer == q["answer"]
+        if correct:
+            score += 1
+
+        if not correct:
+            incorrect_answers_details.append({
+                "question": q["question"],
+                "user_answer": user_answer,
+                "correct_answer": q["answer"],
+                "explanation": q["explanation"]
+            })
+        results.append({
+            "id": qid,
+            "question": q["question"],
+            "user_answer": user_answer,
+            "correct_answer": q["answer"],
+            "is_correct": correct,
+            "explanation": q["explanation"]
+        })
+
+    # --- Generate AI Feedback ---
+    ai_feedback = ""
+    if incorrect_answers_details:
+        # Construct a prompt for the AI based on incorrect answers
+        prompt = "As a USMLE tutor, please analyze the following incorrect answers from a practice quiz and provide feedback on specific topics or concepts the student should focus on for improvement. Be concise and actionable.\n\nIncorrect Answers:\n"
+        for item in incorrect_answers_details:
+            prompt += f"- Question: {item['question']}\n"
+            prompt += f"  User Answer: {item['user_answer']}\n"
+            prompt += f"  Correct Answer: {item['correct_answer']}\n"
+            prompt += f"  Explanation: {item['explanation']}\n\n"
+
+        ai_feedback = get_chat_response(prompt)
+
+    return jsonify({
+        "score": score,
+        "total": len(full_data),
+        "ai_feedback": ai_feedback, # Include AI feedback in the response
+        "results": results
+    })
+
+
+# --------------------------
+# Route 4: Step 2 Basic Quiz
+# --------------------------
+@app.route('/api/step2basic', methods=['GET']) #Create an endpoint to get all questions from the step2basic.json file
+@login_required
+def get_step2_basic_quiz_questions():
+    return jsonify(step2_basic_questions()) 
+      
+
+
+@app.route('/api/step2basic/submit', methods=['POST']) #Create an endpoint to get user answers and evaluate
+def submit_step2_basic_quiz():
+    data = request.get_json()
+    if not data or "answers" not in data:
+        return jsonify({"message": "Missing answers in request body"}), 400
+    user_answers = data.get("answers", {})
+    full_data = step2_basic_questions_ans()
+    results = []    
     score = 0
 
     for q in full_data:
@@ -191,17 +258,89 @@ def submit():
             "correct_answer": q["answer"],
             "is_correct": correct,
             "explanation": q["explanation"]
+        })  
+    feedback_message = ""
+    if score >= 15: # Assuming 15 is the passing score for the basic quiz
+        feedback_message = "Congratulations! You have passed the quiz. You are good to go with the next step."
+    else:
+        feedback_message = "Your score is less. Please try again. You can do it."   
+    return jsonify({
+        "score": score,
+        "total": len(full_data),
+        "results": results,
+        "feedback_message": feedback_message # Add the message here
+    })
+
+
+# --------------------------
+# Route 5: Step 2 Core
+# --------------------------
+@app.route('/api/step2core',methods=['GET'])
+@login_required
+def get_sample_questions():
+    # Return only questions and options (for quiz display)
+    return jsonify(get_sampletest_questions())
+
+#Endpoint to get user answers and evaluate 
+@app.route('/api/step2core/submit',methods=['POST'])
+@login_required
+def step2_core_submit():
+    data = request.get_json()
+    if not data or "answers" not in data:
+        return jsonify({"message": "Missing answers in request body"}), 400
+    user_answers = data.get("answers", {})
+    full_data = get_sampletest_qa()
+
+    results = []
+    incorrect_answers_details = [] # Store details for AI feedback
+    score = 0
+
+    for q in full_data:
+        qid = str(q["id"])
+        user_answer = user_answers.get(qid)
+        correct = user_answer == q["answer"]
+        if correct:
+            score += 1
+
+        if not correct:
+            incorrect_answers_details.append({
+                "question": q["question"],
+                "user_answer": user_answer,
+                "correct_answer": q["answer"],
+                "explanation": q["explanation"]
+            })
+        results.append({
+            "id": qid,
+            "question": q["question"],
+            "user_answer": user_answer,
+            "correct_answer": q["answer"],
+            "is_correct": correct,
+            "explanation": q["explanation"]
         })
+
+    # --- Generate AI Feedback ---
+    ai_feedback = ""
+    if incorrect_answers_details:
+        # Construct a prompt for the AI based on incorrect answers
+        prompt = "As a USMLE tutor, please analyze the following incorrect answers from a practice quiz and provide feedback on specific topics or concepts the student should focus on for improvement. Be concise and actionable.\n\nIncorrect Answers:\n"
+        for item in incorrect_answers_details:
+            prompt += f"- Question: {item['question']}\n"
+            prompt += f"  User Answer: {item['user_answer']}\n"
+            prompt += f"  Correct Answer: {item['correct_answer']}\n"
+            prompt += f"  Explanation: {item['explanation']}\n\n"
+
+        ai_feedback = get_chat_response(prompt)
 
     return jsonify({
         "score": score,
         "total": len(full_data),
+        "ai_feedback": ai_feedback, # Include AI feedback in the response
         "results": results
     })
 
 
 # --------------------------
-# Route 4: Chat Support
+# Route 5: Chat Support
 # --------------------------
 @app.route("/api/chat", methods=["POST"]) # Changed route to /api/chat for consistency
 @login_required
@@ -214,7 +353,7 @@ def chat():
     return jsonify({"response": response}) #Return the response as JSON
 
 # --------------------------
-# Route 5: Authentication
+# Route 6: Authentication
 # --------------------------
 @app.route('/api/auth/register', methods=['POST'])
 def register():
@@ -276,167 +415,4 @@ if __name__ == '__main__': #Run the Flask app
     app.run(debug=True) # Set debug=True for development; set to False in production
 
 
-'''
 
-from flask import Flask, jsonify, request
-from flask_cors import CORS
-import json
-from chatbot import get_chat_response
-from basic_questions import get_basic_questions, get_basic_questions_public
-from core import get_dataset_questions, get_dataset_qa # type: ignore
-
-app = Flask(__name__)
-CORS(app)
-
-
-# --------------------------
-# Route 1: Home Summary
-# --------------------------
-@app.route('/api/home', methods=['GET'])
-def home_summary():
-    summary = {
-        "title": "USMLE Practice App",
-        "description": (
-            "This application helps students prepare for the USMLE exam through interactive quizzes and chat support.\n\n"
-            "This application has practice sections for the three steps of the USMLE exam. "
-            "Each step has two sections:\n"
-            "  - First section has basic science questions and answers.\n"  # Corrected typo and added formatting
-            "  - Second section has core questions that are fetched from Kaggle dataset.\n\n"
-            "You can go to 'Practice sections' to practice the questions and answers.\n\n"
-            "The app also includes a chat that helps clarify USMLE-related doubts and topics."
-        ),
-        "features": [
-            "🎯 Quiz section with MCQs that has basic questions focuses on basic science.",
-            "🧠 Core Quiz section with advanced questions from a Kaggle dataset",
-            "💬 USMLE chat support for study guidance",
-            "📊 Score evaluation with explanations"
-        ],
-
-        "USMLE Pattern": {
-            "Step 1": {
-                "description": "Basic medical sciences and principles.",
-                "questions": 280,
-                "duration": "8 hours",
-                "format": "Multiple-choice questions (MCQs)"
-            },
-            "Step 2 CK": {
-                "description": "Clinical knowledge and patient care.",
-                "questions": 318,
-                "duration": "9 hours",
-                "format": "Multiple-choice questions (MCQs)"
-            },
-            "Step 3": {
-                "description": "Patient management in ambulatory settings.",
-                "questions": 233,
-                "duration": "7 hours",
-                "format": "Multiple-choice questions (MCQs)"
-            }
-        }
-        
-    }
-    return jsonify(summary)
-
-# --------------------------
-# Route 2: BasicQuiz from basic.json
-# --------------------------
-@app.route('/api/basic', methods=['GET']) #Create an endpoint to get all questions from the basic.json file
-def get_basic_quiz_questions():
-    return jsonify(get_basic_questions_public())
-
-@app.route('/api/basic/submit', methods=['POST']) #Create an endpoint to get user answers and evaluate 
-def submit_basic_quiz():
-    user_answers = request.json.get("answers", {})
-    full_data = get_basic_questions()
-    results = []
-    score = 0
-
-    for q in full_data:
-        qid = str(q["id"])
-        user_answer = user_answers.get(qid)
-        correct = user_answer == q["answer"]
-        if correct:
-            score += 1
-
-        results.append({
-            "id": qid,
-            "question": q["question"],
-            "user_answer": user_answer,
-            "correct_answer": q["answer"],
-            "is_correct": correct,
-            "explanation": q["explanation"]
-        })
-
-    feedback_message = ""
-    if score >= 15: # Assuming 15 is the passing score for the basic quiz
-        feedback_message = "Congratulations! You have passed the quiz. You are good to go with the next step."
-    else:
-        feedback_message = "Your score is less. Please try again. You can do it."
-
-    return jsonify({
-        "score": score,
-        "total": len(full_data),
-        "results": results,
-        "feedback_message": feedback_message # Add the message here
-
-    
-    })
-
-
-
-## --------------------------
-# Route 3: Core Quiz from kaggle dataset
-# --------------------------
-
-#Endpoint to get all questions from the dataset
-@app.route('/api/questions',methods=['GET'])
-def get_questions():
-    # Return only questions and options (for quiz display)
-    return jsonify(get_dataset_questions())
-
-#Endpoint to get user answers and evaluate 
-
-@app.route('/api/submit',methods=['POST'])
-def submit():
-    user_answers = request.json.get("answers", {})
-    full_data = get_dataset_qa()
-    results = []
-    score = 0
-
-    for q in full_data:
-        qid = str(q["id"])
-        user_answer = user_answers.get(qid)
-        correct = user_answer == q["answer"]
-        if correct:
-            score += 1
-
-        results.append({
-            "id": qid,
-            "question": q["question"],
-            "user_answer": user_answer,
-            "correct_answer": q["answer"],
-            "is_correct": correct,
-            "explanation": q["explanation"]
-        })
-
-    return jsonify({
-        "score": score,
-        "total": len(full_data),
-        "results": results
-    })
-
-
-# --------------------------
-# Route 4: Chat Support
-# --------------------------
-@app.route("/chat", methods=["POST"])
-def chat(): 
-    data = request.get_json() #Get the JSON data from the request
-    user_query = data.get("query", "") #Get the user query from the JSON data
-    response = get_chat_response(user_query) #Get the response from the chatbot
-    return jsonify({"response": response}) #Return the response as JSON
-
-
-if __name__ == '__main__': #Run the Flask app
-    app.run(debug=True) # Set debug=True for development; set to False in production
-
-'''

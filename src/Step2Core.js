@@ -1,8 +1,7 @@
-// QuizPage.js
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const QuizPage = () => {
+const Step2Core = () => {
   const [questions, setQuestions] = useState([]);
   const [answers, setAnswers] = useState({});
   const [submitted, setSubmitted] = useState(false);
@@ -16,7 +15,7 @@ const QuizPage = () => {
   const fetchQuestions = () => {
     setLoading(true);
     setError(null);
-    axios.get("http://localhost:5000/api/questions", {
+    axios.get("http://localhost:5000/api/step2core", {
       withCredentials: true
     })
       .then(res => setQuestions(res.data))
@@ -68,7 +67,7 @@ const QuizPage = () => {
     
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/submit",
+        "http://localhost:5000/api/step2core/submit",
         { answers },
         { withCredentials: true }
       );
@@ -204,4 +203,4 @@ const QuizPage = () => {
   );
 };
 
-export default QuizPage;
+export default Step2Core;

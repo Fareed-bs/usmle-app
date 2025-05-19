@@ -1,0 +1,130 @@
+[
+    {
+  "question": "A 65-year-old man with a history of hypertension and diabetes presents with crushing substernal chest pain radiating to his left arm. ECG shows ST-segment elevations in leads II, III, and aVF. Which of the following is the most likely diagnosis?",
+  "options": ["Unstable angina", "Acute inferior MI", "Pericarditis", "Pulmonary embolism"],
+  "answer": "Acute inferior MI",
+  "explanation": "ST-segment elevations in II, III, and aVF indicate an inferior myocardial infarction (MI). Crushing chest pain with radiation is classic for MI."
+},
+
+    {
+  "question": "A 2-year-old child presents with fever, barking cough, and inspiratory stridor. Which of the following is the most likely diagnosis?",
+  "options": ["Epiglottitis", "Bronchiolitis", "Croup", "Pneumonia"],
+  "answer": "Croup",
+  "explanation": "Croup (laryngotracheobronchitis) is characterized by a barking cough and stridor, often caused by parainfluenza virus."
+},
+
+    {
+  "question": "A 28-year-old pregnant woman at 32 weeks gestation presents with hypertension, proteinuria, and edema. Which of the following is the most likely diagnosis?",
+  "options": ["Gestational diabetes", "Preeclampsia", "HELLP syndrome", "Chronic hypertension"],
+  "answer": "Preeclampsia",
+  "explanation": "Preeclampsia is defined by new-onset hypertension and proteinuria after 20 weeks of gestation."
+},
+
+    {
+  "question": "A 45-year-old man presents with severe epigastric pain radiating to the back, nausea, and elevated serum amylase and lipase. Which of the following is the most likely diagnosis?",
+  "options": ["Acute cholecystitis", "Peptic ulcer disease", "Acute pancreatitis", "Appendicitis"],
+  "answer": "Acute pancreatitis",
+  "explanation": "Epigastric pain radiating to the back with elevated pancreatic enzymes (amylase/lipase) is classic for acute pancreatitis, often due to gallstones or alcohol."
+},
+
+    {
+  "question": "A 30-year-old woman presents with persistent sadness, anhedonia, poor concentration, and insomnia for the past 6 weeks. Which of the following is the most likely diagnosis?",
+  "options": ["Generalized anxiety disorder", "Bipolar disorder", "Major depressive disorder", "Schizophrenia"],
+  "answer": "Major depressive disorder",
+  "explanation": "Depressed mood, anhedonia, and neurovegetative symptoms for ≥2 weeks indicate major depressive disorder."
+},
+
+    {
+  "question": "A 60-year-old man presents with sudden-onset severe headache, vomiting, and nuchal rigidity. CT scan shows hyperdensity in the basal cisterns. Which of the following is the most likely diagnosis?",
+  "options": ["Migraine", "Subarachnoid hemorrhage", "Meningitis", "Brain tumor"],
+  "answer": "Subarachnoid hemorrhage",
+  "explanation": "Thunderclap headache + nuchal rigidity + blood in basal cisterns on CT suggests subarachnoid hemorrhage, often due to ruptured aneurysm."
+},
+
+    {
+  "question": "According to USPSTF guidelines, at what age should average-risk women begin screening mammograms for breast cancer?",
+  "options": ["30 years", "40 years", "50 years", "60 years"],
+  "answer": "50 years",
+  "explanation": "USPSTF recommends biennial mammograms starting at age 50 for average-risk women (individualized decisions may start at 40)."
+},
+
+    {
+  "question": "A 70-year-old man with a history of atrial fibrillation presents with sudden-onset right-sided weakness and expressive aphasia. Which of the following is the most likely diagnosis?",
+  "options": ["Transient ischemic attack", "Hemorrhagic stroke", "Ischemic stroke", "Seizure"],
+  "answer": "Ischemic stroke",
+  "explanation": "Atrial fibrillation is a major risk factor for cardioembolic ischemic stroke. Sudden focal neurologic deficits (e.g., hemiparesis, aphasia) suggest stroke."
+},
+
+    {
+  "question": "A 25-year-old sexually active man presents with dysuria and purulent urethral discharge. Gram stain reveals intracellular gram-negative diplococci. Which of the following is the most likely diagnosis?",
+  "options": ["Chlamydia trachomatis", "Neisseria gonorrhoeae", "Trichomonas vaginalis", "Herpes simplex virus"],
+  "answer": "Neisseria gonorrhoeae",
+  "explanation": "Purulent discharge + intracellular gram-negative diplococci on Gram stain is diagnostic for gonococcal urethritis."
+},
+    {
+  "question": "A 55-year-old diabetic man presents with fatigue, nausea, and decreased urine output. Labs show elevated BUN, creatinine, and hyperkalemia. Which of the following is the most likely diagnosis?",
+  "options": ["Acute kidney injury", "Chronic kidney disease", "Nephrotic syndrome", "Urinary tract infection"],
+  "answer": "Acute kidney injury",
+  "explanation": "Sudden rise in BUN/Cr + oliguria + hyperkalemia suggests acute kidney injury (common causes: dehydration, nephrotoxins, obstruction)."
+},
+    {
+  "question": "A 60-year-old woman presents with unilateral throbbing headache, photophobia, and nausea. She reports similar episodes in the past triggered by stress. Which of the following is the most likely diagnosis?",
+  "options": ["Cluster headache", "Tension headache", "Migraine", "Subarachnoid hemorrhage"],
+  "answer": "Migraine",
+  "explanation": "Unilateral throbbing headache + photophobia/phonophobia + nausea/vomiting is classic for migraine."
+},
+    {
+  "question": "A 45-year-old obese woman presents with fatigue, weight gain, and cold intolerance. Labs show elevated TSH and low free T4. Which of the following is the most likely diagnosis?",
+  "options": ["Graves' disease", "Hashimoto's thyroiditis", "Subacute thyroiditis", "Pituitary adenoma"],
+  "answer": "Hashimoto's thyroiditis",
+  "explanation": "Elevated TSH + low T4 indicates primary hypothyroidism. Hashimoto's (autoimmune) is the most common cause in iodine-sufficient areas."
+},
+    {
+  "question": "A 50-year-old smoker presents with progressive dyspnea, chronic cough, and barrel chest. Spirometry shows decreased FEV1/FVC ratio. Which of the following is the most likely diagnosis?",
+  "options": ["Asthma", "Chronic bronchitis", "Emphysema", "Pulmonary fibrosis"],
+  "answer": "Emphysema",
+  "explanation": "Smoking history + dyspnea + barrel chest + obstructive pattern (↓FEV1/FVC) suggests emphysema (a type of COPD)."
+},
+    {
+  "question": "A 30-year-old woman presents with morning stiffness, symmetric joint swelling in hands, and fatigue. Rheumatoid factor is positive. Which of the following is the most likely diagnosis?",
+  "options": ["Osteoarthritis", "Gout", "Rheumatoid arthritis", "Systemic lupus erythematosus"],
+  "answer": "Rheumatoid arthritis",
+  "explanation": "Symmetric small joint arthritis + morning stiffness + RF positivity is classic for rheumatoid arthritis."
+},
+    {
+  "question": "A 25-year-old African American man presents with fatigue and jaundice. Peripheral smear shows sickle-shaped RBCs. Which of the following is the most likely diagnosis?",
+  "options": ["Iron deficiency anemia", "Sickle cell anemia", "Thalassemia", "G6PD deficiency"],
+  "answer": "Sickle cell anemia",
+  "explanation": "Sickle-shaped RBCs on smear + African American ethnicity + jaundice/fatigue confirms sickle cell anemia."
+},
+    {
+  "question": "A 40-year-old man presents with epigastric pain that improves with eating. H. pylori testing is positive. Which of the following is the most likely diagnosis?",
+  "options": ["GERD", "Gastric ulcer", "Duodenal ulcer", "Gastritis"],
+  "answer": "Duodenal ulcer",
+  "explanation": "Epigastric pain relieved by food + H. pylori infection is classic for duodenal ulcers."
+},
+    {
+  "question": "A 10-year-old boy presents with pruritic, erythematous papules and vesicles in a linear distribution. Which of the following is the most likely diagnosis?",
+  "options": ["Scabies", "Contact dermatitis", "Poison ivy", "Atopic dermatitis"],
+  "answer": "Poison ivy",
+  "explanation": "Linear, pruritic, vesicular rash is characteristic of allergic contact dermatitis (e.g., poison ivy)."
+},
+    {
+  "question": "A 35-year-old man with untreated HIV presents with fever, cough, and hypoxia. Chest X-ray shows diffuse interstitial infiltrates. Which of the following is the most likely diagnosis?",
+  "options": ["Tuberculosis", "Pneumocystis pneumonia", "Bacterial pneumonia", "Lung cancer"],
+  "answer": "Pneumocystis pneumonia",
+  "explanation": "HIV patient with hypoxia + diffuse interstitial infiltrates suggests Pneumocystis jirovecii pneumonia (PCP)."
+},
+    {
+  "question": "A patient with terminal cancer refuses further chemotherapy despite the physician's recommendation. What is the most appropriate next step?",
+  "options": ["Proceed with chemotherapy", "Respect the patient's autonomy", "Consult psychiatry", "Ask family to convince the patient"],
+  "answer": "Respect the patient's autonomy",
+  "explanation": "Competent patients have the right to refuse treatment, even if it is life-sustaining (autonomy must be respected)."
+},
+    {
+  "question": "A new screening test has a sensitivity of 90% and specificity of 80%. What does this mean?",
+  "options": ["It correctly identifies 90% of true positives", "It correctly identifies 80% of true negatives", "Both A and B", "Neither A nor B"],
+  "answer": "Both A and B",
+  "explanation": "Sensitivity = true positive rate (90%). Specificity = true negative rate (80%)."
+}
+]

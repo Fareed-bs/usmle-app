@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from "react-router-dom";
 import HomePage from "./HomePage";
@@ -6,6 +7,8 @@ import ChatPage from "./ChatPage";
 import BasicQuiz from "./BasicQuiz";
 import LoginPage from "./LoginPage"; // NEW: Login page
 import RegisterPage from "./RegisterPage"; // NEW: Register page
+import Step2Basic from "./Step2Basic"; // NEW: Step2Basic page
+import Step2Core from "./Step2Core"; // NEW: Step2Core page
 import "./App.css";
 
 const App = () => {
@@ -34,21 +37,25 @@ const App = () => {
   return (
     <Router>
       <div className="app-layout">
-        {/* Top navbar */}
+        {/* Top navbar - Using flexbox to separate left and right */}
         <nav className="navbar">
-          <Link to="/">Home</Link>
-          <Link to="/chat">Chat Support</Link>
-          {user ? (
-            <>
-              <span>👤 {user.username}</span>
-              <button onClick={handleLogout}>Logout</button>
-            </>
-          ) : (
-            <>
-              <Link to="/login">Login</Link>
-              <Link to="/register">Register</Link>
-            </>
-          )}
+          <div className="navbar-left">
+            <Link to="/">Home</Link>
+            <Link to="/chat">Chat Support</Link>
+          </div>
+          <div className="navbar-right">
+            {user ? (
+              <>
+                <span>👤 {user.username}</span>
+                <button onClick={handleLogout}>Logout</button>
+              </>
+            ) : (
+              <>
+                <Link to="/login">Login</Link>
+                <Link to="/register">Register</Link>
+              </>
+            )}
+          </div>
         </nav>
 
         {/* Main section */}
@@ -59,6 +66,9 @@ const App = () => {
             <h4 className="sidebar-subtitle">Step-1</h4>
             <Link to="/basicquiz" className="sidebar-link">Basic</Link>
             <Link to="/quiz" className="sidebar-link">Core</Link>
+            <h4 className="sidebar-subtitle">Step-2</h4>
+            <Link to="/step2basic" className="sidebar-link">Basic</Link>
+            <Link to="/step2core" className="sidebar-link">Core</Link>
           </aside>
 
           {/* Page content */}
@@ -69,6 +79,8 @@ const App = () => {
               <Route path="/chat" element={<ProtectedRoute user={user}><ChatPage /></ProtectedRoute>} />
               <Route path="/basicquiz" element={<ProtectedRoute user={user}><BasicQuiz /></ProtectedRoute>} />
               <Route path="/login" element={<LoginPage setUser={setUser} />} />
+              <Route path="/step2basic" element={<ProtectedRoute user={user}><Step2Basic /></ProtectedRoute>} /> 
+              <Route path="/step2core" element={<ProtectedRoute user={user}><Step2Core /></ProtectedRoute>} />
               <Route path="/register" element={<RegisterPage />} />
             </Routes>
           </div>
@@ -78,7 +90,7 @@ const App = () => {
   );
 };
 
-// 🔒 Component to protect routes
+
 const ProtectedRoute = ({ user, children }) => {
   const navigate = useNavigate();
   useEffect(() => {
@@ -97,46 +109,3 @@ export default App;
 
 
 
-/*
-import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import HomePage from "./HomePage";
-import QuizPage from "./QuizPage";
-import ChatPage from "./ChatPage";
-import BasicQuiz from "./BasicQuiz";
-import "./App.css";
-
-const App = () => {
-  return (
-    <Router>
-      <div className="app-layout">
-        <nav className="navbar">
-          <Link to="/">Home</Link>
-          <Link to="/chat">Chat Support</Link>
-        </nav>
-
-        <div className="main-layout">
-          <aside className="sidebar">
-            <h3 className="sidebar-title">📝 Practice Sections</h3>
-            <h4 className="sidebar-subtitle">Step-1</h4>
-            <Link to="/basicquiz" className="sidebar-link"> Basic </Link>
-            <Link to="/quiz" className="sidebar-link"> Core </Link>
-          </aside>
-
-          <div className="container">
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/quiz" element={<QuizPage />} />
-              <Route path="/chat" element={<ChatPage />} />
-              <Route path="/basicquiz" element={<BasicQuiz />} />
-            </Routes>
-          </div>
-        </div>
-      </div>
-    </Router>
-  );
-};
-
-export default App;
-
-*/
