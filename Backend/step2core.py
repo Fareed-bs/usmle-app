@@ -2,7 +2,7 @@
 import json
 
 # This script is used to load a JSON file containing questions and answers
-with open('step2core.json') as f:
+with open('step2core.json',encoding='utf-8') as f:
     data = json.load(f)
     
 # The JSON file is expected to contain a list of dictionaries, each with a question, options, answer, and explanation

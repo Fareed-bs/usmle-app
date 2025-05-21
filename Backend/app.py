@@ -32,15 +32,17 @@ login_manager.session_protection = "strong" # Protects against session tampering
 def home_summary():
     summary = {
         "title": "USMLE Practice App",
-        "description": (
-            "This application helps students prepare for the USMLE exam through interactive quizzes and chat support.\n\n"
-            "This application has practice sections for the three steps of the USMLE exam. "
-            "Each step has two sections:\n"
-            "  - First section has basic science questions and answers.\n"  # Corrected typo and added formatting
-            "  - Second section has core questions that are fetched from Kaggle dataset.\n\n"
-            "You can go to 'Practice sections' to practice the questions and answers.\n\n"
+        "description": [
+            "This application helps students prepare for the USMLE exam through interactive quizzes and chat support.",
+            "This application has practice sections for the three steps of the USMLE exam. Each step has two sections:",
+            "  - First section has basic science questions and answers.",
+            "  - Second section has core questions that are fetched from Kaggle dataset.",
+            "",  # Represents a blank line
+            "You can go to 'Practice sections' to practice the questions and answers.",
+            "",  # Represents a blank line
             "The app also includes a chat that helps clarify USMLE-related doubts and topics."
-        ),
+        ],
+
         "features": [
             "🎯 Quiz section with MCQs that has basic questions focuses on basic science.",
             "🧠 Core Quiz section with advanced questions from a Kaggle dataset",
@@ -413,6 +415,3 @@ if __name__ == '__main__': #Run the Flask app
     with app.app_context(): # Create database tables if they don't exist
         db.create_all()
     app.run(debug=True) # Set debug=True for development; set to False in production
-
-
-

@@ -67,6 +67,210 @@
   "options": ["A large pericardial effusion", "Dilated cardiomyopathy", "Left ventricular hypertrophy", "Paradoxical septal motion", "Regional wall motion abnormality"],
   "answer": "Dilated cardiomyopathy",
   "explanation": "This patient presents with symptoms and signs of heart failure. His history of heavy alcohol use (a risk factor for dilated cardiomyopathy) and physical findings (S3, pulmonary crackles, peripheral edema) suggest this diagnosis. Echocardiography would likely show dilated chambers and reduced systolic function."
-}
+},
 
+ {
+  "question": "A 68-year-old man comes to the clinic because of a 6-month history of frequent falls. He sustained a fracture of the left wrist 4 weeks ago during a fall. He has not had loss of consciousness before or during the falls. He says that turning and pivoting often cause him to fall, and he has a tendency to fall backward when walking. He has Parkinson disease treated with carbidopa-levodopa and entacapone. Vital signs are within normal limits. Examination shows masked facies and a resting tremor of the right upper extremity. Romberg sign is absent. When the patient stands still and is pulled backward, he is unable to maintain his posture. Which of the following is the most appropriate intervention to decrease this patient's risk for future falls?",
+  "options": ["Biofeedback", "Physical therapy", "Pramipexole therapy", "Ropinirole therapy", "Rotigotine therapy"],
+  "answer": "Physical therapy",
+  "explanation": "This patient has postural instability and falls due to Parkinson disease. Physical therapy can help improve balance, strength, and gait, reducing the risk of future falls."
+},
+ 
+ {
+  "question": "A 6-year-old boy is brought to the office by his parents as a new patient. Three months ago, he and his 3-year-old sister and 4 year-old brother were adopted from a Russian orphanage, where they had lived for 2 years. Their biological parents died in a motor vehicle collision; they have no other relatives. The adoptive parents say they were told that the children had stable caregivers, age-appropriate stimulation, and schooling at the orphanage. The children were shy initially on meeting them but now seem comfortable. They play well with each other; the patient is protective of his siblings. His medical and developmental history prior to 2 years ago is unknown. He has been learning English slowly; his parents hope he will learn enough by the end of the summer to begin kindergarten, a grade below that of his peers. Although he can perform basic mathematics, he is unable to read, even in Russian. Results of receptive language testing are consistent with an average IQ. His daily living skills are appropriate for age. He is at the 10th percentile for height and weight. During the examination, the patient’s adoptive mother, who is fluent in Russian, translates for him. Physical examination shows no abnormalities. On mental status examination, he is shy and maintains intermittent eye contact. He slowly answers questions with brief statements. He smiles and says he is excited and pleased about being adopted. Results of laboratory studies are within the reference ranges. Which of the following is the most likely diagnosis?",
+  "options": ["Autism spectrum disorder", "Fetal alcohol syndrome", "Intellectual developmental disorder", "Learning disorder", "Post-traumatic stress disorder", "Reactive attachment disorder"],
+  "answer": "Learning disorder",
+  "explanation": "The child has normal receptive language and IQ but struggles with reading, suggesting a specific learning disorder rather than a global developmental or psychiatric condition."
+},
+
+ {
+  "question": "A 17-year-old boy is brought to the emergency department because of a 1-hour history of progressive difficulty breathing and a 2-hour history of an itchy, red rash over his trunk, arms, and legs. He has not used new soaps, detergents, or lotions during the past week. Thirty-six hours ago, he began a 1-week course of amoxicillin for an ear infection; he has taken four doses since that time. He has no other history of serious illness and no known allergies. He takes no other medications. Pulse is 100/min, respirations are 28/min, and blood pressure is 90/60 mm Hg. Pulse oximetry on room air shows an oxygen saturation of 95%. He appears anxious and is in moderate respiratory distress. Examination shows an erythematous, raised, demarcated rash over the trunk and all extremities. Which of the following is the most appropriate next step in management?",
+  "options": ["Administration of albuterol", "Administration of diphenhydramine", "Administration of epinephrine", "Complete blood count", "Observation only"],
+  "answer": "Administration of epinephrine",
+  "explanation": "The patient has signs of anaphylaxis (respiratory distress, hypotension, and rash). Epinephrine is the first-line treatment for anaphylaxis due to its rapid vasoconstrictive and bronchodilatory effects."
+},
+
+ {
+  "question": "Two weeks after undergoing open cholecystectomy for gangrenous cholecystitis, a 47-year-old woman comes to the clinic for removal of surgical staples. She was treated with oral vancomycin for Clostridioides difficile colitis during hospitalization. She has type 2 diabetes mellitus. Current medications are metformin and pantoprazole. She reports loose stools four times daily during the past 2 weeks. In addition to wearing a clean isolation gown, which of the following is the most appropriate precaution for the physician to take?",
+  "options": ["Washing hands thoroughly with alcohol gel", "Washing hands thoroughly with soap and water", "Wearing a surgical mask", "Wearing sterile gloves and preparing the staple skin line with chlorhexidine", "No additional precautions are necessary"],
+  "answer": "Washing hands thoroughly with soap and water",
+  "explanation": "C. difficile spores are resistant to alcohol-based sanitizers. Soap and water is required for effective hand hygiene to prevent spore transmission."
+},
+
+ {
+  "question": "A 38-year-old woman comes to the clinic for follow-up examination. She has opioid use disorder and currently takes methadone 40 mg daily as maintenance therapy. She says the methadone is causing mild sedation that is interfering with her job. She would like to discontinue methadone maintenance therapy but is concerned about heroin relapse. She says she also takes a friend’s valium when she is feeling “stressed out.” The physician discusses alternative maintenance therapy strategies with the patient. The physician discusses the pros and cons of medium- or high-dose buprenorphine maintenance therapy compared with medium- or high-dose methadone therapy with the patient. Based on this abstract, which of the following is the most appropriate information for the physician to convey to the patient?",
+  "options": ["Buprenorphine is 13% and 21% less effective than methadone at medium and high doses, respectively", "Buprenorphine is a better maintenance strategy if the patient is also regularly using benzodiazepines", "Methadone is statistically more likely to result in treatment retention", "Neither drug is more effective than placebo", "There is an unclear difference in efficacy between the two drugs at these doses"],
+  "answer": "There is an unclear difference in efficacy between the two drugs at these doses",
+  "explanation": "Current evidence does not clearly favor methadone or buprenorphine in terms of efficacy at medium/high doses, though methadone may have better retention rates."
+},
+
+ {
+  "question": "A 27-year-old woman comes to the office because of a 3-week history of nasal congestion, cough productive of sputum, intermittent moderate headache, and intermittent moderate pain over her cheeks. She has had similar symptoms three to four times yearly during the past 5 years. The symptoms last 2 to 8 weeks and generally resolve spontaneously. She has had two episodes of bacterial pneumonia during the past 5 years; both episodes resolved with antibiotic therapy. Her only current medication is acetaminophen as needed for headache. Vital signs are within normal limits. Examination shows no abnormalities. Serum study results show decreased IgA, IgG, and IgM concentrations. Antibiotic therapy is begun, and the patient’s condition improves. Which of the following is most likely to decrease the likelihood of recurrent infection in this patient?",
+  "options": ["Daily inhaled tobramycin therapy", "Daily intranasal glucocorticoid therapy", "Daily trimethoprim-sulfamethoxazole therapy", "Intranasal influenza virus vaccine administration", "Monthly immune globulin replacement therapy"],
+  "answer": "Monthly immune globulin replacement therapy",
+  "explanation": "The patient has panhypogammaglobulinemia, which predisposes her to recurrent infections. Immune globulin replacement is the standard therapy to prevent infections in this setting."
+},
+
+ {
+  "question": "A 10-year-old boy is brought to the office because of moderate right knee pain. He is in no distress. Medical history is remarkable for hemophilia A. Examination of the right knee shows warmth and swelling; there is pain with flexion. Range of motion is limited by pain and swelling. Which of the following is the most appropriate therapy for this patient?",
+  "options": ["ADH (vasopressin)", "Factor VIII concentrate", "Factor IX concentrate", "Ferrous sulfate", "Fresh frozen plasma"],
+  "answer": "Factor VIII concentrate",
+  "explanation": "Hemophilia A is caused by factor VIII deficiency. Acute hemarthrosis requires factor VIII replacement to stop bleeding and reduce joint damage."
+},
+
+ {
+  "question": "A 72-year-old man comes to the clinic because of a 3-week history of visual changes in his right eye. During this period, he has noticed that the lines of his daily crossword puzzle look curved, and the blinds in his apartment appear wavy. He wears magnifying lenses for reading. He has not had pain in his eye or photophobia. He has no history of trauma to the area. On examination, visual acuity is 20/200 in the right eye and 20/100 in the left eye. Both pupils are round and reactive to light. Palpation of both globes through closed eyelids shows no abnormalities. There is normal red reflex bilaterally. The lenses appear clear. Which of the following is the most likely diagnosis?",
+  "options": ["Cataracts", "Central retinal artery occlusion", "Closed-angle glaucoma", "Macular degeneration", "Temporal arteritis"],
+  "answer": "Macular degeneration",
+  "explanation": "Metamorphopsia (distorted vision) and central vision loss with clear lenses suggest macular degeneration, a leading cause of painless central vision loss in older adults."
+},
+
+ {
+  "question": "A 37-year-old man comes to the clinic for a health maintenance examination prior to employment. He feels well. He has no history of serious illness and takes no medications. One year ago, his blood pressure was 136/85 mm Hg. He is 173 cm (5 ft 8 in) tall and weighs 100 kg (220 lb); BMI is 33 kg/m2. Today, his blood pressure is 138/87 mm Hg. Examination shows no abnormalities. In addition to recommending weight loss, which of the following is the most appropriate next step to prevent cardiovascular morbidity in this patient?",
+  "options": ["ACE inhibitor therapy", "Calcium supplementation", "DASH diet", "Fish oil supplementation", "Thiazide diuretic therapy"],
+  "answer": "DASH diet",
+  "explanation": "For stage 1 hypertension without complications, lifestyle modifications (e.g., DASH diet, weight loss) are first-line interventions before pharmacotherapy."
+},
+
+ {
+  "question": " A 43-year-old man comes to the office because of a 2-week history of fatigue and mild pain in his right armpit. He has not had fever or weight loss. Medical history is remarkable for type 2 diabetes mellitus and hypercholesterolemia. Medications are metformin, simvastatin, and aspirin. He is a social worker and frequently visits clients in homeless shelters. He lives alone with two dogs and a cat and has one male sexual partner. Vital signs are within normal limits. He appears well. Examination of the right upper extremity shows an erythematous axilla with a 4-cm, mobile, tender, nonfluctuant axillary lymph node and a tender, 1-cm epitrochlear lymph node. Abdominal examination shows no hepatosplenomegaly. Which of the following is the most likely diagnosis?",
+  "options": ["Castleman disease", "Cat-scratch disease", "Hidradenitis suppurativa", "T-cell lymphoma", "Tuberculosis"],
+  "answer": "Cat-scratch disease",
+  "explanation": "Tender regional lymphadenopathy (especially epitrochlear) in a patient with animal exposure is classic for cat-scratch disease caused by Bartonella henselae."
+},
+
+{
+  "question": " A 2-year-old girl is brought to the office by her parents for a well-child examination. She was adopted 2 months ago. She has no history of serious illness and receives no medications. Vital signs are within normal limits. Examination shows no abnormalities. After the examination, the parents ask when they should tell their daughter about the adoption. Which of the following is the most appropriate advice regarding the best time to tell this patient?",
+  "options": ["fter she turns 18 years of age","As early as possible, even if she cannot process the whole experience ","Once the seal on the adoption records has been lifted","Right before she is enrolled in kindergarten","When she learns that she is not biologically related to her parents"],
+  "answer": "As early as possible, even if she cannot process the whole experience",
+  "explanation": "Open and age-appropriate discussions about adoption from an early age help build trust and normalize the child's story, preventing feelings of secrecy or shame later in life"
+},
+
+
+  {
+    "question": "A surgical intensive care unit observes that the number of days that patients have central venous catheters in place and the number of bloodstream infections have been increasing. A multidisciplinary team from the unit would like to decrease the number of days that central venous catheters are in place in order to improve performance in this area. Which of the following is the most appropriate next step?",
+    "options": [ "Ask clinical providers in the unit to identify what they believe to be the most common factors leading to nonremoval of central venous catheters","Change all central venous catheters every 5 days","Place stickers on all intensive care unit doors reminding staff to reassess the need for a central line","Plan a randomized controlled trial to test the effects of a reminder to reassess the need for a central line on a daily goals sheet implemented during rounds"],
+    "answer": "Ask clinical providers in the unit to identify what they believe to be the most common factors leading to nonremoval of central venous catheters",
+    "explanation": "The first step in quality improvement is to identify the root causes of the problem before implementing interventions."
+  },
+
+  {
+    "question": "A 17-year-old girl comes to the office because of a 3-month history of daily moderate epigastric pain that is more severe after meals. Three weeks ago, she had watery diarrhea for 2 days, which resolved spontaneously. She has not had vomiting. She has no history of serious illness and takes no medications. Vital signs are within normal limits. Examination, including abdominal examination, shows no abnormalities. Which of the following is most likely to confirm the diagnosis?",
+    "options": ["CT scan of the abdomen","Endoscopy", "Examination of the stool for ova and parasites","Stool culture","Upper gastrointestinal series"],
+    "answer": "Endoscopy",
+    "explanation": "Endoscopy is the best diagnostic tool for evaluating persistent epigastric pain, as it can directly visualize and biopsy the gastric mucosa for conditions like gastritis or peptic ulcer disease."
+  },
+
+  {
+    "question": "An 87-year-old man is admitted to the hospital because of a 4-day history of moderate abdominal cramps, nausea, and vomiting. He has not had a bowel movement or passed gas in the past 24 hours. He has colon cancer metastatic to the lungs, liver, and peritoneum. Eighteen months ago, he underwent a low anterior resection for T3N2 rectal cancer. Six months ago, exploratory laparotomy showed diffuse carcinomatosis and bowel obstruction, and an ileotransverse bypass was performed. The patient and his family were informed of the findings and advised that he would not be a candidate for a laparotomy in the future because there would be no surgical options to treat another obstruction. The patient has no other history of serious illness. Medications are 5-fluorouracil and bevacizumab. Temperature is 37.2°C (99.0°F), pulse is 100/min, respirations are 20/min, and blood pressure is 130/80 mm Hg. The abdomen is distended and mildly tender to palpation. There are no peritoneal signs. CT scan of the abdomen shows a mid-jejunal small-bowel obstruction, multiple intraperitoneal tumor deposits, and ascites. The physician recommends insertion of nasogastric and percutaneous endoscopic gastrostomy tubes. The patient and his family request that the patient undergo a laparotomy and intestinal bypass. Which of the following is the most appropriate next step in management?",
+    "options": ["Abide by the wishes of the patient and his family","Alter the chemotherapy regimen","Explain the futility of the operation to the patient and his family","Offer to transfer the patient to another facility","Suggest external beam radiation therapy"],
+    "answer": "Explain the futility of the operation to the patient and his family",
+    "explanation": "Given the patient's advanced metastatic disease and previous surgical findings, further surgery would be futile and non-beneficial. The physician should compassionately explain this to the family."
+  },
+
+  {
+    "question": "A 62-year-old woman comes to the office because of a 3-month history of anxiety, insomnia, and frequent bowel movements. She has had a 9-kg (20-lb) weight loss during this period. Pulse is 90/min and irregularly irregular, respirations are 22/min, and blood pressure is 150/65 mm Hg. She is restless. The thyroid gland is diffusely enlarged. A bruit is heard over the thyroid. Examination shows palmar erythema; some of her fingernails are separated from the nail beds. There is widening of the palpebral fissures and thickening of the skin over the dorsum of the feet with a peau d'orange appearance. There is a fine tremor. Which of the following is the most likely diagnosis?",
+    "options": ["Addison disease","Carcinoid syndrome","Cushing syndrome","Pheochromocytoma","Thyrotoxicosis"],
+    "answer": "Thyrotoxicosis",
+    "explanation": "The patient's symptoms (weight loss, anxiety, tremor, thyroid bruit, onycholysis) and signs (goiter, atrial fibrillation, lid retraction, pretibial myxedema) are classic for hyperthyroidism/Graves disease (thyrotoxicosis)."
+  },
+
+  {
+    "question": " A 19-year-old man is brought to the emergency department (ED) by ambulance 15 minutes after he was stabbed in the chest during a fight. The stab wound is located medially to the left nipple. At the scene, pulse was 105/min, respirations were 18/min, and blood pressure was 120/80 mm Hg. Pulse oximetry on room air showed an oxygen saturation of 96%. Two large-bore intravenous catheters were placed en route to the ED, and lactated Ringer solution was initiated. On arrival in the trauma bay, the patient develops a pulse of 130/min and blood pressure of 80/40 mm Hg. There is jugular venous distention. Results of focused assessment with sonography for trauma (FAST) are most likely to lead to which of the following next steps for this patient?",
+    "options": ["CT scan of the chest and abdomen with contrast", "Exploratory laparotomy", "Needle decompression and chest tube placement", "Pericardiocentesis", "Peritoneal lavag"],
+    "answer": "Pericardiocentesis",
+    "explanation": "Explanation here...."
+  },
+
+  {
+    "question": "A 47-year-old woman is scheduled to undergo right knee arthroscopy and partial medial meniscectomy. Medical history is otherwise unremarkable. At her preoperative examination 2 weeks ago, her surgeon discussed the risks and benefits of the procedure, and both parties signed the operative consent form. On the patient's arrival at the hospital, the paperwork is reviewed. She is taken into the operating room and sedated, and the anesthesiology team starts a spinal anesthetic. After the patient's right lower extremity is prepped for the procedure, a surgical pause is taken to review the patient's name and consent form and to confirm the site of surgery. The operating room team is unable to locate the consent form for review. No markings are present on the patient's extremities to indicate the site of the procedure. The surgeon says that he remembers reviewing the consent form with the patient and seeing her sign it. The patient's husband is in the waiting room. Which of the following is the most appropriate course of action?",
+    "options": ["Ask the patient if she recalls signing the consent form and, if so, proceed with the operation", "Ask the patient to sign a new consent form and proceed with the operation", "Do not proceed, and remove the patient from the operating room", "Obtain verbal consent from the patient's husband before proceeding with the operation", "Proceed with the operative procedure as planned"],
+    "answer": "Do not proceed, and remove the patient from the operating room",
+    "explanation": "Without proper documentation of consent and site marking, proceeding with surgery would be unethical and potentially legally actionable, even if the surgeon recalls obtaining consent."
+  },
+  {
+    "question": "A 30-year-old man comes to the physician because he and his wife have been unable to conceive during the past 2 years. Previous evaluation of his wife showed no abnormalities. He has not been exposed to pesticides, heavy metals, radiation, or testicular overheating. Physical examination shows no abnormalities. Serum studies show a testosterone concentration within the lower reference range. A diagnosis of oligospermia is made. Which of the following is the most appropriate initial action by the physician?",
+    "options": ["Ask the patient about his alcohol intake, smoking, and stress level", "Educate the patient about declining sperm counts with increased age", "Prescribe a phosphodiesterase inhibitor", "Provide a topical testosterone gel", "Recommend in vitro fertilization"],
+    "answer": "Ask the patient about his alcohol intake, smoking, and stress level",
+    "explanation": "Lifestyle factors like alcohol, smoking, and stress can significantly impact sperm production and should be evaluated first before considering medical interventions."
+  },
+  {
+    "question": "A 62-year-old woman is brought to the emergency department (ED) by her husband because of a 3-day history of increasing confusion. She has a 20-year history of bipolar disorder well controlled with medication for the past 5 years. Her husband forgot to bring her medication bottles and cannot remember which medication she takes. He reports that she has recently had mild headaches and has taken acetaminophen as needed. On questioning, he says that there has been no particular change in their routine, but during the past 2 days they have been outside playing tennis more than usual because of the onset of sunny, warm weather. While in the ED, the patient has a generalized tonic-clonic seizure lasting 2 minutes. She is 163 cm (5 ft 4 in) tall and weighs 72 kg (160 lb); BMI is 27 kg/m2. Pulse is 104/min, respirations are 18/min, and blood pressure is 140/90 mm Hg. Examination shows dry mucous membranes. ECG shows a second-degree atrioventricular block. Which of the following is most likely responsible for this patient's confusion?",
+    "options": ["Acetaminophen", "Bupropion", "Lithium", "Risperidone","Topiramate"],
+    "answer": "Lithium",
+    "explanation": "The clinical picture suggests lithium toxicity, with dehydration from outdoor activity leading to reduced lithium clearance, resulting in confusion, seizures, AV block, and other neurological symptoms."
+  },
+  {
+    "question": "A 51-year-old woman comes to the office for a health maintenance examination. She feels well. She has no history of serious illness and takes no medications. She smoked one pack of cigarettes daily for 28 years but quit 6 years ago. Pulse is 80/min, respirations are 12/min, and blood pressure is 122/78 mm Hg. On examination, pedal pulses are absent bilaterally. A femoral bruit is heard in the left lower extremity. Which of the following is the most appropriate next step in management?",
+    "options": ["Pentoxifylline therapy", "Peripheral artery catheterization", "Serum lipid studies", "Warfarin therapy", "No further management is indicated"],
+    "answer": "Serum lipid studies",
+    "explanation": "The findings suggest peripheral artery disease, and lipid studies are crucial for evaluating cardiovascular risk factors and guiding further management in this former smoker."
+  },
+
+{
+    "question": "A 13-year-old girl is brought to the office for evaluation of short stature. Since birth, she has been below the 3rd percentile for height and at the 3rd percentile for weight. She has never had a menstrual period. There is no family history of short stature, but her maternal uncle did not begin puberty until the age of 16 years. Her current height is consistent with that of a 9½-year-old girl. Pulse is 82/min and blood pressure is 110/70 mm Hg. Sexual maturity rating is stage 1 for breast development and stage 2 for pubic hair development. Which of the following is the most appropriate next step in diagnosis?",
+    "options": ["Complete blood count and serum chemistry panel", "Measurement of urine free cortisol concentration", "X-rays of the left hand and wrist", "X-rays of the long bones and spine", "X-ray of the skull"],
+    "answer": "X-rays of the left hand and wrist",
+    "explanation": "The patient's short stature and delayed sexual maturation suggest a possible growth hormone deficiency or constitutional delay of growth and puberty. X-rays of the left hand and wrist can assess bone age, which helps differentiate between these conditions."
+  },
+
+  {
+    "question": "A 77-year-old woman who resides in a skilled nursing care facility is examined by the physician 1 day after staff noticed some blood on her bedsheets. She sustained a cerebral infarction 8 years ago and has been confined to bed since then because of residual left hemiparesis. She is currently taking warfarin. She is 160 cm (5 ft 3 in) tall and weighs 50 kg (110 lb); BMI is 20 kg/m2. Temperature is 36.0°C (96.8°F), pulse is 70/min, respirations are 18/min, and blood pressure is 180/90 mm Hg. There is no lymphadenopathy. Examination shows a small, clean, decubitus ulcer on the sacrum. Pelvic examination shows a 3-cm, raised, fleshy lesion on the right labium majus. Vaginal examination cannot be performed because of the patient's discomfort. Which of the following is the most appropriate next step in management?",
+    "options": ["Cytologic evaluation of the vulva", "CT scan of the abdomen and pelvis", "Application of an antifungal cream", "Application of a corticosteroid cream", "Colonoscopy","Biopsy of the vulva"],
+    "answer": "Biopsy of the vulva",
+    "explanation": "A raised, fleshy vulvar lesion in an elderly patient requires biopsy to rule out malignancy (e.g., squamous cell carcinoma), especially given the presence of bleeding. This takes precedence over other diagnostic or treatment options."
+  },
+  {
+    "question": "A 68-year-old man comes to the office because of a 3-month history of moderate low back pain that extends into both legs. He first noticed the pain while standing in the ticket line at a theater. At that time, the pain was accompanied by tingling in both legs. The symptoms recurred a few days later as he was standing in the grocery checkout line. The pain has not responded to ibuprofen or naproxen but improves with sitting or lying down. Prior to onset of the pain, the patient typically walked for 30 minutes four times weekly. He discontinued his walking regimen 2 months ago because it seemed to trigger his back pain. He has hypertension and hyperlipidemia. Medications are hydrochlorothiazide-triamterene, simvastatin, and aspirin. The patient has smoked one pack of cigarettes daily for 40 years. Pulse is 74/min and blood pressure is 140/90 mm Hg. Lungs are clear to auscultation; expiration phase is delayed. On cardiac examination, a grade 2/6 systolic crescendo-decrescendo murmur is heard at the upper right sternal border. There is trace ankle edema bilaterally; ankle brachial index is 1.0. Musculoskeletal and neurologic examinations show no abnormalities. Which of the following is the most likely diagnosis?",
+    "options": ["Abdominal aortic aneurysm", "Osteoporosis", "Peripheral neuropathy", "Spinal stenosis", "Vascular claudication"],
+    "answer": "Spinal stenosis",
+    "explanation": "The symptoms of neurogenic claudication (pain relieved by sitting/flexion and worsened by standing/extension), along with normal pulses and ABI, are classic for lumbar spinal stenosis. The lack of pulsatile mass rules out AAA."
+  },
+  {
+    "question": "A 67-year-old man is evaluated in the intensive care unit. He has end-stage pancreatic cancer and was hospitalized 3 days ago for treatment of pneumonia. Respirations are 6/min. Pulse oximetry on 100% oxygen by face mask shows an oxygen saturation of 78%. Examination shows feeble respiratory efforts; he is using accessory muscles of respiration. On mental status examination, the patient is oriented to person but not to place or time. If the patient is not endotracheally intubated and mechanically ventilated, he will die within hours. His wife says the patient recently told her that he would never want mechanical ventilation, but they never completed paperwork regarding his wishes. His daughter insists that he be mechanically ventilated. Which of the following is the most appropriate action for the physician to take?",
+    "options": ["Perform endotracheal intubation and begin mechanical ventilation", "Perform endotracheal intubation and then consult the hospital ethics committee regarding mechanical ventilation", "Perform endotracheal intubation only", "Provide palliative therapy only", "Seek a court order to assign a legal guardian"],
+    "answer": "Provide palliative therapy only",
+    "explanation": "The patient's verbal wishes (via his wife) against mechanical ventilation should be honored given his terminal condition, despite family disagreement. Palliative care is most appropriate in this end-stage scenario."
+  },
+  {
+    "question": "A 5-day-old boy is brought to the office for an initial well-child examination. He was born at 40 weeks' gestation and discharged at 60 hours of life. On newborn screening, hemoglobin electrophoresis showed an FS pattern. He is at the 50th percentile for length and weight. Temperature is 37.0°C (98.6°F), pulse is 136/min, and respirations are 34/min. He appears well. Examination shows no abnormalities. Which of the following is the most appropriate next step in management?",
+    "options": ["Deferoxamine therapy", "Hydroxyurea therapy", "Iron supplementation", "Monthly blood transfusions", "Penicillin prophylaxis", "Vitamin B12 (cyanocobalamin) supplementation"],
+    "answer": "Penicillin prophylaxis",
+    "explanation": "An FS pattern on hemoglobin electrophoresis indicates sickle cell disease (likely HbSS). Penicillin prophylaxis should begin by 2 months of age to prevent pneumococcal sepsis, which is the standard of care for all infants with SCD."
+  },
+
+  {
+    "question": "A 1-week-old female newborn is brought to the office for a follow-up examination after newborn screening showed a serum TSH concentration of 40 μU/mL (N=1–20). She has been breast-feeding well. She passes five to six stools and has multiple wet diapers daily. She has returned to her birth weight. Vital signs are within normal limits. Examination discloses no abnormalities. Serum studies today show a TSH concentration of 14 μU/mL (N=0.5–6.5) and free thyroxine (FT4) concentration of 0.4 ng/dL (N=0.9-2.2). Which of the following is the most appropriate next step in management?",
+    "options": ["Hydrocortisone therapy", "Levothyroxine therapy", "Monthly serial measurement of serum thyroglobulin concentration", "Monthly serial measurement of serum TSH and free thyroxine (FT4) concentrations", "Radioactive iodine uptake scan", "Ultrasonography of the thyroid gland"],
+    "answer": "Levothyroxine therapy",
+    "explanation": "The patient has congenital hypothyroidism, as indicated by the elevated TSH and low FT4 levels. Levothyroxine therapy should be initiated immediately to prevent developmental delays and other complications associated with untreated congenital hypothyroidism."
+  },
+
+  {
+    "question": "An 18-year-old patient comes to the emergency department because of a 2-day history of severe abdominal pain. The pain began in the middle of the abdomen after a large meal but now is localized to the right lower quadrant. The patient also has a 2-month history of intermittent diarrhea. Three weeks ago, the patient had an upper respiratory tract infection that resolved spontaneously. The patient currently takes no medications. The patient identifies as nonbinary and uses they/they pronouns; their assigned sex at birth was male. They do not smoke cigarettes or use other substances. Temperature is 37.8°C (100.0°F), pulse is 80/min, respirations are 20/min, and blood pressure is 110/70 mm Hg. Abdominal examination shows fullness and tenderness to palpation of the right lower quadrant. Leukocyte count is 11,000/mm3. Which of the following is the most appropriate next step in diagnosis?",
+    "options": ["Abdominal ultrasonography of the right lower quadrant", "Air-contrast barium enema", "CT scan of the abdomen", "Technetium 99m scan of the bowel", "Upper gastrointestinal series with small bowel follow-through"],
+    "answer": "CT scan of the abdomen",
+    "explanation": "CT scan is the most appropriate initial imaging for suspected appendicitis, especially with RLQ pain, fever, and leukocytosis. It provides better sensitivity/specificity than ultrasound for appendicitis and can evaluate for other potential causes."
+  },
+  {
+    "question": "A 25-year-old woman, gravida 3, para 2, at 36 weeks' gestation comes to the emergency department because of heavy vaginal bleeding following sexual intercourse 3 hours ago. She has received no prenatal care. She has no history of serious illness or operative procedures. Vital signs are within normal limits. Continuous external fetal heart monitoring shows a baseline of 155/min with no accelerations or decelerations. The uterus is consistent in size with a 36-week gestation. Tocodynamometer monitoring shows contractions every 8 minutes. Which of the following is the most appropriate next step in management?",
+    "options": ["Cesarean delivery now", "Digital examination of the cervix", "Intravenous administration of magnesium sulfate", "Intravenous administration of oxytocin", "Transabdominal ultrasonography"],
+    "answer": "Transabdominal ultrasonography",
+    "explanation": "Ultrasonography is critical to evaluate for placenta previa before any cervical examination, as digital exam could worsen bleeding in case of previa. The history of painless bleeding after intercourse is concerning for previa."
+  },
+  {
+    "question": "A 59-year-old man is brought to the emergency department because of a 1-hour history of weakness of his left arm and leg and mild headache. He says that, when he was gardening with his wife, he suddenly became unable to hold his gardening tool, lift his left arm, or walk. Two weeks ago, he had a nonproductive cough and nasal congestion that resolved spontaneously after 1 week. He has hypertension treated with lisinopril. On arrival, he is lethargic. He is 183 cm (6 ft) tall and weighs 97 kg (215 lb); BMI is 29 kg/m2. Temperature is 36.6°C (97.9°F), pulse is 94/min, respirations are 16/min, and blood pressure is 174/109 mm Hg. The pupils measure 3 mm and are reactive to light. Muscle movement is decreased over the left lower aspect of the face. Muscle strength is 0/5 in the left extremities. Deep tendon reflexes are absent in the left extremities and 2+ in the right extremities. CT scan of the head shows a large area of increased attenuation in the right putamen region. Which of the following is the most likely cause of this patient's condition?",
+    "options": ["Amyloid angiopathy", "Embolism", "Small vessel disease", "Vasculitis", "Venous thrombosis"],
+    "answer": "Small vessel disease",
+    "explanation": "The putamen is a common location for lacunar strokes caused by small vessel disease. The patient's hypertension and sudden onset of pure motor hemiparesis are classic for this diagnosis."
+  },
+  {
+    "question": "A 24-year-old primigravid woman at 10 weeks' gestation comes to the office for a scheduled dilatation and suction curettage. Ultrasonography 2 days ago showed a fetus consistent in size with a 9-week gestation with absent cardiac activity. Two weeks ago, the patient had an upper respiratory tract infection that resolved spontaneously. One year ago, she was diagnosed with herpes simplex virus (HSV) 2; her last outbreak was 6 months ago. She has no other history of serious illness. She is 163 cm (5 ft 4 in) tall. She weighed 82 kg (180 lb) prior to her pregnancy; BMI was 31 kg/m2. She has had a 3.6-kg (8-lb) weight gain during her pregnancy. Vital signs are within normal limits. The vulvar area is shaven; no lesions are noted. Examination shows a normal appearing cervix. The uterus is nontender and consistent in size with an 8-week gestation. There is homogenous white-gray vaginal discharge; the pH of the discharge is 5.5. She undergoes dilatation and suction curettage with sterile instruments and povidone-iodine vaginal cleansing. Which of the following is the strongest predisposing risk factor for postoperative infection in this patient?",
+    "options": ["History of upper respiratory tract infection", "HSV 2", "Obesity", "Type of vaginal discharge", "Vulvar shaving"],
+    "answer": "Type of vaginal discharge",
+    "explanation": "The white-gray discharge with pH 5.5 suggests bacterial vaginosis, which is the strongest risk factor for post-procedure endometritis. The other factors listed are not significant infection risks in this context."
+  }
 ]
+
+
+

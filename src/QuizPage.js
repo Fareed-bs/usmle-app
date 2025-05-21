@@ -101,7 +101,7 @@ const QuizPage = () => {
   if (error && !questions.length && !submitted) {
     return (
       <div style={{ padding: "2rem", fontFamily: "Arial" }}>
-        <h1>USMLE Practice Quiz</h1>
+        <h1>Step 1 Core Questions</h1>
         <p style={{ color: "red" }}>{error}</p>
         <button onClick={fetchQuestions} style={{ padding: "0.5rem 1rem" }}>Try Again</button>
       </div>
@@ -110,14 +110,23 @@ const QuizPage = () => {
 
   return (
     <div style={{ padding: "2rem", fontFamily: "Arial", position: "relative", minHeight: "100vh" }}>
-      <h1>USMLE Practice Quiz</h1>
+      <h1>Step 1 Core Questions</h1>
+      <p>This section is after basic quiz. It contains questions that are more difficult than the basic quiz.</p>
 
       {error && !loading && <p style={{ color: "red", marginBottom: "1rem" }}>{error}</p>}
 
       {!quizStarted && !submitted && questions.length > 0 && (
-        <div style={{ textAlign: "center", margin: "2rem 0" }}>
-          <h2>Ready to begin your quiz?</h2>
-          <p>You will have 60 minutes to complete {questions.length} questions.</p>
+        <div style={{ textAlign: "left", margin: "2rem 0" }}>
+          <h2>Guidelines:</h2>
+          <p>1. You will have 60 minutes to complete the quiz.</p>
+          <p>2. Each question has multiple-choice answers.</p>
+          <p>3. Select the best answer for each question.</p>
+          <p>8. If the time runs out before submitting, the quiz will be automatically submitted.</p>
+          <p>4. You can only submit once.</p>
+          <p>6. You can restart the quiz at any time.</p>
+          <p>7. Good luck!</p>
+          <h2>Ready to begin your quiz?</h2>          
+          <p style={{ color: 'red' }}>You will have 60 minutes to complete {questions.length} questions.</p>
           <button 
             onClick={handleStartQuiz}
             style={{
