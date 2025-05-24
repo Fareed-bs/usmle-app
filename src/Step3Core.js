@@ -1,9 +1,7 @@
-// Filename: FipQuizPage.js
-// Description: This component handles the FIP quiz page, including fetching questions, handling user input, and displaying results.
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const Step2Core = () => {
+const Step3Core = () => {
   const [questions, setQuestions] = useState([]);
   const [answers, setAnswers] = useState({});
   const [submitted, setSubmitted] = useState(false);
@@ -13,11 +11,6 @@ const Step2Core = () => {
   const [error, setError] = useState(null);
   const [timeLeft, setTimeLeft] = useState(60 * 60); // 60 minutes in seconds
   const [quizStarted, setQuizStarted] = useState(false); // New state for quiz start
-  const [currentPage, setCurrentPage] = useState(1); // Pagination state
-  const [isSubmitting, setIsSubmitting] = useState(false); // New state for submission loading
-
-  const QUESTIONS_PER_PAGE = 10;
-  const totalPages = Math.ceil(questions.length / QUESTIONS_PER_PAGE);
 
   const fetchQuestions = () => {
     setLoading(true);
@@ -70,10 +63,9 @@ const Step2Core = () => {
   };
 
   const handleSubmit = async () => {
-    if (submitted || isSubmitting) return; // Prevent multiple submissions
+    if (submitted) return; // Prevent multiple submissions
     
     try {
-      setIsSubmitting(true);
       const response = await axios.post(
         "http://localhost:5000/api/step2core/submit",
         { answers },
@@ -87,22 +79,6 @@ const Step2Core = () => {
     } catch (err) {
       console.error("Submission error", err);
       setError("Failed to submit answers. Please try again.");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
-  const handleNextPage = () => {
-    if (currentPage < totalPages) {
-      setCurrentPage(currentPage + 1);
-      window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top
-    }
-  };
-
-  const handlePrevPage = () => {
-    if (currentPage > 1) {
-      setCurrentPage(currentPage - 1);
-      window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top
     }
   };
 
@@ -114,15 +90,8 @@ const Step2Core = () => {
     setError(null);
     setTimeLeft(60 * 60); // Reset timer
     setQuizStarted(false); // Reset quiz start state
-    setCurrentPage(1); // Reset to first page
-    setIsSubmitting(false); // Reset submitting state
     fetchQuestions();
   };
-
-  const paginatedQuestions = questions.slice(
-    (currentPage - 1) * QUESTIONS_PER_PAGE,
-    currentPage * QUESTIONS_PER_PAGE
-  );
 
   if (loading && !submitted) {
     return <p style={{ padding: "2rem", fontFamily: "Arial" }}>Loading questions...</p>;
@@ -131,9 +100,8 @@ const Step2Core = () => {
   if (error && !questions.length && !submitted) {
     return (
       <div style={{ padding: "2rem", fontFamily: "Arial" }}>
-        <h1>Step 1 Core Questions</h1>
+        <h1>USMLE Practice Quiz</h1>
         <p style={{ color: "red" }}>{error}</p>
-        
         <button onClick={fetchQuestions} style={{ padding: "0.5rem 1rem" }}>Try Again</button>
       </div>
     );
@@ -141,16 +109,7 @@ const Step2Core = () => {
 
   return (
     <div style={{ padding: "2rem", fontFamily: "Arial", position: "relative", minHeight: "100vh" }}>
-      <style>
-        {`
-          @keyframes spin {
-            to { transform: rotate(360deg); }
-          }
-        `}
-      </style>
-      
-      <h1>Step 3 - FIP (Foundations of Independent Practice)</h1>
-      <p>This section is after basic quiz, that covers FIP.</p>
+      <h1>Step 2 Core Practice Quiz</h1>
 
       {error && !loading && <p style={{ color: "red", marginBottom: "1rem" }}>{error}</p>}
 
@@ -161,9 +120,11 @@ const Step2Core = () => {
           <p>2. Each question has multiple-choice answers.</p>
           <p>3. Select the best answer for each question.</p>
           <p>4. If the time runs out before submitting, the quiz will be automatically submitted.</p>
-          <p>5. You can only submit once.</p>
+          <p>5. You can review your answers and explanations after the quiz.</p>
           <p>6. Good luck!</p>
-          <h2>Ready to begin your quiz?</h2>          
+          
+          <p>9. You can restart the quiz at any time.</p>
+          <h2>Ready to begin your quiz?</h2>
           <p style={{ color: 'red' }}>You will have 60 minutes to complete {questions.length} questions.</p>
           <button 
             onClick={handleStartQuiz}
@@ -183,14 +144,10 @@ const Step2Core = () => {
       )}
 
       {quizStarted && !submitted && questions.length > 0 && (
-        <form onSubmit={e => e.preventDefault()}>
-          {paginatedQuestions.map((q) => (
+        <form onSubmit={(e) => { e.preventDefault(); handleSubmit(); }}>
+          {questions.map((q) => (
             <div key={q.id} style={{ marginBottom: "1.5rem" }}>
-              <h3>
-                <span style={{ color: "red" }}>Q{q.id}.</span>{" "}
-                <span style={{ whiteSpace: "pre-wrap" }}>{q.question}</span>
-              </h3>
-
+              <h3>Q{q.id}. {q.question}</h3>
               {q.options.map((option, idx) => (
                 <label key={idx} style={{ display: "block", marginLeft: "1rem" }}>
                   <input
@@ -205,52 +162,8 @@ const Step2Core = () => {
               ))}
             </div>
           ))}
-
-          <div style={{ display: "flex", justifyContent: "flex-start", gap: "2rem", marginTop: "2rem" }}>
-            <button
-              type="button"
-              onClick={handlePrevPage}
-              disabled={currentPage === 1}
-              style={{ padding: "0.5rem 1rem", opacity: currentPage === 1 ? 0.5 : 1 }}
-            >
-              Previous
-            </button>
-            <span>Page {currentPage} of {totalPages}</span>
-            {currentPage < totalPages ? (
-              <button
-                type="button"
-                onClick={handleNextPage}
-                style={{ padding: "0.5rem 1rem" }}
-              >
-                Next
-              </button>
-            ) : (
-              <button
-                type="button"
-                onClick={handleSubmit}
-                style={{ padding: "0.5rem 1rem" }}
-                disabled={isSubmitting}
-              >
-                {isSubmitting ? (
-                  <>
-                    Submitting...
-                    <span style={{ marginLeft: "8px", display: "inline-block" }}>
-                      <div style={{
-                        width: "16px",
-                        height: "16px",
-                        border: "2px solid rgba(0,0,0,0.1)",
-                        borderLeftColor: "#000",
-                        borderRadius: "50%",
-                        display: "inline-block",
-                        animation: "spin 1s linear infinite"
-                      }}></div>
-                    </span>
-                  </>
-                ) : "Submit"}
-              </button>
-            )}
-          </div>
-
+          <button type="submit" style={{ padding: "0.5rem 1rem" }}>Submit</button>
+          
           {/* Timer display */}
           <div style={{
             position: "fixed",
@@ -261,7 +174,7 @@ const Step2Core = () => {
             borderRadius: "5px",
             boxShadow: "0 2px 5px rgba(0,0,0,0.2)",
             fontWeight: "bold",
-            color: timeLeft <= 300 ? "red" : "black"
+            color: timeLeft <= 300 ? "red" : "black" // Turns red when 5 minutes or less remain
           }}>
             Time Remaining: {formatTime(timeLeft)}
           </div>
@@ -281,11 +194,7 @@ const Step2Core = () => {
 
           {results.results.map((res, idx) => (
             <div key={idx} style={{ marginBottom: "1.5rem", padding: "1rem", border: "1px solid #ccc", borderRadius: "6px" }}>
-              <h3>
-                <span style={{ color: "red" }}>Q{res.id}.</span>{" "}
-                <span style={{ whiteSpace: "pre-wrap" }}>{res.question}</span>
-              </h3>
-
+              <h3>Q{res.id}. {res.question}</h3>
               <p><strong>Your Answer:</strong> {res.user_answer || "Not Answered"}</p>
               <p><strong>Correct Answer:</strong> {res.correct_answer}</p>
               <p style={{ color: res.is_correct ? "green" : "red" }}>
@@ -303,4 +212,4 @@ const Step2Core = () => {
   );
 };
 
-export default Step2Core;
+export default Step3Core;

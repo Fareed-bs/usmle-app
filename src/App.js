@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from "react-router-dom";
 import HomePage from "./HomePage";
@@ -9,6 +8,8 @@ import LoginPage from "./LoginPage"; // NEW: Login page
 import RegisterPage from "./RegisterPage"; // NEW: Register page
 import Step2Basic from "./Step2Basic"; // NEW: Step2Basic page
 import Step2Core from "./Step2Core"; // NEW: Step2Core page
+import Step3Basic from "./Step3Basic"; // NEW: Step3Basic page
+import FipQuizPage from "./FipQuizPage"; // NEW: FipQuizPage
 import "./App.css";
 
 const App = () => {
@@ -16,16 +17,13 @@ const App = () => {
 
   // Check if user is logged in
   useEffect(() => {
-    fetch("/api/auth/status", {
-      credentials: "include" // Required for session cookies
-    })
-      .then(res => {
-        if (res.ok) return res.json();
-        throw new Error("Not logged in");
-      })
-      .then(data => setUser(data.user))
-      .catch(() => setUser(null));
-  }, []);
+  fetch("/api/auth/status", {
+    credentials: "include"
+  })
+    .then(res => res.json())
+    .then(data => setUser(data.logged_in ? data.user : null))
+    .catch(() => setUser(null));
+}, []);
 
   const handleLogout = () => {
     fetch("/api/auth/logout", {
@@ -69,6 +67,9 @@ const App = () => {
             <h4 className="sidebar-subtitle">Step-2</h4>
             <Link to="/step2basic" className="sidebar-link">Basic</Link>
             <Link to="/step2core" className="sidebar-link">Core</Link>
+            <h4 className="sidebar-subtitle">Step-3</h4>
+            <Link to="/step3basic" className="sidebar-link">Basic</Link>
+            <Link to="/fipquiz" className="sidebar-link">FIP</Link>
           </aside>
 
           {/* Page content */}
@@ -81,6 +82,8 @@ const App = () => {
               <Route path="/login" element={<LoginPage setUser={setUser} />} />
               <Route path="/step2basic" element={<ProtectedRoute user={user}><Step2Basic /></ProtectedRoute>} /> 
               <Route path="/step2core" element={<ProtectedRoute user={user}><Step2Core /></ProtectedRoute>} />
+              <Route path="/step3basic" element={<ProtectedRoute user={user}><Step3Basic /></ProtectedRoute>} />
+              <Route path="/fipquiz" element={<ProtectedRoute user={user}><FipQuizPage /></ProtectedRoute>} />
               <Route path="/register" element={<RegisterPage />} />
             </Routes>
           </div>

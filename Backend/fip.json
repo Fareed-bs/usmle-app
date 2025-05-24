@@ -1,0 +1,50 @@
+[
+ {
+  "question": " A 2-week-old newborn with trisomy 18 diagnosed at birth is brought to the office by his parents for a follow-up visit. He is unable to suck properly and receives all his nutrition via nasogastric tube. The newborn was born at 37 weeks' gestation to a 29-year-old woman, gravida 2, para 1. Apgar scores were 4 at 1 minute and 8 at 5 minutes. The father is age 30 years. They have a 4-year-old daughter who is healthy. The mother reports that her son has trouble breathing and often stops breathing for up to 20 seconds at a time. He has had no fever, vomiting, or diarrhea. Length is 46 cm (18 in; 5th percentile), weight is 2400 g (5 lb 5 oz; 5th percentile), and head circumference is 32 cm (13 in; 10th percentile).\n\nPhysical examination shows dysmorphic features with a small jaw and small head, as noted at birth. The patient is listless and his breaths are shallow. During the examination, he has episodes of apnea lasting up to 15 seconds. His tone is increased and he has overlapping fingers and rocker bottom feet. There is a 3/6 systolic murmur heard loudest over the left sternal border. \n\nWhich of the following is the most appropriate next step?",
+  "options": ["(A) Admission to the hospital for a sleep apnea study", "(B) CT scan of the head","(C) Electroencephalography", "(D) Referral to a cardiologist", "(E) Referral to home hospice care"],
+  "answer": "(E) Referral to home hospice care",
+  "explanation": "The infant has trisomy 18, a condition associated with significant morbidity and mortality. Given the severity of his condition, including feeding difficulties, apnea, and poor growth, the most appropriate next step is to refer the family to home hospice care to provide comfort and support during this time."
+},
+
+{
+  "question": "A 79-year-old retired executive schedules an urgent office visit. When you see him, he says that he had difficulty walking upon getting out of bed this morning because of dizziness, which started last week and worsened last night. He has a 20-year history of hypertension, for which he was treated, but for the past 10 years his blood pressure has been normal without treatment. At his most recent visit 3 weeks ago, his blood pressure was 150/90 mm Hg and he was instructed to adhere to a low-salt diet. He drank a moderate amount of alcoholic beverages in the past and smoked about 16 cigarettes daily from age 20 years to age 50 years. He has not smoked cigarettes during the past 29 years. He is taking no medication at present. \n\nAll his close relatives have lived to be at least in their 80s. This morning, pulse is 78/min and regular and blood pressure is 160/90 mm Hg. Neurologic examination shows instability when the patient is turning and horizontal nystagmus with change in position. Funduscopic examination shows no abnormalities. \n\nWhich of the following is the most likely diagnosis?",
+  "options": ["(A) Cardiac arrhythmia", "(B) Cerebellar ataxia due to alcohol abuse", "(C) Labyrinthitis", "(D) Orthostatic hypotension", "(E) Stroke"],
+  "answer": "(C) Labyrinthitis",
+  "explanation": "The patient's positional dizziness, nystagmus, and instability suggest labyrinthitis, an inner ear disorder affecting balance. The absence of focal neurologic deficits makes stroke less likely."
+},
+
+{
+  "question": "A 12-year-old girl with a seizure disorder is brought to the emergency department 40 minutes after her aunt found her unconscious in her backyard. The aunt reports that the patient is visiting her for the summer. On arrival, the patient is awake but drowsy. She says she is embarrassed because she forgot to bring her anticonvulsant medication from home. She requests that you not call her mother 'because she will yell and get angry.' Temperature is 37.0°C (98.6°F), pulse is 74/min, respirations are 16/min, and blood pressure is 100/70 mm Hg. Physical examination shows no focal neurologic deficits. The patient requests that she receive one dose of carbamazepine now and that she be given a prescription to fill at the nearby pharmacy. \n\nWhich of the following is the most appropriate next step?",
+  "options": ["(A) Administer the dose of carbamazepine and provide a prescription", "(B) Administer the dose of carbamazepine but do not provide a prescription", "(C) Attempt to contact the mother for permission to treat before proceeding", "(D) Do not contact the mother but request that the aunt sign a consent form", "(E) Provide a prescription, but do not administer the dose of carbamazepine"],
+  "answer": "(C) Attempt to contact the mother for permission to treat before proceeding",
+  "explanation": "For minors, parental consent should be obtained for treatment unless it's an emergency. Since the patient is stable, contacting the mother is the most appropriate step."
+},
+
+{
+  "question": "A 63-year-old man comes to the office because of a 10-minute episode of right eye blindness 2 days ago. The episode resolved spontaneously and there was no associated eye pain. Medical history is remarkable for hypertension and type 2 diabetes mellitus. Medications include hydrochlorothiazide, metoprolol, glipizide, simvastatin, and 81-mg aspirin. He is 183 cm (6 ft) tall and weighs 104 kg (229 lb); BMI is 31 kg/m2. Vital signs are within normal limits. \n\nPhysical examination discloses pupils that are equal in size and reactive to light. Visual fields are intact. Visual acuity is 20/20 in both eyes with corrective lenses. Cardiac examination discloses a regular rate and rhythm with no murmurs. Neurologic examination discloses no abnormalities. \n\nWhich of the following is the most appropriate diagnostic study at this time?",
+  "options": ["(A) Fluorescein angiography of the right eye", "(B) Measurement of intraocular pressures", "(C) Transesophageal echocardiography", "(D) Ultrasonography of the neck", "(E) No further evaluation is indicated"],
+  "answer": "(D) Ultrasonography of the neck",
+  "explanation": "The patient's transient monocular blindness (amaurosis fugax) suggests possible carotid artery disease. Ultrasonography of the neck would evaluate for carotid stenosis, a common cause of this symptom."
+},
+
+{
+
+"question": "Patient Information:\n   Age: 66 years\n   Gender: F, self-identified\n   Race/Ethnicity: unspecified\n   Site of Care: office\n\nThe patient presents because of a 3-day history of increasingly severe pain when swallowing solids and liquids. Use of over the-counter antacids has not resulted in relief. There is no associated nausea, vomiting, or loss of appetite. Medical history is remarkable for hypertension, diet-controlled type 2 diabetes mellitus, migraine, and osteoporosis. Current medications are alendronate, chlorthalidone, propranolol, sumatriptan, and calcium citrate with vitamin D supplements. She has smoked one half pack of cigarettes daily for 10 years and drinks one to two alcoholic beverages monthly.\n\nShe does not use other substances. BMI is 24 kg/m2. Temperature is 37.0°C (98.6°F), pulse is 84/min, respirations are 16/min, and blood pressure is 130/90 mm Hg. Oxygen saturation is 98% on room air. Physical examination shows no abnormalities. Endoscopy is most likely to show ulceration of which of the following structures?", 
+"options":["(A) Duodenum", "(B) Esophagus", "(C) Gastric cardia", "(D) Gastric fundus", "(E) Pylorus"],
+"answer": "B) Esophagus",
+"explanation": "The patient's symptoms of pain when swallowing (odynophagia) and the use of alendronate, a bisphosphonate, suggest the possibility of esophageal ulceration. Bisphosphonates can cause esophagitis and ulceration if not taken properly, such as not remaining upright after taking the medication."
+}
+]
+An 11-year-old boy is brought to the office by his parents for a well-child examination and routine vaccinations. His medical 
+history is unremarkable and he receives no medications. Vaccinations were up-to-date at his most recent examination 1 year 
+ago. He is not sexually active, and the family is affiliated with a religion that teaches abstinence. The parents express 
+reluctance about administering the human papillomavirus (HPV) vaccine today because of the potential adverse effects 
+associated with the vaccine. They ask if their son really needs this vaccine today, given that he will not become sexually 
+active until he is much older and married. The patient’s vital signs are within normal limits. Physical examination shows no 
+abnormalities. Which of the following is the most appropriate response to the parents? 
+(A) Acknowledge that there are risks associated with vaccines but emphasize that those associated with the HPV vaccine 
+are small because it is an inactivated vaccine 
+(B) Advise the parents to vaccinate their son in order to contribute to the elimination of HPV from the general population 
+(C) Explain that even if their son waits until marriage to have sex, he could still be exposed to HPV by his future partner 
+(D) Provide the parents with literature about the vaccine and advise them that they may defer the decision because the 
+vaccine may be administered until the age of 26 years

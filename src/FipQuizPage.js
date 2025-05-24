@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const Step2Core = () => {
+const FipQuizPage = () => {
   const [questions, setQuestions] = useState([]);
   const [answers, setAnswers] = useState({});
   const [submitted, setSubmitted] = useState(false);
@@ -22,7 +22,7 @@ const Step2Core = () => {
   const fetchQuestions = () => {
     setLoading(true);
     setError(null);
-    axios.get("http://localhost:5000/api/step2core", {
+    axios.get("http://localhost:5000/api/fip", {
       withCredentials: true
     })
       .then(res => setQuestions(res.data))
@@ -75,7 +75,7 @@ const Step2Core = () => {
     try {
       setIsSubmitting(true);
       const response = await axios.post(
-        "http://localhost:5000/api/step2core/submit",
+        "http://localhost:5000/api/fip/submit",
         { answers },
         { withCredentials: true }
       );
@@ -303,4 +303,4 @@ const Step2Core = () => {
   );
 };
 
-export default Step2Core;
+export default FipQuizPage;

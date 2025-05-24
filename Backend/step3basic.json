@@ -1,0 +1,122 @@
+[
+  {
+    "question": "A 45-year-old man with chronic alcoholism presents with confusion, ataxia, and ophthalmoplegia. What is the most appropriate next step in management?",
+    "options": ["Thiamine", "Glucose", "Naloxone", "Lorazepam"],
+    "answer": "Thiamine",
+    "explanation": "Wernicke encephalopathy is treated with thiamine before glucose to prevent worsening symptoms."
+  },
+  {
+    "question": "Which antihypertensive is contraindicated in pregnancy?",
+    "options": ["Methyldopa", "Labetalol", "Hydralazine", "ACE inhibitor"],
+    "answer": "ACE inhibitor",
+    "explanation": "ACE inhibitors are teratogenic and contraindicated in all trimesters of pregnancy."
+  },
+  {
+    "question": "What is the most appropriate treatment for a patient with ST-elevation myocardial infarction (STEMI) presenting within 2 hours of symptom onset?",
+    "options": ["Thrombolysis", "Aspirin", "PCI", "Beta-blocker"],
+    "answer": "PCI",
+    "explanation": "Percutaneous coronary intervention (PCI) is the preferred treatment for STEMI if available within 90 minutes."
+  },
+  {
+    "question": "Which vaccine is contraindicated in a patient with AIDS and a CD4 count <200/mm³?",
+    "options": ["Tdap", "Hepatitis B", "MMR", "Influenza (inactivated)"],
+    "answer": "MMR",
+    "explanation": "Live vaccines like MMR are contraindicated in immunocompromised patients with low CD4 counts."
+  },
+  {
+    "question": "A 60-year-old woman presents with progressive fatigue and pruritus. Labs show positive antimitochondrial antibodies. What is the diagnosis?",
+    "options": ["Primary biliary cholangitis", "Primary sclerosing cholangitis", "Autoimmune hepatitis", "Chronic hepatitis B"],
+    "answer": "Primary biliary cholangitis",
+    "explanation": "Primary biliary cholangitis is characterized by fatigue, pruritus, and AMA positivity."
+  },
+  {
+    "question": "What is the recommended initial therapy for Type 2 diabetes mellitus with HbA1c of 8.2%?",
+    "options": ["Insulin", "Metformin", "Sulfonylurea", "GLP-1 agonist"],
+    "answer": "Metformin",
+    "explanation": "Metformin is first-line treatment for most patients with type 2 diabetes unless contraindicated."
+  },
+  {
+    "question": "A 30-year-old woman has sudden-onset severe headache and neck stiffness. CT head is negative. What is the next best step?",
+    "options": ["MRI brain", "Lumbar puncture", "EEG", "Carotid ultrasound"],
+    "answer": "Lumbar puncture",
+    "explanation": "In suspected subarachnoid hemorrhage with a negative CT, LP is needed to look for xanthochromia."
+  },
+  {
+    "question": "Which of the following is most appropriate to monitor warfarin therapy?",
+    "options": ["aPTT", "PT/INR", "Bleeding time", "Platelet count"],
+    "answer": "PT/INR",
+    "explanation": "INR (derived from PT) is used to monitor warfarin efficacy and safety."
+  },
+  {
+    "question": "A patient presents with hematuria and hearing loss. What is the most likely diagnosis?",
+    "options": ["IgA nephropathy", "Alport syndrome", "Post-streptococcal GN", "Goodpasture syndrome"],
+    "answer": "Alport syndrome",
+    "explanation": "Alport syndrome is characterized by glomerulonephritis and sensorineural hearing loss."
+  },
+  {
+    "question": "What is the most important initial test for suspected pulmonary embolism in a hemodynamically stable patient?",
+    "options": ["CT pulmonary angiography", "V/Q scan", "D-dimer", "Chest X-ray"],
+    "answer": "D-dimer",
+    "explanation": "D-dimer is used to rule out PE in low/moderate-risk, stable patients before imaging."
+  },
+  {
+    "question": "Which treatment reduces mortality in patients with heart failure with reduced ejection fraction (HFrEF)?",
+    "options": ["Furosemide", "Digoxin", "Beta-blocker", "Nitrate"],
+    "answer": "Beta-blocker",
+    "explanation": "Beta-blockers and ACE inhibitors are proven to reduce mortality in HFrEF."
+  },
+  {
+    "question": "A 27-year-old woman presents with weight loss, palpitations, and heat intolerance. TSH is low, and free T4 is elevated. What is the next best step?",
+    "options": ["Thyroid ultrasound", "Radioactive iodine uptake", "Thyroid biopsy", "TSH receptor antibody test"],
+    "answer": "Radioactive iodine uptake",
+    "explanation": "RAIU helps differentiate causes of thyrotoxicosis (e.g., Graves vs. thyroiditis)."
+  },
+  {
+    "question": "A child presents with barking cough, stridor, and hoarseness. What is the most likely diagnosis?",
+    "options": ["Epiglottitis", "Croup", "Bronchiolitis", "Asthma"],
+    "answer": "Croup",
+    "explanation": "Croup is caused by parainfluenza virus and presents with a seal-like barking cough and stridor."
+  },
+  {
+    "question": "Which of the following is first-line for treating status epilepticus?",
+    "options": ["Phenytoin", "Valproate", "Lorazepam", "Phenobarbital"],
+    "answer": "Lorazepam",
+    "explanation": "Benzodiazepines like lorazepam are first-line treatment for status epilepticus."
+  },
+  {
+    "question": "A 65-year-old man presents with progressive memory loss. MRI shows hippocampal atrophy. Most likely diagnosis?",
+    "options": ["Vascular dementia", "Alzheimer's disease", "Normal pressure hydrocephalus", "Lewy body dementia"],
+    "answer": "Alzheimer's disease",
+    "explanation": "Hippocampal atrophy is a hallmark imaging finding in Alzheimer’s disease."
+  },
+  {
+    "question": "Which of the following is an indication for immediate dialysis in chronic kidney disease?",
+    "options": ["Hyperphosphatemia", "Hyperkalemia", "Anemia", "Secondary hyperparathyroidism"],
+    "answer": "Hyperkalemia",
+    "explanation": "Refractory hyperkalemia is a life-threatening emergency and indication for dialysis."
+  },
+  {
+    "question": "What is the best next step in a patient with a breast mass and normal mammogram?",
+    "options": ["Observation", "Breast MRI", "Ultrasound", "FNA biopsy"],
+    "answer": "Ultrasound",
+    "explanation": "Ultrasound is preferred for evaluating palpable breast masses, especially if mammogram is inconclusive."
+  },
+  {
+    "question": "Which of the following is characteristic of delirium, not dementia?",
+    "options": ["Gradual onset", "Stable course", "Inattention", "Normal consciousness"],
+    "answer": "Inattention",
+    "explanation": "Inattention with acute onset and fluctuating course is typical of delirium."
+  },
+  {
+    "question": "A 40-year-old man with HIV has difficulty swallowing. What is the most likely cause?",
+    "options": ["CMV esophagitis", "Candidiasis", "Herpes simplex virus", "GERD"],
+    "answer": "Candidiasis",
+    "explanation": "Oropharyngeal or esophageal candidiasis is the most common cause of dysphagia in HIV patients."
+  },
+  {
+    "question": "What is the most appropriate initial treatment for acute pericarditis?",
+    "options": ["Antibiotics", "Colchicine and NSAIDs", "Steroids", "Pericardiocentesis"],
+    "answer": "Colchicine and NSAIDs",
+    "explanation": "NSAIDs and colchicine are first-line therapy for viral or idiopathic pericarditis."
+  }
+]

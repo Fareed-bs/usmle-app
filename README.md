@@ -1,6 +1,21 @@
+# To create React app:
+
+Go in an empty directory
+Run in terminal
+npx create-react-app .
+
+Libraries:
+
+npm install react-router-dom : It is a routing library for React. It eneables navigation b/w different components/pages in your React application.
+npm install axios: It is a javascript library. Used to send/recieve requests from backend.
+
 # Libraries for backend flask
 
 pip install Flask-SQLAlchemy Flask-Login Werkzeug
+
+# Library for Google authentication
+
+pip install flask-dance[google] oauthlib
 
 # Getting Started with Create React App
 
@@ -72,3 +87,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+---

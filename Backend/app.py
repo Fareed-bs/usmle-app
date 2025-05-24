@@ -5,6 +5,8 @@ from basic_questions import get_basic_questions, get_basic_questions_public # ty
 from core import get_dataset_questions, get_dataset_qa # type: ignore
 from step2basic import step2_basic_questions, step2_basic_questions_ans # type: ignore
 from step2core import get_sampletest_questions, get_sampletest_qa # type: ignore
+from step3basic import step3_basic_questions, step3_basic_full # type: ignore
+from fip import get_fip_questions, get_fip_qa # type: ignore
 
 import os
 from flask_sqlalchemy import SQLAlchemy # type: ignore
@@ -290,8 +292,144 @@ def step2_core_submit():
     data = request.get_json()
     if not data or "answers" not in data:
         return jsonify({"message": "Missing answers in request body"}), 400
+    
     user_answers = data.get("answers", {})
     full_data = get_sampletest_qa()
+    results = []
+    incorrect_answers_details = []
+    score = 0
+
+    # Process answers and collect incorrect ones
+    for q in full_data:
+        qid = str(q["id"])
+        user_answer = user_answers.get(qid)
+        correct = user_answer == q["answer"]
+        
+        if correct:
+            score += 1
+        else:
+            incorrect_answers_details.append({
+                "question": q["question"],
+                "user_answer": user_answer,
+                "correct_answer": q["answer"],
+                "explanation": q["explanation"]
+            })
+            
+        results.append({
+            "id": qid,
+            "question": q["question"],
+            "user_answer": user_answer,
+            "correct_answer": q["answer"],
+            "is_correct": correct,
+            "explanation": q["explanation"]
+        })
+
+    # --- Improved AI Feedback Generation ---
+    ai_feedback = ""
+    if incorrect_answers_details:
+        prompt = """As a USMLE tutor, analyze these incorrect answers and provide:
+1. **Direct feedback** starting with "Focus on:" 
+2. **Key concept** needing review (bolded)
+3. **1-sentence explanation** of the mistake
+4. **Free resource** with clickable URL
+
+**Requirements:**
+- Speak directly to the student (use "you" instead of "the student")
+- Only recommend freely accessible resources (no paid/subscription content)
+- Format URLs as clickable links: `[Resource Name](https://example.com)`
+- Keep each concept to 3 lines maximum
+
+**Example Output:**
+**Focus on:** Heart failure classification  
+**Why:** You confused NYHA Class II vs III symptoms (dyspnea on mild vs moderate exertion).  
+**Resource:** [AMBOSS Heart Failure Guide](https://www.amboss.com/us/library/free-content#cardiology)
+
+**Incorrect Answers:**"""
+        
+        for item in incorrect_answers_details:
+            prompt += f"""
+            Question: {item['question']}
+            Your Answer: {item['user_answer']}
+            Correct Answer: {item['correct_answer']}
+            Explanation: {item['explanation']}\n"""
+        
+        try:
+            ai_feedback = get_chat_response(prompt)
+            # Post-process to ensure consistent formatting
+            ai_feedback = ai_feedback.replace("The student should", "Focus on")
+        except Exception as e:
+            ai_feedback = f"Feedback generation failed: {str(e)}"
+
+    return jsonify({
+        "score": score,
+        "total": len(full_data),
+        "results": results,
+        "ai_feedback": ai_feedback,
+        "feedback_message": "Great job!" if score/len(full_data) >= 0.7 else "Keep practicing!"
+    })
+
+# --------------------------
+# Route 6: Step 3 Basic
+# --------------------------
+@app.route('/api/step3basic', methods=['GET']) #Create an endpoint to get all questions from the step3basic.json file
+@login_required
+def get_step3_basic_quiz_questions():
+    return jsonify(step3_basic_questions())
+
+@app.route('/api/step3basic/submit', methods=['POST']) #Create an endpoint to get user answers and evaluate
+@login_required
+def submit_step3_basic_quiz():
+    data = request.get_json()
+    if not data or "answers" not in data:
+        return jsonify({"message": "Missing answers in request body"}), 400
+    user_answers = data.get("answers", {})
+    full_data = step3_basic_full()
+    results = []    
+    score = 0
+
+    for q in full_data:
+        qid = str(q["id"])
+        user_answer = user_answers.get(qid)
+        correct = user_answer == q["answer"]
+        if correct:
+            score += 1
+
+        results.append({
+            "id": qid,
+            "question": q["question"],
+            "user_answer": user_answer,
+            "correct_answer": q["answer"],
+            "is_correct": correct,
+            "explanation": q["explanation"]
+        })  
+    feedback_message = ""
+    if score >= 15: # Assuming 15 is the passing score for the basic quiz
+        feedback_message = "Congratulations! You have passed the quiz. You are good to go with the next step."
+    else:
+        feedback_message = "Your score is less. Please try again. You can do it."   
+    return jsonify({
+        "score": score,
+        "total": len(full_data),
+        "results": results,
+        "feedback_message": feedback_message # Add the message here
+    })
+
+# --------------------------
+# Route 7: Step 3 FIP (Foundations of Independent Practice.)
+# --------------------------
+@app.route('/api/fip', methods=['GET']) #Create an endpoint to get all questions from the fip.json file
+@login_required
+def get_fip_quiz_questions():
+    return jsonify(get_fip_questions())
+
+@app.route('/api/fip/submit', methods=['POST']) #Create an endpoint to get user answers and evaluate
+@login_required
+def submit_fip_quiz():
+    data = request.get_json()
+    if not data or "answers" not in data:
+        return jsonify({"message": "Missing answers in request body"}), 400
+    user_answers = data.get("answers", {})
+    full_data = get_fip_qa()
 
     results = []
     incorrect_answers_details = [] # Store details for AI feedback
@@ -342,7 +480,7 @@ def step2_core_submit():
 
 
 # --------------------------
-# Route 5: Chat Support
+# Route 8: Chat Support
 # --------------------------
 @app.route("/api/chat", methods=["POST"]) # Changed route to /api/chat for consistency
 @login_required
