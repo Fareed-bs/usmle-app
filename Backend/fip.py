@@ -1,6 +1,6 @@
 import json
 
-with open('fip.json') as f:
+with open('fip.json', encoding='utf-8') as f:
     data = json.load(f)
 
 #Function to get questions and options
