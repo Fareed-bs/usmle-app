@@ -1,4 +1,5 @@
-// QuizPage.js
+// Filename: FipQuizPage.js
+// Description: This component handles the FIP quiz page, including fetching questions, handling user input, and displaying results.
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -132,6 +133,7 @@ const QuizPage = () => {
       <div style={{ padding: "2rem", fontFamily: "Arial" }}>
         <h1>Step 1 Core Questions</h1>
         <p style={{ color: "red" }}>{error}</p>
+        
         <button onClick={fetchQuestions} style={{ padding: "0.5rem 1rem" }}>Try Again</button>
       </div>
     );
@@ -147,8 +149,8 @@ const QuizPage = () => {
         `}
       </style>
       
-      <h1>Step 1 Core Questions</h1>
-      <p>This section is after basic quiz. It contains questions that are more difficult than the basic quiz.</p>
+      <h1>Step 1 Core questions</h1>
+      <p>This section is after basic quiz.</p>
 
       {error && !loading && <p style={{ color: "red", marginBottom: "1rem" }}>{error}</p>}
 
@@ -159,7 +161,7 @@ const QuizPage = () => {
           <p>2. Each question has multiple-choice answers.</p>
           <p>3. Select the best answer for each question.</p>
           <p>4. If the time runs out before submitting, the quiz will be automatically submitted.</p>
-          <p>5. You can only submit once.</p>     
+          <p>5. You can only submit once.</p>
           <p>6. Good luck!</p>
           <h2>Ready to begin your quiz?</h2>          
           <p style={{ color: 'red' }}>You will have 60 minutes to complete {questions.length} questions.</p>
@@ -188,6 +190,7 @@ const QuizPage = () => {
                 <span style={{ color: "red" }}>Q{q.id}.</span>{" "}
                 <span style={{ whiteSpace: "pre-wrap" }}>{q.question}</span>
               </h3>
+
               {q.options.map((option, idx) => (
                 <label key={idx} style={{ display: "block", marginLeft: "1rem" }}>
                   <input
@@ -282,6 +285,7 @@ const QuizPage = () => {
                 <span style={{ color: "red" }}>Q{res.id}.</span>{" "}
                 <span style={{ whiteSpace: "pre-wrap" }}>{res.question}</span>
               </h3>
+
               <p><strong>Your Answer:</strong> {res.user_answer || "Not Answered"}</p>
               <p><strong>Correct Answer:</strong> {res.correct_answer}</p>
               <p style={{ color: res.is_correct ? "green" : "red" }}>

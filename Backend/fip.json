@@ -132,8 +132,208 @@
     "options": ["(A) Gram stain of urethral discharge before and after prostatic massage", "(B) Polymerase chain reaction test for Neisseria gonorrhoeae and Chlamydia trachomatis", "(C) Urinalysis", "(D) Urine culture and sensitivity", "(E) No study, pending reevaluation of sexual history"],
     "answer": "(E) No study, pending reevaluation of sexual history",
     "explanation": "Given the patient's denial of extramarital sexual activity but concerning symptoms, the first step should be to carefully reevaluate the sexual history before proceeding with testing, as this may reveal important risk factors."
-  }
+  },
+
+{
+  "question": "A 77-year-old man is admitted to the hospital because of a 2-week history of gangrene of the right foot. Three years ago, he underwent a left transmetatarsal amputation. During hospitalization, he required intubation and mechanical ventilation for 2 weeks because of sepsis. He then spent 2 months in an acute rehabilitation facility. Medical history also is remarkable for type 2 diabetes mellitus, peripheral vascular disease, and hypertension. His medications are insulin, irbesartan, hydrochlorothiazide, and aspirin. He is widowed, lives alone, and keeps in contact with his two sons. He has a living will, and his younger son is designated health care proxy. The patient is alert and fully oriented. Temperature is 38.4°C (101.1°F), pulse is 90/min and regular, respirations are 12/min, and blood pressure is 156/90 mm Hg. Oxygen saturation is 96% on room air.\n\nThere is a 5 × 6-cm ulcer with black margins over the plantar surface of the right foot; malodorous, white-green exudate; and visible bone in the center of the ulcer. Popliteal fossa pulses are decreased and posterior tibial pulses are absent bilaterally. Antibiotic therapy is begun. The patient is informed that he requires amputation of the right leg below the knee. He declines amputation, saying, 'I don't ever want to go through what I went through before with my left foot.' He is told that the potential risks for not proceeding with amputation are loss of the entire right lower extremity and death. He still refuses the procedure.\nWhich of the following is the most appropriate action for this physician to take?", 
+  "options": ["(A) Abide by the patient's wishes", "(B) Consult the hospital bioethics department", "(C) Obtain consent for amputation from both sons", "(D) Obtain consent for amputation from the courts", "(E) Obtain consent for amputation from the younger son", "(F) Review any additional instructions in the patient’s living will"],
+  "answer": "(A) Abide by the patient's wishes",
+  "explanation": "The patient has decisional capacity and has made an informed choice to refuse the amputation. As a competent adult, he has the right to refuse medical treatment, even if it may lead to serious consequences. The physician must respect his autonomy and decision."
+},
+
+  {
+    "question": "A physician would like to evaluate the benefit of a new osteoporosis medication in preventing fractures in women aged 40 to 60 years. A total of 300 women aged 40 to 60 years with osteoporosis documented by DEXA scan are enrolled in the study from general gynecology clinics. The patients are equally randomized into two groups. Group A receives the new osteoporosis medication and Group B receives placebo. The patients are followed for 5 years and bone density is measured annually by DEXA scanning. Results show that the bone density of patients who received the study medication is unchanged and the bone density in patients who received placebo decreased by 2% (P=.01). The physician concludes that the new medication decreases the risk for fracture in women aged 40 to 60 years. Which of the following is the most appropriate conclusion to draw from these data?",
+    "options": ["(A) The impact of the medication on bone density may not correlate with the risk for fracture", "(B) The lack of a change in bone density among patients who received the study medication suggests the presence of a confounding variable", "(C) The lack of a change in bone density among the treatment group suggests that the medication regimen is too complicated", "(D) The lack of women younger than 40 years of age makes it difficult to evaluate the long-term benefit of treatment", "(E) Selection bias is likely because the patients were all selected from general gynecology practices"],
+    "answer": "(A) The impact of the medication on bone density may not correlate with the risk for fracture",
+    "explanation": "While the medication maintained bone density, the study didn't directly measure fracture outcomes. Bone density changes don't always perfectly predict fracture risk reduction."
+  },
+  {
+    "question": "A 15-year-old boy is brought to the clinic after his father noticed significant swelling of the boy's chest when he was getting dressed 6 hours ago. The patient reports a 3-month history of gradually worsening left-sided chest pain and swelling, but he says he was too embarrassed to tell his parents. He has not had fever, chills, night sweats, loss of appetite, weight loss, or any recent trauma to the chest. Medical history is unremarkable and he takes no medications. The patient is a good student. He does not smoke cigarettes or drink alcoholic beverages. Temperature is 36.4°C (97.5°F), pulse is 69/min, respirations are 14/min, and blood pressure is 115/70 mm Hg.\nOxygen saturation is 100% on room air. Examination of the head, neck, and skin discloses no abnormalities. There is a fixed palpable mass measuring approximately 14 × 12 cm in the left chest wall that is tender to palpation. The remainder of the physical examination discloses no abnormalities. Biopsy of this mass is most likely to show which of the following?",
+    "options": ["(A) Acid-fast bacilli", "(B) Gram-positive cocci in clusters", "(C) Infiltrating nests of squamous cells and increased keratin", "(D) Malignant syncytiotrophoblasts and cytotrophoblasts", "(E) Poorly differentiated anaplastic spindle cells"],
+    "answer": "(E) Poorly differentiated anaplastic spindle cells",
+    "explanation": "The presentation of a large, painful chest wall mass in an adolescent is most consistent with Ewing sarcoma or osteosarcoma, which would show poorly differentiated anaplastic spindle cells on biopsy."
+  },
+  {
+    "question": "A 20-year-old primigravid woman comes to the emergency department at 8 weeks' gestation because of a 2-day history of persistent nausea and vomiting with a 0.9-kg (2-lb) weight loss during this time. She also notes that she has not voided during the past 8 hours. She has not had fever, chills, or contact with anyone known to be ill. Medical history is unremarkable. She has taken prenatal vitamins sporadically during her pregnancy, but they worsen her nausea and vomiting.\nTemperature is 36.8°C (98.2°F), pulse is 98/min, respirations are 18/min, and blood pressure is 118/60 mm Hg. Oxygen saturation is 99% on room air. Physical examination discloses no abnormalities. Urine specific gravity is greater than 1.030 (N=1.003–1.029). Which of the following laboratory study results is most likely to be abnormal in this patient?",
+    "options": ["(A) Leukocyte count", "(B) Serum ALT and AST activities", "(C) Serum calcium concentration", "(D) Serum glucose concentration", "(E) Serum urea nitrogen concentration", "(F) No abnormality is likely"],
+    "answer": "(E) Serum urea nitrogen concentration",
+    "explanation": "The patient has hyperemesis gravidarum with clinical dehydration (oliguria, high urine specific gravity). BUN would be elevated due to prerenal azotemia from dehydration, while other labs would likely be normal."
+  },
+  {
+    "question": "A 60-year-old woman, who lives alone, is brought to the emergency department on a Friday evening by her next-door neighbor who says the patient has fallen several times during the past several days. An emergency department record from a visit 1 year ago for a minor laceration indicates that the patient has Parkinson disease with mild dementia, bipolar disorder, and hypertension. Her brother fills her weekly medication organizer, but he is overseas on a business trip for the week.\nThe patient is unable to remember which medications she takes and whether there have been any changes recently to her medication regimen. The neighbor was unable to locate her pill organizer in her home, and the patient thinks her brother keeps her pill bottles at his house to prevent her from inadvertently taking extra doses. She has her brother's address on a card in her wallet, along with the names and phone numbers of her primary care physician, psychiatrist, and pharmacy.\n\nThe medical record from her visit 1 year ago shows that her medications included clonazepam, clonidine, and lithium carbonate. Doses of each medication are also listed. Attempts to contact the patient's primary care physician and psychiatrist for more detailed medication history have been unsuccessful. Which of the following is the most appropriate initial approach to managing the patient's medications?",
+    "options": ["(A) Ask the police to enter the brother's house to locate the patient's pill bottles", "(B) Contact the patient's pharmacy to obtain information on her current medications", "(C) Observe the patient closely while continuing to try to reach her psychiatrist", "(D) Order the medications as listed in the emergency department records from her previous visit", "(E) Order serum concentrations of the medications listed on the previous emergency department record, then prescribe doses of the medications in accordance with those concentrations"],
+    "answer": "(B) Contact the patient's pharmacy to obtain information on her current medications",
+    "explanation": "The pharmacy will have the most current and accurate medication list, including recent changes. This is the most efficient and reliable way to determine her current regimen before making any treatment decisions."
+  },
+
+{
+  "question":"A 78-year-old woman, who was admitted to the hospital 3 days ago because of worsening renal failure, has become increasingly lethargic and nonresponsive. Medical history is significant for type 2 diabetes mellitus, hypertension, and stroke 1 year ago with residual right-sided weakness and slurred speech. Medications include insulin, aspirin, and furosemide. On admission, the patient was alert with mildly slurred speech; she was oriented to person, place, and time. Physical examination disclosed decreased motor strength and muscle atrophy in the right upper and lower extremities. Results of laboratory studies showed a serum urea nitrogen concentration of 82 mg/dL and a creatinine concentration of 6.1 mg/dL. Hemodialysis was recommended but the patient declined and expressed an understanding that she would die without the intervention.\nIn addition, she requested a do-not-attempt resuscitation (DNAR) order. This was documented in her medical record and her code status was changed to DNR. Serum urea nitrogen concentration now is 130 mg/dL. She has had no urine output during the past 48 hours. The patient's daughter arrives and states that she is named as the surrogate decision maker by her mother's advance directive. The daughter insists that hemodialysis be initiated and the code status be changed to full code.\nWhich of the following is the most appropriate course of action?",
+  "options": ["(A) Continue current management; do not initiate hemodialysis", "(B) Initiate hemodialysis and change the code status to full code until the patient is more alert", "(C) Initiate hemodialysis but keep the code status as DNAR until the patient is more alert", "(D) Obtain consent from the patient's daughter to initiate all medically indicated interventions"],
+  "answer": "(A) Continue current management; do not initiate hemodialysis",
+  "explanation": "The patient has decisional capacity and has made an informed choice to decline hemodialysis and request a DNAR order. The surrogate decision maker (daughter) cannot override the patient's wishes, as the patient is competent to make her own medical decisions. Therefore, the most appropriate course of action is to continue current management without initiating hemodialysis."
+},
+
+  {
+    "question": "An 88-year-old woman is transferred to the emergency department from the nursing care facility where she resides 4 hours after facility staff noted that the patient had rectal bleeding. Medical history is significant for long-standing dementia secondary to multiple prior strokes, coronary artery disease, hypertension, hypercholesterolemia, and chronic renal disease. Medications include 81-mg aspirin, simvastatin, lisinopril, and hydrochlorothiazide. On arrival in the emergency department, temperature is 37.2°C (98.9°F), pulse is 102/min, respirations are 20/min, and blood pressure is 105/60 mm Hg. Oxygen saturation is 95% on room air.\nThe patient is awake but is not oriented to person, place, or time. She is unable to speak coherently and becomes agitated and combative when a physical examination is attempted. Which of the following is the most appropriate initial intervention?",
+    "options": [
+      "(A) Administer lorazepam and proceed with physical examination",
+      "(B) Contact the patient's health care proxy to discuss how to proceed",
+      "(C) Place the patient in soft wrist restraints and proceed with physical examination",
+      "(D) Schedule outpatient flexible sigmoidoscopy and discharge the patient"
+    ],
+    "answer": "(B) Contact the patient's health care proxy to discuss how to proceed",
+    "explanation": "Given the patient's dementia and inability to consent, contacting the health care proxy is essential to determine the patient's wishes and appropriate level of intervention before proceeding with any examination or treatment."
+  },
+  {
+    "question": "A 56-year-old man comes to the office because of a 3-week history of right arm weakness and drooping of his right eyelid. Medical history is significant for hypertension and dyslipidemia, but he takes no medications. He has smoked one-half pack of cigarettes daily for the past 40 years. BMI is 26 kg/m2. Temperature is 37.2°C (99.0°F), pulse is 82/min, respirations are 20/min, and blood pressure is 138/74 mm Hg. Physical examination shows ptosis on the right side. The left pupil measures 5 mm in diameter and the right pupil measures 4 mm in diameter; both pupils are reactive to light and accommodation.\nMuscle strength is 3/5 in the right finger flexors and hand grip. Muscle strength and deep tendon reflexes are otherwise normal. Fingerstick blood glucose concentration is 119 mg/dL. Which of the following is the most likely diagnosis?",
+    "options": [
+      "(A) Cerebellar artery aneurysm",
+      "(B) Diabetic oculomotor paresis",
+      "(C) Myasthenia gravis",
+      "(D) Myasthenic (Lambert-Eaton) syndrome",
+      "(E) Pancoast tumor"
+    ],
+    "answer": "(E) Pancoast tumor",
+    "explanation": "The combination of ptosis (Horner syndrome), arm weakness, and long smoking history suggests a Pancoast tumor compressing the brachial plexus and sympathetic chain at the lung apex."
+  },
+  {
+    "question": "A 5-year-old boy is brought to the office by his parents because of a 2-month history of progressive difficulty climbing stairs, playing on playground equipment, and rising from a chair. He has mild cognitive delay for which he is receiving academic assistance, and he has had delayed milestones such as walking. He otherwise is healthy. He has no siblings. Family history is unremarkable; neither of his parents has any siblings. The patient's vital signs are within normal limits.\nPhysical examination shows hip girdle proximal muscle weakness and increased circumference of the calves bilaterally. The patient has to use his arms to stand up. Serum creatine kinase activity is 25,000 U/L (N=20–200). Genetic testing is ordered. Which of the following mutations is most likely to be identified in this patient?",
+    "options": [
+      "(A) Frameshift insertion in the gene encoding alpha-1 (III) collagen",
+      "(B) Large deletion in the gene encoding dystrophin",
+      "(C) Missense mutation in the gene encoding fibrillin 1",
+      "(D) Splice-site mutation in the gene encoding spectrin",
+      "(E) Translocation involving the gene encoding myosin I"
+    ],
+    "answer": "(B) Large deletion in the gene encoding dystrophin",
+    "explanation": "The clinical presentation (proximal weakness, Gowers sign, pseudohypertrophy of calves) and extremely elevated CK suggest Duchenne muscular dystrophy, caused by dystrophin gene deletions in 65% of cases."
+  },
+  {
+    "question": "Researchers are attempting to recruit patients from the primary care clinic of a large urban hospital to take part in a minimal risk research study. When initiating the informed consent process, it is observed that African American patients tend to exhibit a greater reluctance to take part in the study. During interim review, data confirm low enrollment totals among African Americans in the community. Which of the following is the best course of action to take?",
+    "options": [
+      "(A) Ask the institutional review board to waive the requirement for informed consent because it is deterring potential participants",
+      "(B) Convene a representative focus group of potential participants to ask questions regarding reluctance to enroll",
+      "(C) Focus recruitment efforts on White patients who are more likely to enroll and acknowledge this study limitation in the publication",
+      "(D) Recognize this as an unavoidable impediment and continue the recruitment practices in the same manner",
+      "(E) Require all patients to take part in the study if they wish to receive care in this clinic to ensure a representative sample"
+    ],
+    "answer": "(B) Convene a representative focus group of potential participants to ask questions regarding reluctance to enroll",
+    "explanation": "A focus group allows researchers to understand and address specific concerns in the African American community, which may relate to historical issues like the Tuskegee study, and improve recruitment through culturally sensitive approaches."
+  },
+
+{
+  "question": "A 54-year-old woman comes to the office because of a 10-month history of moderate to severe upper abdominal pain, nausea after eating, and a 'burning' sensation in her throat and chest. This is her third visit for these symptoms during the past 3 months. She says that the recommended diet modification and weight loss regimen have not relieved her symptoms, but she later acknowledges that her diet changes have been minimal and she has not been exercising regularly. She takes over-thecounter omeprazole daily but says she is unsure how many tablets she takes. She says her symptoms have caused her to use all of her sick days at work and she is 'miserable'. She says she is convinced that she has Barrett esophagus. BMI is 29 kg/m2. Vital signs are within normal limits. She appears anxious and preoccupied with her symptoms.\n\nPhysical examination shows no abnormalities. On mental status examination, she is irritable but is otherwise communicative and fully oriented. Cognition is intact. She uses medical terms with ease. An upper gastrointestinal series 1 month ago showed no abnormalities. The patient requests an endoscopy because she read about them while researching her symptoms on the Internet.\nWhich of the following is the most appropriate next step in management?",
+  "options":["(A) Ask the patient if she would like to see a specialist", "(B) Ask the patient to describe her goals for and expectations of treatment", "(C) Ask the patient to further explain why she thinks she has Barrett esophagus", "(D) Discuss why the patient has not made the suggested changes to her diet and exercise", "(E) Encourage the patient to describe how she feels about having an unresolved medical condition"],
+  "answer": "(B) Ask the patient to describe her goals for and expectations of treatment",
+  "explanation": "This approach allows the physician to understand the patient's perspective and expectations, which can guide further management. It also opens a dialogue about her symptoms and treatment options, fostering a therapeutic alliance. The patient's preoccupation with her symptoms suggests that she may benefit from a more collaborative approach to care, rather than simply ordering an endoscopy without addressing her concerns."
+},
+
+  {
+    "question": "A 64-year-old woman comes to the office because of a 5-month history of pain in her right calf on exertion. The pain occurs when she walks and resolves within 5 minutes of rest. Initially, the pain developed after the patient walked three blocks, but now it occurs after she walks only one block. She has no other symptoms. Medical history is remarkable for hypertension, hyperlipidemia, and type 2 diabetes mellitus. Medications are metformin, lisinopril, and atorvastatin. She does not smoke cigarettes, drink alcoholic beverages, or use any other substances. BMI is 31 kg/m2. Temperature is 37.0°C (98.6°F), pulse is 80/min, respirations are 16/min, and blood pressure is 120/80 mm Hg. Oxygen saturation is 95% on room air. Ankle brachial index is 0.6 on the right and 0.8 on the left.\nPhysical examination discloses a left carotid bruit, a right femoral bruit, and decreased pedal pulses bilaterally. Laboratory studies show a hemoglobin A1c of 7.0%. The results of additional laboratory studies, including urinalysis, are within the reference ranges. The most appropriate pharmacotherapy for this patient targets which of the following?",
+    "options": [
+      "(A) Cyclooxygenase",
+      "(B) Factor Xa",
+      "(C) Nitric oxide synthase",
+      "(D) Phosphodiesterase",
+      "(E) Prostacyclin synthase"
+    ],
+    "answer": "(D) Phosphodiesterase",
+    "explanation": "The patient has classic claudication symptoms due to peripheral arterial disease. Cilostazol, a phosphodiesterase inhibitor, is FDA-approved for symptomatic improvement in PAD by improving vasodilation and inhibiting platelet aggregation."
+  },
+  {
+    "question": "A 29-year-old woman comes to the office for counseling. She learned that she is HIV-positive 1 month ago and she believes that she most likely contracted the infection approximately 6 months ago. Laboratory studies ordered in preparation for this visit show a CD4+ T-lymphocyte count of 800/mm3 and undetectable serum HIV RNA levels. She has no symptoms of AIDS. She has never been pregnant, but she is considering pregnancy and wants to know her risk for transmitting HIV to future children. Which of the following is the most accurate statement?",
+    "options": [
+      "(A) As a subgroup, newborns have the fastest rate of increase in HIV infection",
+      "(B) Intrapartum transmission accounts for less than 50% of neonatal HIV infection",
+      "(C) Maternal viral load is the best predictor of perinatal transmission of HIV infection",
+      "(D) The risk for perinatal transmission is higher among women who conceive within 1 year of initial HIV infection",
+      "(E) Route of delivery does not influence the risk for perinatal transmission of HIV infection"
+    ],
+    "answer": "(C) Maternal viral load is the best predictor of perinatal transmission of HIV infection",
+    "explanation": "With antiretroviral therapy maintaining undetectable viral loads, perinatal transmission risk is <1%. Viral load is the strongest predictor, making option C most accurate."
+  },
+  {
+    "question": "A 50-year-old woman who has been your patient for the past 3 years comes to the office because of heartburn and increased belching and bloating after meals for the past month. Antacids provide little relief. The symptoms tend to occur after eating.\nShe is currently asymptomatic. She has never had an operation. The patient identifies as African American. Physical examination shows mild scleral icterus and a 4-cm mass in the epigastric area. Which of the following is the most appropriate initial diagnostic study?",
+    "options": [
+      "(A) CT scan of the abdomen",
+      "(B) Determination of serum amylase and lipase concentrations",
+      "(C) Endoscopic retrograde cholangiopancreatography",
+      "(D) HIDA scan",
+      "(E) Upper gastrointestinal barium study"
+    ],
+    "answer": "(A) CT scan of the abdomen",
+    "explanation": "The epigastric mass and scleral icterus suggest possible pancreatic cancer. CT abdomen is the best initial imaging to evaluate both the mass and potential biliary obstruction."
+  },
+  {
+    "question": "Patient Information\n       Age: 30 years\n       Gender: F, self-identified\n       Race/Ethnicity: unspecified\n       Site of Care: emergency department (ED)\nThe patient is brought by police because of a 2-hour history of worsening abdominal pain, diarrhea, and joint pain. The symptoms began while the patient was incarcerated in the local jail, where she was placed 12 hours ago after she was arrested for shoplifting. Her medical history is unknown. On arrival at the ED, the patient is irritable and sleepy; she yawns frequently. She is diaphoretic. BMI is 18 kg/m2. Temperature is 37.1°C (98.7°F), pulse is 110/min, respirations are 30/min, and blood pressure is 145/92 mm Hg. Oxygen saturation is 94% on room air. Pupils are moderately dilated. Bowel sounds are hyperactive. The remainder of the physical examination discloses no abnormalities. Results of urine toxicology screening in this patient will most likely be positive for which of the following?",
+    "options": [
+      "(A) Cannabinoids",
+      "(B) Cocaine",
+      "(C) Methamphetamine",
+      "(D) Opioids"
+    ],
+    "answer": "(D) Opioids",
+    "explanation": "The presentation (dilated pupils, yawning, diarrhea, abdominal pain) is classic for opioid withdrawal in a chronic user who was abruptly deprived of opioids upon incarceration."
+  },
+
+
+{
+  "question": "Instructions:\nRead the case carefully and answer the sequential questions based on the information provided.\n\nCase:\nA 16-year-old boy comes to the office because of a 2-week history of six to eight daily episodes of loose, watery stools. The episodes are associated with abdominal cramps. His stool has not contained any blood. Medical history is significant for recurrent sinopulmonary infections typically treated with oral antibiotics. His last infection occurred 1 month ago and resolved within 10 days. He currently takes no medications and is not sexually active. He has no history of recent travel. He does not smoke cigarettes, drink alcoholic beverages, or use other substances. BMI is 18 kg/m2. Temperature is 37.7°C (99.9°F), pulse is 100/min, respirations are 18/min, and blood pressure is 110/60 mm Hg. Lungs are clear to auscultation. Cardiac examination discloses no abnormalities. Bowel sounds are normoactive. Abdomen is soft; palpation discloses mild, diffuse tenderness but no masses or hepatosplenomegaly.\nDigital rectal examination discloses brown stool; test of the stool for occult blood is negative. A culture of the stool is obtained. Acid-fast smear of a stool specimen shows numerous 6-μm ovoid oocysts.\nWhich of the following is the most likely causal agent of this patient's condition?",
+  "options": ["(A) Cryptosporidium parvum", "(B) Entamoeba histolytica", "(C) Norovirus", "(D) Salmonella typhi", "(E) Shigella flexneri"], 
+  "answer": "(A) Cryptosporidium parvum",
+  "explanation": "The presence of oocysts in the stool and the patient's history of recurrent sinopulmonary infections suggest a diagnosis of cryptosporidiosis, which is caused by Cryptosporidium parvum. This organism is known to cause watery diarrhea, especially in immunocompromised individuals, and can be transmitted through contaminated water."
+},
+
+ {
+  "question": "Appropriate treatment is prescribed for the patient's gastrointestinal infection. It is noted that this is the patient's sixth illness during the past 18 months. In determining whether this patient has an immune deficiency, which of the following is the most appropriate diagnostic study to obtain at this time?",
+  "options": ["(A) CD4+ T-lymphocyte count", "(B) CD8+ T-lymphocyte count", "(C) Serum complement concentrations", "(D) Serum interferon gamma assay", "(E) Serum quantitative immunoglobulin concentrations"],
+  "answer": "(E) Serum quantitative immunoglobulin concentrations", 
+  "explanation": "Given the patient's recurrent infections, particularly respiratory and gastrointestinal, measuring serum quantitative immunoglobulin concentrations is the most appropriate initial test to evaluate for humoral immune deficiency. This will help determine if there is an issue with antibody production, which is common in patients with recurrent infections."
+ },
+
+  {
+  "question": "A 62-year-old man with a history of hypertension and type 2 diabetes mellitus comes to the emergency department because of progressive shortness of breath and lower extremity swelling for the past 3 days. He also reports orthopnea and waking up at night short of breath. On examination, blood pressure is 160/94 mm Hg, pulse is 96/min, and respiratory rate is 22/min. Jugular venous distention is noted. Bilateral rales are heard on lung auscultation, and there is 2+ pitting edema in the legs. Chest x-ray shows cardiomegaly and pulmonary vascular congestion. Which of the following is the most appropriate next step in management?",
+  "options": [
+    "(A) Administer intravenous furosemide",
+    "(B) Order cardiac stress testing",
+    "(C) Begin beta-blocker therapy",
+    "(D) Refer for coronary angiography",
+    "(E) Start aspirin and statin therapy"
+  ],
+  "answer": "(A) Administer intravenous furosemide",
+  "explanation": "The patient presents with acute decompensated heart failure, as evidenced by pulmonary edema and peripheral edema. The immediate priority is volume reduction with IV diuretics such as furosemide."
+},
+
+ {
+  "question": "A 45-year-old woman comes to the office due to progressive fatigue, joint pain, and dry eyes for the past several months. She also reports occasional difficulty swallowing dry foods. On examination, she has bilateral parotid gland enlargement and dry mucous membranes. Laboratory studies show a positive ANA and anti-Ro/SSA antibodies. Which of the following is the most appropriate next step in management?",
+  "options": [
+    "(A) Prescribe artificial tears and saliva substitutes",
+    "(B) Initiate systemic corticosteroids",
+    "(C) Refer for parotid gland biopsy",
+    "(D) Begin methotrexate therapy",
+    "(E) Test for rheumatoid factor"
+  ],
+  "answer": "(A) Prescribe artificial tears and saliva substitutes",
+  "explanation": "This patient likely has Sjögren syndrome. Initial management focuses on symptom relief using artificial tears for keratoconjunctivitis sicca and saliva substitutes for dry mouth. Immunosuppressive therapy is reserved for severe systemic involvement."
+},
+
+ {
+  "question": "A 30-year-old woman at 10 weeks gestation comes to the clinic for her first prenatal visit. She has a history of hypothyroidism and is currently taking levothyroxine. She feels well and has no complaints. Physical examination is normal. Which of the following is the most appropriate adjustment to her levothyroxine therapy?",
+  "options": [
+    "(A) Decrease the dose by 25%",
+    "(B) Continue current dose and recheck TSH in 6 months",
+    "(C) Increase the dose by 30%",
+    "(D) Discontinue levothyroxine during pregnancy",
+    "(E) Switch to propylthiouracil"
+  ],
+  "answer": "(C) Increase the dose by 30%",
+  "explanation": "Pregnancy increases thyroid hormone requirements due to estrogen-induced increases in thyroxine-binding globulin and transplacental transfer of maternal T4. Women with preexisting hypothyroidism typically need a 30% increase in levothyroxine dosage upon confirmation of pregnancy."
+}  
+
 ]
+
+
+
 
 
 

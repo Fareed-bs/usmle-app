@@ -7,6 +7,7 @@ from step2basic import step2_basic_questions, step2_basic_questions_ans # type: 
 from step2core import get_sampletest_questions, get_sampletest_qa # type: ignore
 from step3basic import step3_basic_questions, step3_basic_full # type: ignore
 from fip import get_fip_questions, get_fip_qa # type: ignore
+from acm import acm_questions, acm_qa # type: ignore
 
 import os
 from flask_sqlalchemy import SQLAlchemy # type: ignore
@@ -160,7 +161,7 @@ def submit_basic_quiz():
 
 
 ## --------------------------
-# Route 3: Core Quiz from kaggle dataset
+# Route 3: Step-1 Core Quiz from kaggle dataset
 # --------------------------
 
 #Endpoint to get all questions from the dataset
@@ -210,20 +211,44 @@ def submit():
     # --- Generate AI Feedback ---
     ai_feedback = ""
     if incorrect_answers_details:
-        # Construct a prompt for the AI based on incorrect answers
-        prompt = "As a USMLE tutor, please analyze the following incorrect answers from a practice quiz and provide feedback on specific topics or concepts the student should focus on for improvement. Be concise and actionable.\n\nIncorrect Answers:\n"
-        for item in incorrect_answers_details:
-            prompt += f"- Question: {item['question']}\n"
-            prompt += f"  User Answer: {item['user_answer']}\n"
-            prompt += f"  Correct Answer: {item['correct_answer']}\n"
-            prompt += f"  Explanation: {item['explanation']}\n\n"
+        prompt = """As a USMLE tutor, analyze these incorrect answers and provide:
+1. **Direct feedback** starting with "Focus on:" 
+2. **Key concept** needing review (bolded)
+3. **1-sentence explanation** of the mistake
+4. **Free resource** with clickable URL
 
-        ai_feedback = get_chat_response(prompt)
+**Requirements:**
+- Speak directly to the student (use "you" instead of "the student")
+- Only recommend freely accessible resources (no paid/subscription content)
+- Format URLs as clickable links: `[Resource Name](https://example.com)`
+- Keep each concept to 3 lines maximum
+
+**Example Output:**
+**Focus on:** Heart failure classification  
+**Why:** You confused NYHA Class II vs III symptoms (dyspnea on mild vs moderate exertion).  
+**Resource:** [AMBOSS Heart Failure Guide](https://www.amboss.com/us/library/free-content#cardiology)
+
+**Incorrect Answers:**"""
+        
+        for item in incorrect_answers_details:
+            prompt += f"""
+            Question: {item['question']}
+            Your Answer: {item['user_answer']}
+            Correct Answer: {item['correct_answer']}
+            Explanation: {item['explanation']}\n"""
+        
+        try:
+            ai_feedback = get_chat_response(prompt)
+            # Post-process to ensure consistent formatting
+            ai_feedback = ai_feedback.replace("The student should", "Focus on")
+        except Exception as e:
+            ai_feedback = f"Feedback generation failed: {str(e)}"
+    
 
     return jsonify({
         "score": score,
         "total": len(full_data),
-        "ai_feedback": ai_feedback, # Include AI feedback in the response
+        "ai_feedback": ai_feedback,
         "results": results
     })
 
@@ -239,6 +264,7 @@ def get_step2_basic_quiz_questions():
 
 
 @app.route('/api/step2basic/submit', methods=['POST']) #Create an endpoint to get user answers and evaluate
+@login_required # Added to ensure only logged-in users can submit
 def submit_step2_basic_quiz():
     data = request.get_json()
     if not data or "answers" not in data:
@@ -268,6 +294,7 @@ def submit_step2_basic_quiz():
         feedback_message = "Congratulations! You have passed the quiz. You are good to go with the next step."
     else:
         feedback_message = "Your score is less. Please try again. You can do it."   
+        
     return jsonify({
         "score": score,
         "total": len(full_data),
@@ -480,7 +507,69 @@ def submit_fip_quiz():
 
 
 # --------------------------
-# Route 8: Chat Support
+# Route 8: Step 3 ACM (Advanced Clinical Medicine)
+# --------------------------
+@app.route('/api/acm', methods=['GET']) #Create an endpoint to get all questions from the acm.json file
+@login_required
+def get_acm_quiz_questions():
+    return jsonify(acm_questions())
+
+@app.route('/api/acm/submit', methods=['POST']) #Create an endpoint to get user answers and evaluate
+@login_required
+def submit_acm_quiz():
+    data = request.json()
+    if not data or "answers" not in data:
+        return jsonify({"message": "Missing answers in request body"}), 400
+    user_answers = data.get("answers", {})
+    full_data = acm_qa()
+    results = []
+    incorrect_answers_details = []
+    score = 0
+    for q in full_data:
+        qid = str(q["id"])
+        user_answer = user_answers.get(qid)
+        correct = user_answer == q["answer"]
+        if correct:
+            score += 1
+        if not correct:
+            incorrect_answers_details.append({
+                "question": q["question"],
+                "user_answer": user_answer,
+                "correct_answer": q["answer"],
+                "explanation": q["explanation"]
+            })
+
+        results.append({
+            "id": qid,
+            "question": q["question"],
+            "user_answer": user_answer,
+            "correct_answer": q["answer"],
+            "is_correct": correct,
+            "explanation": q["explanation"]
+        })
+
+    # --- Generate AI Feedback ---
+    ai_feedback = ""
+    if incorrect_answers_details:
+        prompt = """ As a USMLE tutor, please analyze the following incorrect answers from a practice quiz and provide feedback on specific topics or concepts the student should focus on for improvement. Be concise and actionable.\n\nIncorrect Answers:\n"""
+        for item in incorrect_answers_details:
+            prompt += f"- Question: {item['question']}\n"
+            prompt += f"  User Answer: {item['user_answer']}\n"
+            prompt += f"  Correct Answer: {item['correct_answer']}\n"
+            prompt += f"  Explanation: {item['explanation']}\n\n"
+
+        ai_feedback = get_chat_response(prompt)
+    
+    return jsonify({
+        "score": score,
+        "total": len(full_data),
+        "ai_feedback": ai_feedback, # Include AI feedback in the response
+        "results": results
+    })
+
+
+# --------------------------
+# Route 9: Chat Support
 # --------------------------
 @app.route("/api/chat", methods=["POST"]) # Changed route to /api/chat for consistency
 @login_required

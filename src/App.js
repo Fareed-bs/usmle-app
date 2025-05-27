@@ -10,6 +10,7 @@ import Step2Basic from "./Step2Basic"; // NEW: Step2Basic page
 import Step2Core from "./Step2Core"; // NEW: Step2Core page
 import Step3Basic from "./Step3Basic"; // NEW: Step3Basic page
 import FipQuizPage from "./FipQuizPage"; // NEW: FipQuizPage
+import ACMQuiz from "./ACMQuiz"; // NEW: ACMQuiz page
 import "./App.css";
 
 const App = () => {
@@ -62,14 +63,15 @@ const App = () => {
           <aside className="sidebar">
             <h3 className="sidebar-title">📝 Practice Sections</h3>
             <h4 className="sidebar-subtitle">Step-1</h4>
-            <Link to="/basicquiz" className="sidebar-link">Basic</Link>
-            <Link to="/quiz" className="sidebar-link">Core</Link>
+            <Link to="/basicquiz" className="sidebar-link">1.Basic</Link>
+            <Link to="/quiz" className="sidebar-link">2.Core</Link>
             <h4 className="sidebar-subtitle">Step-2</h4>
-            <Link to="/step2basic" className="sidebar-link">Basic</Link>
-            <Link to="/step2core" className="sidebar-link">Core</Link>
+            <Link to="/step2basic" className="sidebar-link">1.Basic</Link>
+            <Link to="/step2core" className="sidebar-link">2.Core</Link>
             <h4 className="sidebar-subtitle">Step-3</h4>
-            <Link to="/step3basic" className="sidebar-link">Basic</Link>
-            <Link to="/fipquiz" className="sidebar-link">FIP</Link>
+            <Link to="/step3basic" className="sidebar-link">1.Basic</Link>
+            <Link to="/fipquiz" className="sidebar-link">2.FIP</Link>
+            <Link to="/acmquiz" className="sidebar-link">3.ACM</Link>
           </aside>
 
           {/* Page content */}
@@ -84,6 +86,7 @@ const App = () => {
               <Route path="/step2core" element={<ProtectedRoute user={user}><Step2Core /></ProtectedRoute>} />
               <Route path="/step3basic" element={<ProtectedRoute user={user}><Step3Basic /></ProtectedRoute>} />
               <Route path="/fipquiz" element={<ProtectedRoute user={user}><FipQuizPage /></ProtectedRoute>} />
+              <Route path="/acmquiz" element={<ProtectedRoute user={user}><ACMQuiz /></ProtectedRoute>} />
               <Route path="/register" element={<RegisterPage />} />
             </Routes>
           </div>

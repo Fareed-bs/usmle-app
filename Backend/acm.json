@@ -1,0 +1,67 @@
+[
+    {
+        "question": "Patient Information:\n       Age: 25 years\n       Gender: F, self-identified\n       Race/Ethnicity: White, self-identified\n       Site of Care: office\n\nThe patient who works as an attorney at a large law firm presents because of a 1-week history of pain in and around her left upper jaw. She is unable to open her mouth wide, and when she attempts to do so she feels a snapping sensation in the joint in front of her ear at the jawbone. She has not sustained any recent trauma. She was recently diagnosed with major depressive disorder, for which she has been taking paroxetine. She remembers being advised in the past by her dentist to consider braces for her teeth, but she never wore them because they were unaffordable. Medical history is otherwise unremarkable, and she takes no other medications. Temperature is 37.0°C (98.6°F), pulse is 80/min, respirations are  20/min, and blood pressure is 104/60 mm Hg.\n\nPhysical examination discloses point tenderness at the left temporomandibular joint. Examination of the ears shows good light reflex bilaterally on the tympanic membranes. After the patient removes chewing gum from her mouth, examination of the oral cavity shows pink buccal mucosa and no evidence of dental abscess or trauma. The patient should be advised to do which of the following?",
+        "options": [
+            "(A) Avoid chewing gum and eating hard or chewy foods",
+            "(B) Consult an orthodontist",
+            "(C) Cradle the phone receiver between shoulder and jaw",
+            "(D) Open and close her jaw widely three time daily",
+            "(E) Take oxycodone as needed for pain"
+        ],
+        "answer": "(A) Avoid chewing gum and eating hard or chewy foods",
+        "explanation": "The patient has symptoms consistent with temporomandibular joint (TMJ) dysfunction, which can be exacerbated by activities such as chewing gum or eating hard foods. Advising her to avoid these activities can help reduce pain and prevent further aggravation of the condition."
+    },
+
+  {
+    "question": "A 35-year-old woman comes to the office because she noticed a lump in her neck 2 months ago. She has not had pain, difficulty swallowing, or change in her voice. She is a native of Germany and immigrated to the United States 10 years ago. Medical history is significant for Hodgkin lymphoma at age 12 years treated with mantle radiation. Hypothyroidism was diagnosed at age 25 years. Her only routine medication is levothyroxine. The patient has smoked one pack of cigarettes daily for the past 10 years. She appears well. BMI is 26 kg/m2. Temperature is 36.6°C (97.8°F), pulse is 82/min, respirations are 18/min, and blood pressure is 108/66 mm Hg. Physical examination discloses a 2.5-cm (1-in) nodule in the right lobe of the thyroid gland. There is also a 1-cm (0.4-in) nodule in the left thyroid lobe. Results of serum thyroid function tests show a thyroid-stimulating hormone concentration of 0.6 μU/mL and a free thyroxine concentration of 1.7 ng/dL (N=0.7–1.8). Which of the following factors in this patient is most indicative of a poor prognosis?",
+    "options": [
+      "(A) Cigarette smoking",
+      "(B) Hyperthyroidism",
+      "(C) Iodine deficiency",
+      "(D) Presence of multiple nodules",
+      "(E) Radiation exposure"
+    ],
+    "answer": "(E) Radiation exposure",
+    "explanation": "Prior mantle radiation for Hodgkin lymphoma significantly increases risk for aggressive thyroid cancer. Radiation exposure is the strongest risk factor for poor prognosis among the options given."
+  },
+
+  {
+    "question": "A 24-year-old woman with asthma comes to the office because of a 2-week history of mild shortness of breath and a nonproductive cough that occurs occasionally during the day and frequently at night. During this time, she has required use of her albuterol inhaler twice daily. Medical history is otherwise unremarkable and her only other medication is an oral contraceptive. The patient drinks three to four alcoholic beverages weekly and does not smoke cigarettes. She appears alert and comfortable. BMI is 25 kg/m2. Temperature is 37.2°C (99.0°F), pulse is 88/min, respirations are 16/min, and blood pressure is 114/72 mm Hg. Oxygen saturation is 97% on room air. FEV1 is 70% of predicted. Physical examination discloses no abnormalities. Which of the following is the most appropriate next step in pharmacotherapy?",
+    "options": [
+      "(A) Add inhaled fluticasone",
+      "(B) Add inhaled tiotropium",
+      "(C) Add oral azithromycin",
+      "(D) Add oral montelukast",
+      "(E) Increase the dosage of the inhaled albuterol to four times daily",
+      "(F) Prescribe a 5-day course of oral prednisone"
+    ],
+    "answer": "(A) Add inhaled fluticasone",
+    "explanation": "The patient has persistent asthma symptoms requiring daily controller therapy. Inhaled corticosteroids (fluticasone) are first-line treatment for persistent asthma according to current guidelines."
+  },
+
+  {
+    "question": "A 27-year-old woman, gravida 1, para 1, has a meeting with her physician and a lactation consultant in the hospital 1 day after uncomplicated spontaneous vaginal delivery of a 3572-g (7-lb 14-oz) female newborn at 38 weeks' gestation. Pregnancy was uncomplicated. The patient has good social support. Counseling is provided. The patient has begun to produce colostrum, and the newborn latches well. The patient says she is interested in breast-feeding and is convinced that breast milk will be best for her baby, but she is worried about how long she will be able to breast-feed because she plans to return to work as soon as possible. Her job involves packing boxes in an assembly line, and she often must work for multiple hours without a break. Her employer expects her back to work in 4 weeks. Which of the following is the most appropriate recommendation?",
+    "options": [
+      "(A) Advise continuing breast-feeding now and discussing with her employer a schedule that will allow her to pump during work hours",
+      "(B) Encourage the patient to focus on breast-feeding and find a new job once her infant is ready to discontinue breast-feeding",
+      "(C) Recommend that the patient not breast-feed her infant",
+      "(D) Remind the patient that she needs to concern herself with what is best for her baby's care",
+      "(E) Suggest using both breast-feeding and bottle-feeding so the transition to work is easier for the baby"
+    ],
+    "answer": "(A) Advise continuing breast-feeding now and discussing with her employer a schedule that will allow her to pump during work hours",
+    "explanation": "This option supports breastfeeding while addressing workplace concerns. Federal law requires employers to provide reasonable break time and private space for nursing mothers to pump breast milk."
+  },
+
+  {
+    "question": "A 14-year-old boy is brought to the emergency department by a school official 1 hour after he was sent to the school nurse for behaving strangely in class and then becoming sleepy and difficult to arouse. School records indicate that the patient has no health problems and takes no medications. On arrival at the emergency department, the patient is lethargic but has no signs of trauma. Temperature is 37.3°C (99.1°F), pulse is 62/min, respirations are 10/min, and blood pressure is 106/62 mm Hg. Pulse oximetry on room air shows an oxygen saturation of 96%. Pupils measure 2 mm in diameter and are minimally reactive to light. Cardiopulmonary examination discloses clear lungs and normal cardiac rhythm. Bowel sounds are decreased. The patient moans and moves all extremities to painful stimuli. The remainder of the physical examination discloses no abnormalities. The most likely cause of this patient's condition is abuse of which of the following medications?",
+    "options": [
+      "(A) Dextromethorphan",
+      "(B) Diazepam",
+      "(C) Diphenhydramine",
+      "(D) Methylphenidate",
+      "(E) Phenylephrine"
+    ],
+    "answer": "(A) Dextromethorphan",
+    "explanation": "The clinical presentation (initial strange behavior followed by sedation, miosis, and decreased bowel sounds) is classic for dextromethorphan abuse, which is commonly available in OTC cough medicines."
+  }
+]

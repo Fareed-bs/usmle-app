@@ -1,9 +1,7 @@
-// Filename: FipQuizPage.js
-// Description: This component handles the FIP quiz page, including fetching questions, handling user input, and displaying results.
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const Step2Core = () => {
+const ACMQuiz = () => {
   const [questions, setQuestions] = useState([]);
   const [answers, setAnswers] = useState({});
   const [submitted, setSubmitted] = useState(false);
@@ -22,7 +20,7 @@ const Step2Core = () => {
   const fetchQuestions = () => {
     setLoading(true);
     setError(null);
-    axios.get("http://localhost:5000/api/step2core", {
+    axios.get("http://localhost:5000/api/acm", {
       withCredentials: true
     })
       .then(res => setQuestions(res.data))
@@ -75,7 +73,7 @@ const Step2Core = () => {
     try {
       setIsSubmitting(true);
       const response = await axios.post(
-        "http://localhost:5000/api/step2core/submit",
+        "http://localhost:5000/api/acm/submit",
         { answers },
         { withCredentials: true }
       );
@@ -149,8 +147,8 @@ const Step2Core = () => {
         `}
       </style>
       
-      <h1>Step 2 Core questions</h1>
-      <p>This section is after basic quiz.</p>
+      <h1>Step 3 ACM (Advanced Clinical Medicine)</h1>
+      <p>This section is after FIP (Foundations of Indipendent Practice).</p>
 
       {error && !loading && <p style={{ color: "red", marginBottom: "1rem" }}>{error}</p>}
 
@@ -303,4 +301,4 @@ const Step2Core = () => {
   );
 };
 
-export default Step2Core;
+export default ACMQuiz;
