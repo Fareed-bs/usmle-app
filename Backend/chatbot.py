@@ -47,3 +47,6 @@ Return:
     except Exception as e:
         print("Gemini error:", e)
         return "Sorry, there was an issue with the AI response."
+
+
+

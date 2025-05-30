@@ -8,6 +8,7 @@ from step2core import get_sampletest_questions, get_sampletest_qa # type: ignore
 from step3basic import step3_basic_questions, step3_basic_full # type: ignore
 from fip import get_fip_questions, get_fip_qa # type: ignore
 from acm import acm_questions, acm_qa # type: ignore
+from flask_dance.contrib.google import make_google_blueprint, google 
 
 import os
 from flask_sqlalchemy import SQLAlchemy # type: ignore
@@ -26,56 +27,9 @@ CORS(app, supports_credentials=True) # Allow credentials for session cookies
 
 db = SQLAlchemy(app)
 login_manager = LoginManager(app)
+login_manager.login_view = 'google_login'
 login_manager.session_protection = "strong" # Protects against session tampering
 
-# --------------------------
-# Route 1: Home Summary
-# --------------------------
-@app.route('/api/home', methods=['GET'])
-def home_summary():
-    summary = {
-        "title": "USMLE Practice App",
-        "description": [
-            "This application helps students prepare for the USMLE exam through interactive quizzes and chat support.",
-            "This application has practice sections for the three steps of the USMLE exam. Each step has two sections:",
-            "  - First section has basic science questions and answers.",
-            "  - Second section has core questions that are fetched from Kaggle dataset.",
-            "",  # Represents a blank line
-            "You can go to 'Practice sections' to practice the questions and answers.",
-            "",  # Represents a blank line
-            "The app also includes a chat that helps clarify USMLE-related doubts and topics."
-        ],
-
-        "features": [
-            "🎯 Quiz section with MCQs that has basic questions focuses on basic science.",
-            "🧠 Core Quiz section with advanced questions from a Kaggle dataset",
-            "💬 USMLE chat support for study guidance",
-            "📊 Score evaluation with explanations"
-        ],
-
-        "USMLE Pattern": {
-            "Step 1": {
-                "description": "Basic medical sciences and principles.",
-                "questions": 280,
-                "duration": "8 hours",
-                "format": "Multiple-choice questions (MCQs)"
-            },
-            "Step 2 CK": {
-                "description": "Clinical knowledge and patient care.",
-                "questions": 318,
-                "duration": "9 hours",
-                "format": "Multiple-choice questions (MCQs)"
-            },
-            "Step 3": {
-                "description": "Patient management in ambulatory settings.",
-                "questions": 233,
-                "duration": "7 hours",
-                "format": "Multiple-choice questions (MCQs)"
-            }
-        }
-        
-    }
-    return jsonify(summary)
 
 # --- User Model and Auth Setup ---
 class User(UserMixin, db.Model):
@@ -108,8 +62,9 @@ def unauthorized():
 #   db.create_all()
 # print("Database tables created.")
 
+
 # --------------------------
-# Route 2: BasicQuiz from basic.json
+# Route 1: BasicQuiz from basic.json
 # --------------------------
 @app.route('/api/basic', methods=['GET']) #Create an endpoint to get all questions from the basic.json file
 @login_required
@@ -161,7 +116,7 @@ def submit_basic_quiz():
 
 
 ## --------------------------
-# Route 3: Step-1 Core Quiz from kaggle dataset
+# Route 2: Step-1 Core Quiz from kaggle dataset
 # --------------------------
 
 #Endpoint to get all questions from the dataset
@@ -254,7 +209,7 @@ def submit():
 
 
 # --------------------------
-# Route 4: Step 2 Basic Quiz
+# Route 3: Step 2 Basic Quiz
 # --------------------------
 @app.route('/api/step2basic', methods=['GET']) #Create an endpoint to get all questions from the step2basic.json file
 @login_required
@@ -304,7 +259,7 @@ def submit_step2_basic_quiz():
 
 
 # --------------------------
-# Route 5: Step 2 Core
+# Route 4: Step 2 Core
 # --------------------------
 @app.route('/api/step2core',methods=['GET'])
 @login_required
@@ -396,7 +351,7 @@ def step2_core_submit():
     })
 
 # --------------------------
-# Route 6: Step 3 Basic
+# Route 5: Step 3 Basic
 # --------------------------
 @app.route('/api/step3basic', methods=['GET']) #Create an endpoint to get all questions from the step3basic.json file
 @login_required
@@ -442,7 +397,7 @@ def submit_step3_basic_quiz():
     })
 
 # --------------------------
-# Route 7: Step 3 FIP (Foundations of Independent Practice.)
+# Route 6: Step 3 FIP (Foundations of Independent Practice.)
 # --------------------------
 @app.route('/api/fip', methods=['GET']) #Create an endpoint to get all questions from the fip.json file
 @login_required
@@ -507,7 +462,7 @@ def submit_fip_quiz():
 
 
 # --------------------------
-# Route 8: Step 3 ACM (Advanced Clinical Medicine)
+# Route 7: Step 3 ACM (Advanced Clinical Medicine)
 # --------------------------
 @app.route('/api/acm', methods=['GET']) #Create an endpoint to get all questions from the acm.json file
 @login_required
@@ -569,7 +524,7 @@ def submit_acm_quiz():
 
 
 # --------------------------
-# Route 9: Chat Support
+# Route 8: Chat Support
 # --------------------------
 @app.route("/api/chat", methods=["POST"]) # Changed route to /api/chat for consistency
 @login_required
@@ -582,7 +537,7 @@ def chat():
     return jsonify({"response": response}) #Return the response as JSON
 
 # --------------------------
-# Route 6: Authentication
+# Route 9: Authentication
 # --------------------------
 @app.route('/api/auth/register', methods=['POST'])
 def register():

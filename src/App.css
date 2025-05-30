@@ -63,7 +63,7 @@
 
 .sidebar-subtitle {
   color: white;
-  font-size: 0.9rem; /* Smaller than links */
+  font-size: 1.2rem; /* Smaller than links */
   font-weight: normal;
   margin-top: 0.2rem; /* Space above the subtitle */
   margin-bottom: 0.75rem; /* Space below the subtitle, before links */
