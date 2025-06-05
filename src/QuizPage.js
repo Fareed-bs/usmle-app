@@ -22,9 +22,7 @@ const QuizPage = () => {
   const fetchQuestions = () => {
     setLoading(true);
     setError(null);
-    axios.get("http://localhost:5000/api/questions", {
-      withCredentials: true
-    })
+    axios.get("http://localhost:5000/api/questions", { withCredentials: true })
       .then(res => setQuestions(res.data))
       .catch(err => {
         console.error("Error loading questions", err);
@@ -77,7 +75,7 @@ const QuizPage = () => {
       const response = await axios.post(
         "http://localhost:5000/api/submit",
         { answers },
-        { withCredentials: true }
+        { withCredentials: true}
       );
       setError(null);
       setResults(response.data);

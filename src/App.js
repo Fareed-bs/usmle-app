@@ -1,112 +1,162 @@
-import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from "react-router-dom";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route, Link, Navigate } from "react-router-dom";
 import HomePage from "./HomePage";
 import QuizPage from "./QuizPage";
 import ChatPage from "./ChatPage";
 import BasicQuiz from "./BasicQuiz";
-import LoginPage from "./LoginPage"; // NEW: Login page
-import RegisterPage from "./RegisterPage"; // NEW: Register page
-import Step2Basic from "./Step2Basic"; // NEW: Step2Basic page
-import Step2Core from "./Step2Core"; // NEW: Step2Core page
-import Step3Basic from "./Step3Basic"; // NEW: Step3Basic page
-import FipQuizPage from "./FipQuizPage"; // NEW: FipQuizPage
-import ACMQuiz from "./ACMQuiz"; // NEW: ACMQuiz page
-
+import Step2Basic from "./Step2Basic";
+import Step2Core from "./Step2Core";
+import Step3Basic from "./Step3Basic";
+import FipQuizPage from "./FipQuizPage";
+import ACMQuiz from "./ACMQuiz";
+import Login from "./Login";
+import Register from "./Register";
+import { AuthProvider, useAuth } from "./AuthContext";
+import AnalyzeWithAI from "./AnalyzeWithAI";
+import IncorrectAnswersViewer from './IncorrectAnswersViewer';
 import "./App.css";
 
-const App = () => {
-  const [user, setUser] = useState(null);
+// Protected Route component
+const ProtectedRoute = ({ children }) => {
+  const { user, loading } = useAuth();
 
-  // Check if user is logged in
-  useEffect(() => {
-  fetch("/api/auth/status", {
-    credentials: "include"
-  })
-    .then(res => res.json())
-    .then(data => setUser(data.logged_in ? data.user : null))
-    .catch(() => setUser(null));
-}, []);
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
-  const handleLogout = () => {
-    fetch("/api/auth/logout", {
-      method: "POST",
-      credentials: "include"
-    }).then(() => setUser(null));
-  };
+  return user ? children : <Navigate to="/login" replace />;
+};
+
+const AppContent = () => {
+  const { user, logout } = useAuth();
 
   return (
-    <Router>
-      <div className="app-layout">
-        {/* Top navbar - Using flexbox to separate left and right */}
-        <nav className="navbar">
-          <div className="navbar-left">
-            <Link to="/">Home</Link>
-            <Link to="/chat">Chat Support</Link>
-          </div>
-          <div className="navbar-right">
-            {user ? (
-              <>
-                <span>👤 {user.username}</span>
-                <button onClick={handleLogout}>Logout</button>
-              </>
-            ) : (
-              <>
-                <Link to="/login">Login</Link>
-                <Link to="/register">Register</Link>
-              </>
-            )}
-          </div>
-        </nav>
+    <div className="app-layout">
+      {/* Top navbar */}
+      <nav className="navbar">
+        <div className="navbar-left">
+          <Link to="/">Home</Link>
+          <Link to="/chat">Chat Support</Link>
+          <Link to="/analyze-with-ai">Analyze With AI</Link>
+          <Link to="/incorrect-answers">Incorrect Answers</Link>
+        </div>
+        <div className="navbar-right">
+          {user ? (
+            <>
+              <span className="welcome-message">Welcome, {user.username}</span>
+              <button onClick={logout} className="auth-button">Logout</button>
+            </>
+          ) : (
+            <>
+              <Link to="/login" className="auth-button">Login</Link>
+              <Link to="/register" className="auth-button">Register</Link>
+            </>
+          )}
+        </div>
+      </nav>
 
-        {/* Main section */}
-        <div className="main-layout">
-          {/* Sidebar */}
-          <aside className="sidebar">
-            <h3 className="sidebar-title">📝 Practice Sections</h3>
-            <h4 className="sidebar-subtitle"><strong>Step-1</strong></h4>
-            <Link to="/basicquiz" className="sidebar-link">1.Basic</Link>
-            <Link to="/quiz" className="sidebar-link">2.Core</Link>
-            <h4 className="sidebar-subtitle"><strong>Step-2</strong></h4>
-            <Link to="/step2basic" className="sidebar-link">1.Basic</Link>
-            <Link to="/step2core" className="sidebar-link">2.Core</Link>
-            <h4 className="sidebar-subtitle"><strong>Step-3</strong></h4>
-            <Link to="/step3basic" className="sidebar-link">1.Basic</Link>
-            <Link to="/fipquiz" className="sidebar-link">2.FIP</Link>
-            <Link to="/acmquiz" className="sidebar-link">3.ACM</Link>
-          </aside>
+      {/* Main section */}
+      <div className="main-layout">
+        {/* Sidebar */}
+        <aside className="sidebar">
+          <h3 className="sidebar-title">📝 Practice Sections</h3>
+          <h4 className="sidebar-subtitle"><strong>Step-1</strong></h4>
+          <Link to="/basicquiz" className="sidebar-link">1.Basic</Link>
+          <Link to="/quiz" className="sidebar-link">2.Core</Link>
+          <h4 className="sidebar-subtitle"><strong>Step-2</strong></h4>
+          <Link to="/step2basic" className="sidebar-link">1.Basic</Link>
+          <Link to="/step2core" className="sidebar-link">2.Core</Link>
+          <h4 className="sidebar-subtitle"><strong>Step-3</strong></h4>
+          <Link to="/step3basic" className="sidebar-link">1.Basic</Link>
+          <Link to="/fipquiz" className="sidebar-link">2.FIP</Link>
+          <Link to="/acmquiz" className="sidebar-link">3.ACM</Link>
+        </aside>
 
-          {/* Page content */}
-          <div className="container">
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/quiz" element={<ProtectedRoute user={user}><QuizPage /></ProtectedRoute>} />
-              <Route path="/chat" element={<ProtectedRoute user={user}><ChatPage /></ProtectedRoute>} />
-              <Route path="/basicquiz" element={<ProtectedRoute user={user}><BasicQuiz /></ProtectedRoute>} />
-              <Route path="/login" element={<LoginPage setUser={setUser} />} />
-              <Route path="/step2basic" element={<ProtectedRoute user={user}><Step2Basic /></ProtectedRoute>} /> 
-              <Route path="/step2core" element={<ProtectedRoute user={user}><Step2Core /></ProtectedRoute>} />
-              <Route path="/step3basic" element={<ProtectedRoute user={user}><Step3Basic /></ProtectedRoute>} />
-              <Route path="/fipquiz" element={<ProtectedRoute user={user}><FipQuizPage /></ProtectedRoute>} />
-              <Route path="/acmquiz" element={<ProtectedRoute user={user}><ACMQuiz /></ProtectedRoute>} />             
-              <Route path="/register" element={<RegisterPage />} />
-            </Routes>
-          </div>
+        {/* Page content */}
+        <div className="container">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            
+            {/* Protected routes */}
+            <Route path="/quiz" element={
+              <ProtectedRoute>
+                <QuizPage />
+              </ProtectedRoute>
+            } />
+            <Route path="/chat" element={
+              <ProtectedRoute>
+                <ChatPage />
+              </ProtectedRoute>
+            } />
+            <Route path="/basicquiz" element={
+              <ProtectedRoute>
+                <BasicQuiz />
+              </ProtectedRoute>
+            } />
+            <Route path="/step2basic" element={
+              <ProtectedRoute>
+                <Step2Basic />
+              </ProtectedRoute>
+            } />
+            <Route path="/step2core" element={
+              <ProtectedRoute>
+                <Step2Core />
+              </ProtectedRoute>
+            } />
+            <Route path="/step3basic" element={
+              <ProtectedRoute>
+                <Step3Basic />
+              </ProtectedRoute>
+            } />
+            <Route path="/fipquiz" element={
+              <ProtectedRoute>
+                <FipQuizPage />
+              </ProtectedRoute>
+            } />
+            <Route path="/acmquiz" element={
+              <ProtectedRoute>
+                <ACMQuiz />
+              </ProtectedRoute>
+            } />
+              <Route path="/analyze-with-ai" element={
+              <ProtectedRoute>
+                <AnalyzeWithAI /> 
+              </ProtectedRoute>
+            } />
+              <Route path="/incorrect-answers" element={
+              <ProtectedRoute>
+                <IncorrectAnswersViewer /> 
+              </ProtectedRoute> 
+            } />   
+          </Routes>
         </div>
       </div>
-    </Router>
+    </div>
   );
 };
 
+function QuizResultsPage() {
+  return (
+    <div>
+      <h2>Review Your Mistakes</h2>
+      <IncorrectAnswersViewer quizType="step1" />
+      {/* or */}
+      <IncorrectAnswersViewer quizType="step2" />
+    </div>
+  );
+}
 
-const ProtectedRoute = ({ user, children }) => {
-  const navigate = useNavigate();
-  useEffect(() => {
-    if (!user) {
-      navigate("/login");
-    }
-  }, [user, navigate]);
 
-  return user ? children : null;
+const App = () => {
+  return (
+    <Router>
+      <AuthProvider>
+        <AppContent />
+      </AuthProvider>
+    </Router>
+  );
 };
 
 export default App;

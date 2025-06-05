@@ -40,7 +40,7 @@ const BasicQuiz = () => {
     const response = await axios.post(
       "http://localhost:5000/api/basic/submit",
       { answers },
-      { withCredentials: true } // Configuration as third argument
+      { withCredentials: true}
     );
     setResults(response.data);
     setSubmitted(true);
@@ -133,93 +133,3 @@ const BasicQuiz = () => {
 };
 
 export default BasicQuiz;
-
-
-/*
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-
-const BasicQuiz = () => {
-  const [questions, setQuestions] = useState([]);
-  const [answers, setAnswers] = useState({});
-  const [submitted, setSubmitted] = useState(false);
-  const [results, setResults] = useState(null);
-
-  // 🔁 Fetch from /api/basic (NOT /api/questions)
-  useEffect(() => {
-    axios.get("http://localhost:5000/api/basic")
-      .then(res => setQuestions(res.data))
-      .catch(err => console.error("Error loading basic questions", err));
-  }, []);
-
-  const handleOptionChange = (qid, option) => {
-    setAnswers(prev => ({ ...prev, [qid]: option }));
-  };
-
-  // 🚀 Submit to /api/basic/submit (NOT /api/submit)
-  const handleSubmit = async () => {
-    try {
-      const response = await axios.post("http://localhost:5000/api/basic/submit", {
-        answers
-      });
-      setResults(response.data);
-      setSubmitted(true);
-    } catch (err) {
-      console.error("Submission error", err);
-    }
-  };
-
-  return (
-    <div style={{ padding: "2rem", fontFamily: "Arial" }}>
-      <h1>USMLE Basic Quiz</h1>
-
-      {!submitted && questions.length > 0 && (
-        <form onSubmit={(e) => { e.preventDefault(); handleSubmit(); }}>
-          {questions.map((q) => (
-            <div key={q.id} style={{ marginBottom: "1.5rem" }}>
-              <h3>Q{q.id}. {q.question}</h3>
-              {q.options.map((option, idx) => (
-                <label key={idx} style={{ display: "block", marginLeft: "1rem" }}>
-                  <input
-                    type="radio"
-                    name={`question-${q.id}`}
-                    value={option}
-                    checked={answers[q.id] === option}
-                    onChange={() => handleOptionChange(q.id, option)}
-                  />
-                  {option}
-                </label>
-              ))}
-            </div>
-          ))}
-          <button type="submit" style={{ padding: "0.5rem 1rem" }}>Submit</button>
-        </form>
-      )}
-
-      {submitted && results && (
-        <div>
-          <h2>Score: {results.score} / {results.total}</h2>
-          {results.feedback_message && (
-            <p style={{ marginTop: "1rem", fontSize: "1.1em", fontWeight: "bold" }}>
-              {results.feedback_message}
-            </p>
-          )}
-          {results.results.map((res, idx) => (
-            <div key={idx} style={{ marginBottom: "1.5rem", padding: "1rem", border: "1px solid #ccc", borderRadius: "6px" }}>
-              <h3>Q{res.id}. {res.question}</h3>
-              <p><strong>Your Answer:</strong> {res.user_answer || "Not Answered"}</p>
-              <p><strong>Correct Answer:</strong> {res.correct_answer}</p>
-              <p style={{ color: res.is_correct ? "green" : "red" }}>
-                {res.is_correct ? "Correct ✅" : "Incorrect ❌"}
-              </p>
-              <p><strong>Explanation:</strong> {res.explanation}</p>
-            </div>
-          ))}
-        </div>
-      )}
-    </div>
-  );
-};
-
-export default BasicQuiz;
-*/

@@ -2,19 +2,19 @@ import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from './AuthContext';
 
-const Register = () => {
+const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  const { register } = useAuth();
+  const { login } = useAuth();
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
-    const result = await register(username, password);
+    const result = await login(username, password);
     if (result.success) {
-      navigate('/login');
+      navigate('/');
     } else {
       setError(result.message);
     }
@@ -22,7 +22,7 @@ const Register = () => {
 
   return (
     <div className="auth-container">
-      <h2>Register</h2>
+      <h2>Login</h2>
       {error && <div className="auth-error">{error}</div>}
       <form onSubmit={handleSubmit}>
         <div className="form-group">
@@ -43,13 +43,13 @@ const Register = () => {
             required
           />
         </div>
-        <button type="submit" className="auth-button">Register</button>
+        <button type="submit" className="auth-button">Login</button>
       </form>
       <p>
-        Already have an account? <Link to="/login">Login here</Link>
+        Don't have an account? <Link to="/register">Register here</Link>
       </p>
     </div>
   );
 };
 
-export default Register;
+export default Login;
