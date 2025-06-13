@@ -14,6 +14,7 @@ import Register from "./Register";
 import { AuthProvider, useAuth } from "./AuthContext";
 import AnalyzeWithAI from "./AnalyzeWithAI";
 import IncorrectAnswersViewer from './IncorrectAnswersViewer';
+import Dashboard from "./Dashboard";
 import "./App.css";
 
 // Protected Route component
@@ -39,6 +40,7 @@ const AppContent = () => {
           <Link to="/chat">Chat Support</Link>
           <Link to="/analyze-with-ai">Analyze With AI</Link>
           <Link to="/incorrect-answers">Incorrect Answers</Link>
+          <Link to="/dashboard">Dashboard</Link>
         </div>
         <div className="navbar-right">
           {user ? (
@@ -129,7 +131,12 @@ const AppContent = () => {
               <ProtectedRoute>
                 <IncorrectAnswersViewer /> 
               </ProtectedRoute> 
-            } />   
+            } />
+            <Route path="/dashboard" element={
+              <ProtectedRoute>
+                <Dashboard /> 
+              </ProtectedRoute>
+            } />      
           </Routes>
         </div>
       </div>

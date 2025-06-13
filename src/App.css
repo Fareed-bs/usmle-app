@@ -25,6 +25,12 @@
   display: flex;
   align-items: center;
   gap: 15px; /* Adjust gap between items in these groups as needed */
+  text-decoration:solid;
+  cursor: pointer;
+}
+
+.navbar-left a:hover {
+  text-decoration: underline;
 }
 
 /* New: Styles for user info (span) and logout button if they exist in navbar-right */
@@ -297,4 +303,42 @@
 .explanation-section p {
   color: #34495e;
   line-height: 1.6;
+}
+
+.dashboard-container {
+  --container-max-width: min(600px, 90vw); /* Responsive clamp */
+  --surface-color: #fff;
+  --shadow-color: rgba(0, 0, 0, 0.07);
+  --border-radius: 0.625rem; /* 10px */
+  --transition-time: 0.2s;
+
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin: 2rem auto;
+  padding: 2rem;
+  background: var(--surface-color);
+  border-radius: var(--border-radius);
+  box-shadow: 
+    0 0.125rem 0.5rem var(--shadow-color);
+  transition: 
+    box-shadow var(--transition-time) ease-out,
+    transform var(--transition-time) ease-out;
+}
+
+.dashboard-container:hover {
+  box-shadow: 
+    0 0.25rem 1rem rgba(0, 0, 0, 0.1);
+  transform: translateY(-0.125rem);
+}
+
+.dashboard-section {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.dashboard-section:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
 }

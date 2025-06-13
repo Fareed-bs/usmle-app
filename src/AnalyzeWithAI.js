@@ -98,9 +98,18 @@ const AnalyzeWithAI = () => {
               checked={promptType === 'practice'}
               onChange={() => setPromptType('practice')}
             />
-            Get Practice Material
+            Get Practice Material 
           </label>
           
+          <label>
+            <input
+              type="radio"
+              checked={promptType === 'questions'}
+              onChange={() => setPromptType('questions')}
+            />
+            Get Practice Questions
+          </label>
+
           <label>
             <input
               type="radio"

@@ -15,7 +15,8 @@ const IncorrectAnswersViewer = () => {
   const quizTypes = [
     { value: 'step1', label: 'Step 1 Core' },
     { value: 'step2', label: 'Step 2 Core' },
-    { value: 'fip', label: 'Step 3 FIP' }
+    { value: 'fip', label: 'Step 3 FIP' },
+    { value: 'acm', label: 'Step 3 ACM'}
   ];
 
   useEffect(() => {
@@ -41,6 +42,9 @@ const IncorrectAnswersViewer = () => {
             break;
           case 'fip':
             endpoint = '/api/incorrect_answers_fip';
+            break;
+          case 'acm':
+            endpoint = '/api/incorrect_answers_acm';
             break;
           default:
             endpoint = '/api/incorrect_answers_step1';

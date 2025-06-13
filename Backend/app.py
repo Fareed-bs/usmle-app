@@ -1,13 +1,14 @@
+from functools import wraps
 from flask import Flask, jsonify, request, session
 from flask_cors import CORS
 from chatbot import get_chat_response
-from basic_questions import get_basic_questions, get_basic_questions_public # type: ignore
-from core import get_dataset_questions, get_dataset_qa # type: ignore
-from step2basic import step2_basic_questions, step2_basic_questions_ans # type: ignore
-from step2core import get_sampletest_questions, get_sampletest_qa # type: ignore
-from step3basic import step3_basic_questions, step3_basic_full # type: ignore
-from fip import get_fip_questions, get_fip_qa # type: ignore
-from acm import acm_questions, acm_qa # type: ignore
+from basic_questions import get_basic_questions, get_basic_questions_public  # type: ignore
+from core import get_dataset_questions, get_dataset_qa  # type: ignore
+from step2basic import step2_basic_questions, step2_basic_questions_ans  # type: ignore
+from step2core import get_sampletest_questions, get_sampletest_qa  # type: ignore
+from step3basic import step3_basic_questions, step3_basic_full  # type: ignore
+from fip import get_fip_questions, get_fip_qa  # type: ignore
+from acm import acm_questions, acm_qa  # type: ignore
 import datetime
 import os
 from pymongo import MongoClient
@@ -18,10 +19,12 @@ app = Flask(__name__)
 
 # --- Configuration ---
 # IMPORTANT: Use environment variables for sensitive data in production!
-app.config['SECRET_KEY'] = os.environ.get('FLASK_SECRET_KEY', 'your_very_secret_key_for_dev')
-app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(days=7)  # Session will expire after 7 days
+app.config['SECRET_KEY'] = os.environ.get(
+    'FLASK_SECRET_KEY', 'your_very_secret_key_for_dev')
+app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(
+    days=7)  # Session will expire after 7 days
 
-CORS(app, supports_credentials=True) # Allow credentials for session cookies
+CORS(app, supports_credentials=True)  # Allow credentials for session cookies
 
 # MongoDB setup
 mongo_uri = os.environ.get('MONGO_URI', 'mongodb://localhost:27017/')
@@ -46,14 +49,14 @@ def register():
     data = request.get_json()
     if not data or 'username' not in data or 'password' not in data:
         return jsonify({"message": "Username and password required"}), 400
-    
+
     username = data['username']
     password = data['password']
-    
+
     # Check if user already exists
     if users_collection.find_one({'username': username}):
         return jsonify({"message": "Username already exists"}), 409
-    
+
     # Create new user
     user_id = str(uuid.uuid4())
     hashed_password = generate_password_hash(password)
@@ -63,28 +66,30 @@ def register():
         'password': hashed_password,
         'quizzes': []  # You can store quiz results here later
     })
-    
+
     return jsonify({"message": "User created successfully"}), 201
 
-#Login
+# Login
+
+
 @app.route('/api/login', methods=['POST'])
 def login():
     data = request.get_json()
     if not data or 'username' not in data or 'password' not in data:
         return jsonify({"message": "Username and password required"}), 400
-    
+
     username = data['username']
     password = data['password']
-    
+
     user = users_collection.find_one({'username': username})
     if not user or not check_password_hash(user['password'], password):
         return jsonify({"message": "Invalid username or password"}), 401
-    
+
     # Create session
     session.permanent = True
     session['user_id'] = user['_id']
     session['username'] = user['username']
-    
+
     return jsonify({
         "message": "Login successful",
         "user": {
@@ -93,11 +98,14 @@ def login():
         }
     })
 
-#Logout
+# Logout
+
+
 @app.route('/api/logout', methods=['POST'])
 def logout():
     session.clear()
     return jsonify({"message": "Logout successful"})
+
 
 @app.route('/api/check-auth', methods=['GET'])
 def check_auth():
@@ -113,7 +121,6 @@ def check_auth():
             })
     return jsonify({"isAuthenticated": False})
 
-from functools import wraps
 
 def login_required(f):
     @wraps(f)
@@ -124,19 +131,23 @@ def login_required(f):
     return decorated_function
 
 # --------------------------
-# Route 1: BasicQuiz from basic.json
+# Step 1 BasicQuiz from basic.json
 # --------------------------
-@app.route('/api/basic', methods=['GET']) #Create an endpoint to get all questions from the basic.json file
+
+
+# Create an endpoint to get all questions from the basic.json file
+@app.route('/api/basic', methods=['GET'])
 @login_required
 def get_basic_quiz_questions():
     return jsonify(get_basic_questions_public())
+
 
 @app.route('/api/basic/submit', methods=['POST'])
 def submit_basic_quiz():
     data = request.get_json()
     if not data or "answers" not in data:
         return jsonify({"message": "Missing answers in request body"}), 400
-    
+
     user_answers = data.get("answers", {})
     full_data = get_basic_questions()
     results = []
@@ -157,7 +168,7 @@ def submit_basic_quiz():
             "is_correct": correct,
             "explanation": q["explanation"]
         })
-    
+
     feedback_message = ""
     if score >= 15:
         feedback_message = "Congratulations! You have passed the quiz. You are good to go with the next step."
@@ -172,25 +183,27 @@ def submit_basic_quiz():
     })
 
 
-## --------------------------
-# Route 2: Step-1 Core Quiz from kaggle dataset
+# --------------------------
+# Step-1 Core Quiz (from kaggle dataset)
 # --------------------------
 
-#Endpoint to get all questions from the dataset
-@app.route('/api/questions',methods=['GET'])
+# Endpoint to get all questions from the dataset
+@app.route('/api/questions', methods=['GET'])
 @login_required
 def get_questions():
     # Return only questions and options (for quiz display)
     return jsonify(get_dataset_questions())
 
-#Endpoint to get user answers and evaluate 
-@app.route('/api/submit',methods=['POST'])
+# Endpoint to get user answers and evaluate
+
+
+@app.route('/api/submit', methods=['POST'])
 @login_required
 def submit():
     data = request.get_json()
     if not data or "answers" not in data:
         return jsonify({"message": "Missing answers in request body"}), 400
-    
+
     user_answers = data.get("answers", {})
     full_data = get_dataset_qa()
     results = []
@@ -222,7 +235,7 @@ def submit():
 
     # Store users answers in the new collection
     if incorrect_answers_details and 'user_id' in session:
-        user_id= session['user_id']
+        user_id = session['user_id']
         document = {
             "user_id": user_id,
             "timestamp": datetime.datetime.now(),
@@ -230,7 +243,7 @@ def submit():
             "score": score,
             "total": len(full_data)
         }
-        user_answers_step1_collection.insert_one(document)         
+        user_answers_step1_collection.insert_one(document)
 
     return jsonify({
         "score": score,
@@ -239,23 +252,26 @@ def submit():
     })
 
 # endpoint to retrieve a user's incorrect answers
+
+
 @app.route('/api/incorrect_answers_step1', methods=['GET'])
 @login_required
 def get_user_incorrect_answers():
     if 'user_id' not in session:
         return jsonify({"message": "Unauthorized"}), 401
-    
+
     user_id = session['user_id']
     user_step1_attempts = list(user_answers_step1_collection.find(
         {"user_id": user_id},
-        {"_id": 0, "incorrect_answers": 1, "timestamp": 1, "score": 1, "total_questions": 1}
+        {"_id": 0, "incorrect_answers": 1, "timestamp": 1,
+            "score": 1, "total_questions": 1}
     ).sort("timestamp", -1).limit(1))  # Sort by most recent first ))
 
     # Convert datetime to string for JSON serialization
     # This loop will run at most once, if an attempt is found
     for attempt_data in user_step1_attempts:
         attempt_data['timestamp'] = attempt_data['timestamp'].isoformat()
-    
+
     # user_step2_attempts will be a list containing either:
     # 1. The single most recent attempt object (if one exists)
     # 2. An empty list (if no attempts exist for the user)
@@ -263,22 +279,24 @@ def get_user_incorrect_answers():
 
 
 # --------------------------
-# Route 3: Step 2 Basic Quiz
+# Step 2 Basic Quiz
 # --------------------------
-@app.route('/api/step2basic', methods=['GET']) #Create an endpoint to get all questions from the step2basic.json file
+# Create an endpoint to get all questions from the step2basic.json file
+@app.route('/api/step2basic', methods=['GET'])
 @login_required
 def get_step2_basic_quiz_questions():
-    return jsonify(step2_basic_questions()) 
-      
+    return jsonify(step2_basic_questions())
 
-@app.route('/api/step2basic/submit', methods=['POST']) #Create an endpoint to get user answers and evaluate
+
+# Create an endpoint to get user answers and evaluate
+@app.route('/api/step2basic/submit', methods=['POST'])
 def submit_step2_basic_quiz():
     data = request.get_json()
     if not data or "answers" not in data:
         return jsonify({"message": "Missing answers in request body"}), 400
     user_answers = data.get("answers", {})
     full_data = step2_basic_questions_ans()
-    results = []    
+    results = []
     score = 0
 
     for q in full_data:
@@ -295,37 +313,39 @@ def submit_step2_basic_quiz():
             "correct_answer": q["answer"],
             "is_correct": correct,
             "explanation": q["explanation"]
-        })  
+        })
     feedback_message = ""
-    if score >= 15: # Assuming 15 is the passing score for the basic quiz
+    if score >= 15:  # Assuming 15 is the passing score for the basic quiz
         feedback_message = "Congratulations! You have passed the quiz. You are good to go with the next step."
     else:
-        feedback_message = "Your score is less. Please try again. You can do it."   
-        
+        feedback_message = "Your score is less. Please try again. You can do it."
+
     return jsonify({
         "score": score,
         "total": len(full_data),
         "results": results,
-        "feedback_message": feedback_message # Add the message here
+        "feedback_message": feedback_message  # Add the message here
     })
 
 
 # --------------------------
-# Route 4: Step 2 Core
+# Step 2 Core
 # --------------------------
-@app.route('/api/step2core',methods=['GET'])
+@app.route('/api/step2core', methods=['GET'])
 @login_required
 def get_sample_questions():
     # Return only questions and options (for quiz display)
     return jsonify(get_sampletest_questions())
 
-#Endpoint to get user answers and evaluate 
-@app.route('/api/step2core/submit',methods=['POST'])
+# Endpoint to get user answers and evaluate
+
+
+@app.route('/api/step2core/submit', methods=['POST'])
 def step2_core_submit():
     data = request.get_json()
     if not data or "answers" not in data:
         return jsonify({"message": "Missing answers in request body"}), 400
-    
+
     user_answers = data.get("answers", {})
     full_data = get_sampletest_qa()
     results = []
@@ -337,7 +357,7 @@ def step2_core_submit():
         qid = str(q["id"])
         user_answer = user_answers.get(qid)
         correct = user_answer == q["answer"]
-        
+
         if correct:
             score += 1
         else:
@@ -347,7 +367,7 @@ def step2_core_submit():
                 "correct_answer": q["answer"],
                 "explanation": q["explanation"]
             })
-            
+
         results.append({
             "id": qid,
             "question": q["question"],
@@ -361,11 +381,11 @@ def step2_core_submit():
         if incorrect_answers_details_step2 and 'user_id' in session:
             user_id = session['user_id']
             document = {
-                "user_id" : user_id,
-                "timestamp" : datetime.datetime.now(),
-                "incorrect_answers" : incorrect_answers_details_step2,
-                "score" : score,
-                "total_questions" : len(full_data)
+                "user_id": user_id,
+                "timestamp": datetime.datetime.now(),
+                "incorrect_answers": incorrect_answers_details_step2,
+                "score": score,
+                "total_questions": len(full_data)
             }
             user_answers_step2_collection.insert_one(document)
 
@@ -377,45 +397,53 @@ def step2_core_submit():
     })
 
 # Endpoint to retrive user's incorrect aswers
+
+
 @app.route('/api/incorrect_answers_step2', methods=['GET'])
 @login_required
 def get_user_incorrect_answers_step2():
     if 'user_id' not in session:
         return jsonify({"message": "Unauthorized"}), 401
-    
+
     user_id = session['user_id']
     # Find the most recent attempt by adding .limit(1)
     user_step2_attempts = list(user_answers_step2_collection.find(
         {"user_id": user_id},
-        {"_id": 0, "incorrect_answers": 1, "timestamp": 1, "score": 1, "total_questions": 1}
+        {"_id": 0, "incorrect_answers": 1, "timestamp": 1,
+            "score": 1, "total_questions": 1}
     ).sort("timestamp", -1).limit(1))  # Added .limit(1) here
-    
+
     # Convert datetime to string for JSON serialization
     # This loop will run at most once, if an attempt is found
     for attempt_data in user_step2_attempts:
         attempt_data['timestamp'] = attempt_data['timestamp'].isoformat()
-    
+
     # user_step2_attempts will be a list containing either:
     # 1. The single most recent attempt object (if one exists)
     # 2. An empty list (if no attempts exist for the user)
     return jsonify(user_step2_attempts)
 
 # --------------------------
-# Route 5: Step 3 Basic
+# Step 3 Basic
 # --------------------------
-@app.route('/api/step3basic', methods=['GET']) #Create an endpoint to get all questions from the step3basic.json file
+
+
+# Create an endpoint to get all questions from the step3basic.json file
+@app.route('/api/step3basic', methods=['GET'])
 @login_required
 def get_step3_basic_quiz_questions():
     return jsonify(step3_basic_questions())
 
-@app.route('/api/step3basic/submit', methods=['POST']) #Create an endpoint to get user answers and evaluate
+
+# Create an endpoint to get user answers and evaluate
+@app.route('/api/step3basic/submit', methods=['POST'])
 def submit_step3_basic_quiz():
     data = request.get_json()
     if not data or "answers" not in data:
         return jsonify({"message": "Missing answers in request body"}), 400
     user_answers = data.get("answers", {})
     full_data = step3_basic_full()
-    results = []    
+    results = []
     score = 0
 
     for q in full_data:
@@ -432,28 +460,33 @@ def submit_step3_basic_quiz():
             "correct_answer": q["answer"],
             "is_correct": correct,
             "explanation": q["explanation"]
-        })  
+        })
     feedback_message = ""
-    if score >= 15: # Assuming 15 is the passing score for the basic quiz
+    if score >= 15:  # Assuming 15 is the passing score for the basic quiz
         feedback_message = "Congratulations! You have passed the quiz. You are good to go with the next step."
     else:
-        feedback_message = "Your score is less. Please try again. You can do it."   
+        feedback_message = "Your score is less. Please try again. You can do it."
     return jsonify({
         "score": score,
         "total": len(full_data),
         "results": results,
-        "feedback_message": feedback_message # Add the message here
+        "feedback_message": feedback_message  # Add the message here
     })
 
 # --------------------------
-# Route 6: Step 3 FIP (Foundations of Independent Practice.)
+# Step 3 FIP (Foundations of Independent Practice.)
 # --------------------------
-@app.route('/api/fip', methods=['GET']) #Create an endpoint to get all questions from the fip.json file
+
+
+# Create an endpoint to get all questions from the fip.json file
+@app.route('/api/fip', methods=['GET'])
 @login_required
 def get_fip_quiz_questions():
     return jsonify(get_fip_questions())
 
-@app.route('/api/fip/submit', methods=['POST']) #Create an endpoint to get user answers and evaluate
+
+# Create an endpoint to get user answers and evaluate
+@app.route('/api/fip/submit', methods=['POST'])
 def submit_fip_quiz():
     data = request.get_json()
     if not data or "answers" not in data:
@@ -462,7 +495,7 @@ def submit_fip_quiz():
     full_data = get_fip_qa()
 
     results = []
-    incorrect_answers_details_fip = [] # Store details for AI feedback
+    incorrect_answers_details_fip = []  # Store details for AI feedback
     score = 0
 
     for q in full_data:
@@ -507,18 +540,21 @@ def submit_fip_quiz():
     })
 
 # Endpoint to retrive user's incorrect answers
+
+
 @app.route('/api/incorrect_answers_fip', methods=['GET'])
 @login_required
 def get_user_incorrect_answers_fip():
     if 'user_id' not in session:
         return jsonify({"message": "Unauthorized"}), 401
-    
+
     user_id = session['user_id']
     # Find the most recent attempt by adding .limit(1)
     user_fip_attempts = list(user_answers_fip_collection.find(
         {"user_id": user_id},
-        {"_id": 0, "incorrect_answers": 1,  "timestamp": 1,  "score": 1,"total_questions": 1}
-    ).sort("timestamp", -1).limit(1)) # Added .limit(1) here
+        {"_id": 0, "incorrect_answers": 1,  "timestamp": 1,
+            "score": 1, "total_questions": 1}
+    ).sort("timestamp", -1).limit(1))  # Added .limit(1) here
 
     # Convert datetime to string for JSON serialization
     # This loop will run at most once, if an attempt is found
@@ -528,16 +564,18 @@ def get_user_incorrect_answers_fip():
     return jsonify(user_fip_attempts)
 
 
-
 # --------------------------
-# Route 7: Step 3 ACM (Advanced Clinical Medicine)
+# Step 3 ACM (Advanced Clinical Medicine)
 # --------------------------
-@app.route('/api/acm', methods=['GET']) #Create an endpoint to get all questions from the acm.json file
+# Create an endpoint to get all questions from the acm.json file
+@app.route('/api/acm', methods=['GET'])
 @login_required
 def get_acm_quiz_questions():
     return jsonify(acm_questions())
 
-@app.route('/api/acm/submit', methods=['POST']) #Create an endpoint to get user answers and evaluate
+
+# Create an endpoint to get user answers and evaluate
+@app.route('/api/acm/submit', methods=['POST'])
 def submit_acm_quiz():
     data = request.get_json()
     if not data or "answers" not in data:
@@ -592,15 +630,41 @@ def submit_acm_quiz():
             prompt += f"  Explanation: {item['explanation']}\n\n"
 
         ai_feedback = get_chat_response(prompt)
-    
+
     return jsonify({
         "score": score,
         "total": len(full_data),
-        "ai_feedback": ai_feedback, # Include AI feedback in the response
+        "ai_feedback": ai_feedback,  # Include AI feedback in the response
         "results": results
     })
 
+# Endpoint to retrive the user's incorrect answers
+
+
+@app.route('/api/incorrect_answers_acm', methods=['GET'])
+def get_user_incorrect_answers_acm():
+    if 'user_id' not in session:
+        return jsonify({"message": "Unauthorized"}), 401
+
+    user_id = session['user_id']
+
+    # Find the most recent attempt by adding .limit(1)
+    user_acm_attempts = list(user_answers_acm_collection.find(
+        {"user_id": user_id},
+        {"_id": 0, "incorrect_answers": 1, "timestamp": 1,
+            "score": 1, "total_questions": 1}
+    ).sort("timestamp", -1).limit(1))
+
+    # Convert datetime to string for JSON serialization
+    # This loop will run at most once, if an attempt is found
+
+    for attempt_data in user_acm_attempts:
+        attempt_data['timestamp'] = attempt_data['timestamp'].isoformat()
+
+    return jsonify(user_acm_attempts)
+
 # Analyze with AI
+
 
 @app.route('/api/analyze-with-ai', methods=['POST'])
 @login_required
@@ -626,13 +690,13 @@ def analyze_with_ai():
     elif collection_type == 'acm':
         collection = user_answers_acm_collection
     else:
-        return jsonify ({"message": "Invalid collection type"}), 400
-    
+        return jsonify({"message": "Invalid collection type"}), 400
 
     user_answers = list(collection.find(
         {"user_id": user_id},
         {"_id": 0, "incorrect_answers": 1}
-    ).sort("timestamp", -1).limit(1))  # Now only gets the single most recent attempt
+        # Now only gets the single most recent attempt
+    ).sort("timestamp", -1).limit(1))
 
     if not user_answers:
         return jsonify({"message": "No incorrect answers found"}), 404
@@ -646,28 +710,52 @@ def analyze_with_ai():
 
     # Define prompts
     prompts = {
-        "resources": f"""Based on these incorrect answers, suggest 3-5 specific free learning resources (with URLs) that would help the user improve. Format as markdown links.
-        
-        Incorrect Answers:
-        {context}
-        
-        Provide output in this exact format:
-        - [Resource 1 Name](URL1) - Brief reason why it's relevant
-        - [Resource 2 Name](URL2) - Brief reason why it's relevant""",
-        
-        "practice": f"""Based on these incorrect answers, suggest 3-5 specific free practice resources (with URLs) that would help the user to attempt the practice questions. Format as markdown links.
-        
+        "resources": f"""Based on these incorrect answers, suggest 3-5 specific free learning resources (with URLs) that that directly address weak areas. Each should include a markdown link and a brief explanation of relevance. Format as markdown links.
+
         Incorrect Answers:
         {context}
 
         Provide output in this exact format:
         - [Resource 1 Name](URL1) - Brief reason why it's relevant
-        - [Resource 2 Name](URL2) - Brief reason why it's relevant"""
+
+        - [Resource 2 Name](URL2) - Brief reason how it improves understanding""",
+
+        "practice": f"""Based on these incorrect answers, suggest 3-5 specific free practice resources (with URLs) that help reinforce learning. Provide markdown links and a brief reason why they are beneficial.
+
+        Incorrect Answers:
+        {context}
+
+        Provide output in this exact format:
+        - [Resource 1 Name](URL) - Focus area it strengthens
+
+        - [Resource 2 Name](URL) - Type of questions included""",
+
+        "questions": f"""
+        You are a USMLE Step 1 medical tutor.
+
+        Based on the following incorrect answers, generate targeted concept reviews and one question per topic in the format described below.
+
+        Incorrect answers:
+        {context}
+
+        Provide output in this exact format for **each** concept:
+
+        Incorrect answer concept name: {{concept_name}}
+
+        A brief concept about {{concept_name}}:
+
+        Knowledge check:
+        One USMLE-style question related to that topic with four options (A–D), and indicate:
+        - The correct answer
+        - A brief explanation
+
+        Use medically accurate and concise wording.
+        """
     }
 
     prompt_type = data['prompt_type']
     custom_prompt = data.get('custom_prompt', '')
-    
+
     if prompt_type == 'custom' and custom_prompt:
         final_prompt = f"User's incorrect answers:\n{context}\n\nUser's question: {custom_prompt}"
     else:
@@ -679,19 +767,86 @@ def analyze_with_ai():
         return jsonify({"response": gemini_response})
     except Exception as e:
         return jsonify({"message": f"AI analysis failed: {str(e)}"}), 500
-    
+
 # --------------------------
 # Route 8: Chat Support
 # --------------------------
-@app.route("/api/chat", methods=["POST"]) # Changed route to /api/chat for consistency
-def chat(): 
-    data = request.get_json() #Get the JSON data from the request
+# Changed route to /api/chat for consistency
+
+
+@app.route("/api/chat", methods=["POST"])
+def chat():
+    data = request.get_json()  # Get the JSON data from the request
     if not data or "query" not in data:
         return jsonify({"message": "Missing query in request body"}), 400
-    user_query = data.get("query", "") #Get the user query from the JSON data
-    response = get_chat_response(user_query) #Get the response from the chatbot
-    return jsonify({"response": response}) #Return the response as JSON
+    user_query = data.get("query", "")  # Get the user query from the JSON data
+    # Get the response from the chatbot
+    response = get_chat_response(user_query)
+    return jsonify({"response": response})  # Return the response as JSON
+
+# Dashboard
 
 
-if __name__ == '__main__': #Run the Flask app
-    app.run(debug=True) # Set debug=True for development; set to False in production
+@app.route('/api/dashboard', methods=['GET'])
+@login_required
+def get_dashboard_data():
+    if 'user_id' not in session:
+        return jsonify({"message": "Unauthorized"}), 401
+
+    user_id = session['user_id']
+
+    # Define collections and labels
+    quiz_types = [
+        {
+            "label": "Step 1",
+            "collection": user_answers_step1_collection
+        },
+        {
+            "label": "Step 2",
+            "collection": user_answers_step2_collection
+        },
+        {
+            "label": "FIP",
+            "collection": user_answers_fip_collection
+        },
+        {
+            "label": "ACM",
+            "collection": user_answers_acm_collection
+        }
+    ]
+
+    scores = {}
+    latest_attempt = None
+    latest_timestamp = None
+
+    # For each quiz type, get the most recent attempt
+    for quiz in quiz_types:
+        attempt = quiz["collection"].find_one(
+            {"user_id": user_id},
+            sort=[("timestamp", -1)]
+        )
+        if attempt:
+            score = attempt.get("score", 0)
+            # Use 40 as a total for percentage calculation
+            percentage = round((score/40)*100, 2) if score is not None else 0
+            scores[quiz["label"]] = {
+                "score": score,
+                "percentage": percentage
+            }
+            # Track latest attempt for status
+            if not latest_timestamp or attempt["timestamp"] > latest_timestamp:
+                latest_timestamp = attempt["timestamp"]
+                latest_attempt = quiz["label"]
+
+        else:
+            scores[quiz["label"]] = "Not attempted"
+
+    return jsonify({
+        "status": latest_attempt if latest_attempt else "Not attempted",
+        "scores": scores
+    })
+
+
+if __name__ == '__main__':  # Run the Flask app
+    # Set debug=True for development; set to False in production
+    app.run(debug=True)
