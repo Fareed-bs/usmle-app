@@ -731,26 +731,48 @@ def analyze_with_ai():
         - [Resource 2 Name](URL) - Type of questions included""",
 
         "questions": f"""
-        You are a USMLE Step 1 medical tutor.
-
-        Based on the following incorrect answers, generate targeted concept reviews and one question per topic in the format described below.
+        You are a USMLE Step 1 medical tutor. Based on the following incorrect answers, generate targeted concept reviews and one question per topic in an accordion-friendly format.
 
         Incorrect answers:
         {context}
 
-        Provide output in this exact format for **each** concept:
+        For EACH incorrect concept, provide output in THIS EXACT STRUCTURE:
 
-        Incorrect answer concept name: {{concept_name}}
+        **Areas for Improvement:**
+        Below is a list of collapsible sections. Click on each one to explore its content.
 
-        A brief concept about {{concept_name}}:
+        <details>
+        <summary><strong>{{concept_name}}</strong></summary>
 
-        Knowledge check:
-        One USMLE-style question related to that topic with four options (A–D), and indicate:
-        - The correct answer
-        - A brief explanation
+        <strong>Concept Summary:</strong>**  
+        [1-2 sentence explanation of the core concept]
 
-        Use medically accurate and concise wording.
+        <strong>Knowledge Check:</strong>
+
+        [USMLE-style multiple choice question]  
+        A) [Option A]  
+        B) [Option B]  
+        C) [Option C]  
+        D) [Option D]
+
+        <strong>Answer:</strong>  
+        [Correct letter option only, e.g. "B"]
+
+        <strong>Explanation:<strong>  
+        [1-2 sentence explanation of why this is correct]
+        </details>
+        __________________________________________________________________________________________________
+
+        Requirements:
+        1. Generate one accordion item per incorrect concept
+        2. Use clear medical terminology
+        3. Keep explanations concise but accurate
+        4. Questions should be typical Step 1 difficulty
+        5. Maintain this exact formatting for each concept
+
+        Do not include any introductory text or section headers - only provide the accordion items.
         """
+
     }
 
     prompt_type = data['prompt_type']

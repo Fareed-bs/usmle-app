@@ -107,8 +107,9 @@ const AnalyzeWithAI = () => {
               checked={promptType === 'questions'}
               onChange={() => setPromptType('questions')}
             />
-            Get Practice Questions
+            Get Practice Questions 
           </label>
+
 
           <label>
             <input
