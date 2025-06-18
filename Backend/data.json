@@ -39,7 +39,7 @@
     {
       "question": "A 59-year-old woman with stage IV lung cancer presents with progressively worsening weakness and a 10.5-kg weight loss over 3 months. Her BMI is 16 kg/m², and she has bilateral temporal wasting. What is the most likely primary mechanism underlying her temporal muscle atrophy?",
       "options": ["Lysosomal degradation of endocytosed proteins", "Cytochrome c-mediated activation of proteases", "Lipase-mediated degradation of triglycerides", "TNF-α-mediated activation of caspases", "Proteasomal degradation of ubiquitinated proteins"],
-      "answer": "E",
+      "answer": "Proteasomal degradation of ubiquitinated proteins",
       "explanation": "Cancer cachexia leads to muscle wasting primarily through the ubiquitin-proteasome pathway, which degrades ubiquitinated proteins in skeletal muscle. This pathway is upregulated in cancer cachexia, contributing to muscle atrophy."
     },
     {

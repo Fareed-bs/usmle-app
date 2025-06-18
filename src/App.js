@@ -15,6 +15,7 @@ import { AuthProvider, useAuth } from "./AuthContext";
 import AnalyzeWithAI from "./AnalyzeWithAI";
 import IncorrectAnswersViewer from './IncorrectAnswersViewer';
 import Dashboard from "./Dashboard";
+import GoogleLogin from "./GoogleLogin";
 import "./App.css";
 
 // Protected Route component
@@ -52,6 +53,7 @@ const AppContent = () => {
             <>
               <Link to="/login" className="auth-button">Login</Link>
               <Link to="/register" className="auth-button">Register</Link>
+              <GoogleLogin />
             </>
           )}
         </div>

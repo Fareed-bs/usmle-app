@@ -1,5 +1,5 @@
 from functools import wraps
-from flask import Flask, jsonify, request, session
+from flask import Flask, jsonify, request, session, redirect, url_for
 from flask_cors import CORS
 from chatbot import get_chat_response
 from basic_questions import get_basic_questions, get_basic_questions_public  # type: ignore
@@ -15,7 +15,10 @@ from pymongo import MongoClient
 from werkzeug.security import generate_password_hash, check_password_hash
 import uuid
 from datetime import timedelta
+from authlib.integrations.flask_client import OAuth
 app = Flask(__name__)
+
+oauth = OAuth(app)
 
 # --- Configuration ---
 # IMPORTANT: Use environment variables for sensitive data in production!
@@ -23,8 +26,21 @@ app.config['SECRET_KEY'] = os.environ.get(
     'FLASK_SECRET_KEY', 'your_very_secret_key_for_dev')
 app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(
     days=7)  # Session will expire after 7 days
+app.config['GOOGLE_CLIENT_ID'] = os.environ.get('GOOGLE_CLIENT_ID',)
+app.config['GOOGLE_CLIENT_SECRET'] = os.environ.get('GOOGLE_CLIENT_SECRET')
+app.config['GOOGLE_DISCOVERY_URL'] = "https://accounts.google.com/.well-known/openid-configuration"
 
 CORS(app, supports_credentials=True)  # Allow credentials for session cookies
+
+google = oauth.register(
+    name='google',
+    client_id=app.config['GOOGLE_CLIENT_ID'],
+    client_secret=app.config['GOOGLE_CLIENT_SECRET'],
+    server_metadata_url=app.config['GOOGLE_DISCOVERY_URL'],
+    client_kwargs={
+        'scope': 'openid email profile'
+    }
+)
 
 # MongoDB setup
 mongo_uri = os.environ.get('MONGO_URI', 'mongodb://localhost:27017/')
@@ -129,6 +145,54 @@ def login_required(f):
             return jsonify({"message": "Unauthorized"}), 401
         return f(*args, **kwargs)
     return decorated_function
+
+# --------------------------
+# Google OAuth Routes
+# --------------------------
+# Login
+
+
+@app.route('/api/auth/login/google')
+def login_with_google():
+    redirect_uri = url_for('google_auth_callback', _external=True)
+    return google.authorize_redirect(redirect_uri)
+
+# Callback after Google authentication
+
+
+@app.route('/api/auth/callback/google')
+def google_auth_callback():
+    token = google.authorize_access_token()
+    user_info = token.get('userinfo')
+
+    if not user_info:
+        return jsonify({"message": "Google authentication failed"}), 400
+
+    google_id = user_info['sub']
+    email = user_info['email']
+    username = user_info.get('name', email.split('@')[0])
+
+    user = users_collection.find_one({'google_id': google_id})
+
+    if not user:
+        # Create new user in DB
+        user_id = str(uuid.uuid4())
+        user = {
+            '_id': user_id,
+            'username': username,
+            'email': email,
+            'google_id': google_id,
+            'quizzes': []
+        }
+        users_collection.insert_one(user)
+
+    # Create session
+    session.permanent = True
+    session['user_id'] = user['_id']
+    session['username'] = user['username']
+
+    # redirect to frontend (React)
+    return redirect("http://localhost:3000/dashboard")
 
 # --------------------------
 # Step 1 BasicQuiz from basic.json
