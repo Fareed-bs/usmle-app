@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const BasicQuiz = () => {
+const Step1Basic = () => {
   const [questions, setQuestions] = useState([]);
   const [answers, setAnswers] = useState({});
   const [submitted, setSubmitted] = useState(false);
@@ -209,4 +209,4 @@ const BasicQuiz = () => {
   );
 };
 
-export default BasicQuiz;
+export default Step1Basic;

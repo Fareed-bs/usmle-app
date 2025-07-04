@@ -133,13 +133,22 @@ const AnalyzeWithAI = () => {
         </div>
       )}
       
-      <button 
-        onClick={handleSubmit}
-        disabled={isLoading || (promptType === 'custom' && !customPrompt.trim())}
-        className="analyze-button"
-      >
-        {isLoading ? 'Analyzing...' : 'Analyze'}
-      </button>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+        <button 
+          onClick={handleSubmit}
+          disabled={isLoading || (promptType === 'custom' && !customPrompt.trim())}
+          className="analyze-button"
+        >
+          {isLoading ? 'Analyzing...' : 'Analyze'}
+        </button>
+        {isLoading && (
+          <div className="analyzing-extra-outside" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', fontSize: '0.9em' }}>
+            <span>Please wait...</span>
+            <span>Thanks for your patience <span role="img" aria-label="smile">😊</span></span>
+          </div>
+        )}
+      </div>
+
       
       {error && <div className="error">{error}</div>}
       

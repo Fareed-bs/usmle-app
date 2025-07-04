@@ -192,7 +192,7 @@ def google_auth_callback():
     session['username'] = user['username']
 
     # redirect to frontend (React)
-    return redirect("http://localhost:3000/dashboard")
+    return redirect("http://localhost:3000")
 
 # --------------------------
 # Step 1 BasicQuiz from basic.json
@@ -200,13 +200,13 @@ def google_auth_callback():
 
 
 # Create an endpoint to get all questions from the basic.json file
-@app.route('/api/basic', methods=['GET'])
+@app.route('/api/step1/basic', methods=['GET'])
 @login_required
 def get_basic_quiz_questions():
     return jsonify(get_basic_questions_public())
 
 
-@app.route('/api/basic/submit', methods=['POST'])
+@app.route('/api/step1/basic/submit', methods=['POST'])
 def submit_basic_quiz():
     data = request.get_json()
     if not data or "answers" not in data:
@@ -346,14 +346,14 @@ def get_user_incorrect_answers():
 # Step 2 Basic Quiz
 # --------------------------
 # Create an endpoint to get all questions from the step2basic.json file
-@app.route('/api/step2basic', methods=['GET'])
+@app.route('/api/step2/basic', methods=['GET'])
 @login_required
 def get_step2_basic_quiz_questions():
     return jsonify(step2_basic_questions())
 
 
 # Create an endpoint to get user answers and evaluate
-@app.route('/api/step2basic/submit', methods=['POST'])
+@app.route('/api/step2/basic/submit', methods=['POST'])
 def submit_step2_basic_quiz():
     data = request.get_json()
     if not data or "answers" not in data:
@@ -493,14 +493,14 @@ def get_user_incorrect_answers_step2():
 
 
 # Create an endpoint to get all questions from the step3basic.json file
-@app.route('/api/step3basic', methods=['GET'])
+@app.route('/api/step3/basic', methods=['GET'])
 @login_required
 def get_step3_basic_quiz_questions():
     return jsonify(step3_basic_questions())
 
 
 # Create an endpoint to get user answers and evaluate
-@app.route('/api/step3basic/submit', methods=['POST'])
+@app.route('/api/step3/basic/submit', methods=['POST'])
 def submit_step3_basic_quiz():
     data = request.get_json()
     if not data or "answers" not in data:

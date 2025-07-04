@@ -8,10 +8,22 @@
 
 .navbar {
   background-color: #333;
-  padding: 10px;
+  padding: 10px; 
   display: flex;
   justify-content: space-between; /* Pushes children to opposite ends */
   align-items: center; /* Vertically aligns items in the center */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 30px;
 }
 
 .navbar a {
@@ -341,4 +353,36 @@
   margin-bottom: 0;
   padding-bottom: 0;
   border-bottom: none;
+}
+
+/* Progress Bar Styles */
+.score-item {
+  margin-bottom: 15px;
+}
+
+.quiz-progress {
+  width: 100%;
+  height: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.quiz-progress::-webkit-progress-bar {
+  background-color: #f3f3f3;
+  border-radius: 5px;
+}
+
+.quiz-progress::-webkit-progress-value {
+  background: linear-gradient(90deg, #4CAF50, #8BC34A);
+  border-radius: 5px;
+}
+
+/* For Firefox */
+.quiz-progress {
+  background: #f3f3f3;
+}
+
+.quiz-progress[value]::-moz-progress-bar {
+  background: linear-gradient(90deg, #4CAF50, #8BC34A);
 }

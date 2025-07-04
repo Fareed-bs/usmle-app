@@ -34,10 +34,12 @@ const Dashboard = () => {
         <ul>
           {Object.entries(dashboard.scores).map(([quiz, value]) => (
             <li key={quiz}>
-              <strong>{quiz}:</strong>{" "}
-              {typeof value === "string"
-                ? value
-                : `${value.score} / 40 (Percentage: ${value.percentage}%)`}
+              <strong>{quiz}:</strong> {typeof value === "string" ? value : 
+                <span>
+                  {value.score} / 40 (Percentage: {value.percentage}%)
+                  <progress className="quiz-progress" value={value.percentage} max="100"></progress>
+                </span>
+}
             </li>
           ))}
         </ul>
