@@ -774,15 +774,21 @@ def analyze_with_ai():
 
     # Define prompts
     prompts = {
-        "resources": f"""Based on these incorrect answers, suggest 3-5 specific free learning resources (with URLs) that that directly address weak areas. Each should include a markdown link and a brief explanation of relevance. Format as markdown links.
+        "resources": f"""Based on these incorrect answers, suggest 3-5 specific, free, reputable online learning resources that directly address the weak areas.
+
+        For each resource, provide:
+        - A real, working URL to the resource (no placeholders or example URLs)
+        - The resource name as a markdown link to the URL
+        - A brief explanation of why it is relevant
+
+        Only include resources that are freely accessible and reputable (such as Khan Academy, MedEd, offical medical association sites, etc).
 
         Incorrect Answers:
         {context}
 
         Provide output in this exact format:
-        - [Resource 1 Name](URL1) - Brief reason why it's relevant
-
-        - [Resource 2 Name](URL2) - Brief reason how it improves understanding""",
+        - [Resource 1 Name](https://actual-url.com) - Brief reason why it's relevant
+        - [Resource 2 Name](https://actual-url.com) - Brief reason how it improves understanding""",
 
         "practice": f"""Based on these incorrect answers, suggest 3-5 specific free practice resources (with URLs) that help reinforce learning. Provide markdown links and a brief reason why they are beneficial.
 
@@ -794,49 +800,29 @@ def analyze_with_ai():
 
         - [Resource 2 Name](URL) - Type of questions included""",
 
-        "questions": f"""
-        You are a USMLE Step 1 medical tutor. Based on the following incorrect answers, generate targeted concept reviews and one question per topic in an accordion-friendly format.
+        "questions": f"""      
+
+        You are a USMLE Step 1 medical tutor. Based on the following incorrect answers, generate targeted concept reviews and one question per topic.
 
         Incorrect answers:
         {context}
 
-        For EACH incorrect concept, provide output in THIS EXACT STRUCTURE:
-
-        **Areas for Improvement:**
-        Below is a list of collapsible sections. Click on each one to explore its content.
-
-        <details>
-        <summary><strong>{{concept_name}}</strong></summary>
-
-        <strong>Concept Summary:</strong>**  
-        [1-2 sentence explanation of the core concept]
-
-        <strong>Knowledge Check:</strong>
-
-        [USMLE-style multiple choice question]  
-        A) [Option A]  
-        B) [Option B]  
-        C) [Option C]  
-        D) [Option D]
-
-        <strong>Answer:</strong>  
-        [Correct letter option only, e.g. "B"]
-
-        <strong>Explanation:<strong>  
-        [1-2 sentence explanation of why this is correct]
-        </details>
-        __________________________________________________________________________________________________
+        For EACH incorrect concept, respond with a JSON array of objects. Each object should include:
+        - "concept_name": The concept/topic name
+        - "concept_summary": 1-2 sentence explanation of the core concept
+        - "question": A USMLE-style multiple choice question (as a string)
+        - "options": An array of 4 answer choices (A, B, C, D)
+        - "answer": The correct letter (e.g., "B")
+        - "explanation": 1-2 sentence explanation of why the answer is correct
 
         Requirements:
-        1. Generate one accordion item per incorrect concept
-        2. Use clear medical terminology
-        3. Keep explanations concise but accurate
-        4. Questions should be typical Step 1 difficulty
-        5. Maintain this exact formatting for each concept
+        - One object per incorrect concept
+        - Use clear medical terminology
+        - Explanations concise but accurate
+        - Questions should be typical Step 1 difficulty
+        - Output only pure JSON. Do not include markdown, code blocks, quotes, or explanatory text.
 
-        Do not include any introductory text or section headers - only provide the accordion items.
         """
-
     }
 
     prompt_type = data['prompt_type']

@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import ReactMarkdown from 'react-markdown';
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const AnalyzeWithAI = () => {
   const [promptType, setPromptType] = useState('resources');
@@ -152,16 +157,70 @@ const AnalyzeWithAI = () => {
       
       {error && <div className="error">{error}</div>}
       
-      {response && (
-        <div className="ai-response">
-          <h3>AI Analysis:</h3>
-          <div 
-            dangerouslySetInnerHTML={{ 
-              __html: response.replace(/\n/g, '<br />') 
-            }} 
-          />
-        </div>
-      )}
+      
+    {response && (
+  <div className="ai-response">
+    <h3>AI Analysis:</h3>
+    {promptType === 'questions' ? (() => {
+      let cleanResponse = response.trim();
+      if (cleanResponse.startsWith('```json')) {
+        cleanResponse = cleanResponse.slice(7);
+      }
+      if (cleanResponse.startsWith('```')) {
+        cleanResponse = cleanResponse.slice(3);
+      }
+      if (cleanResponse.endsWith('```')) {
+        cleanResponse = cleanResponse.slice(0, -3);
+      }
+
+      let data;
+      try {
+        data = JSON.parse(cleanResponse);
+      } catch (e) {
+        return <div className="error">AI response is not valid JSON.</div>;
+      }
+      // Debug: Show the parsed data (remove or comment out in production)
+      return (
+        <>
+          {/* <pre style={{ background: "#f5f5f5", color: "#333", padding: "8px", borderRadius: "4px", overflowX: "auto", fontSize: "0.85em" }}>
+            {JSON.stringify(data, null, 2)}
+          </pre> */}
+          {Array.isArray(data) && data.length > 0 ? data.map((item, idx) => (
+            <Accordion key={idx}>
+              <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                <strong>{item.concept_name || `Question ${idx + 1}`}</strong>
+              </AccordionSummary>
+              <AccordionDetails>
+                <div>
+                  <strong>Concept Summary:</strong> {item.concept_summary || <em>N/A</em>}
+                </div>
+                <div style={{ margin: '10px 0' }}>
+                  <strong>Knowledge Check:</strong><br />
+                  {item.question || <em>No question text provided.</em>}
+                  <ul>
+                    {Array.isArray(item.options) && item.options.length > 0 ? item.options.map((opt, i) => (
+                      <li key={i}>{String.fromCharCode(65 + i)}) {opt}</li>
+                    )) : <li><em>No options provided.</em></li>}
+                  </ul>
+                </div>
+                <div>
+                  <strong>Answer:</strong> {item.answer || <em>N/A</em>}
+                </div>
+                <div>
+                  <strong>Explanation:</strong> {item.explanation || <em>N/A</em>}
+                </div>
+              </AccordionDetails>
+            </Accordion>
+          )) : (
+            <div className="error">No questions found in AI response.</div>
+          )}
+        </>
+      );
+    })() : (
+      <ReactMarkdown>{response}</ReactMarkdown>
+    )}
+  </div>
+)}      
     </div>
   );
 };
