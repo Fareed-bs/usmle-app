@@ -8,7 +8,7 @@ A full-stack USMLE (United States Medical Licensing Examination) quiz applicatio
 
 - 📋 Multiple-choice questions with explanations  
 - 🧪 Real-time quiz interface  
-- 🧠 AI-generated suggestions (optional)  
+- 🧠 AI-generated suggestions   
 - 🔒 User authentication (JWT or Google Login supported)  
 - 📊 Result analysis & feedback  
 - 📁 MongoDB backend for data storage  
@@ -24,7 +24,7 @@ A full-stack USMLE (United States Medical Licensing Examination) quiz applicatio
 | Backend    | Flask (Python)    |
 | Database   | MongoDB           |
 | Auth       | JWT / Google OAuth|
-| AI Engine  | Gemini API (Optional) |
+| AI Engine  | Gemini API        |
 
 ---
 
