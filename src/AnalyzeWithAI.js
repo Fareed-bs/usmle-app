@@ -94,7 +94,7 @@ const AnalyzeWithAI = () => {
               checked={promptType === 'resources'}
               onChange={() => setPromptType('resources')}
             />
-            Get Relevant Resources
+            Get Relevant Resource Links
           </label>
           
           <label>
@@ -103,7 +103,7 @@ const AnalyzeWithAI = () => {
               checked={promptType === 'practice'}
               onChange={() => setPromptType('practice')}
             />
-            Get Practice Material 
+            Get Practice Material Links
           </label>
           
           <label>
