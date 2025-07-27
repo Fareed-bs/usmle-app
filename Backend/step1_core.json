@@ -1,137 +1,137 @@
 [
   {
     "question": "A 21-year-old sexually active male complains of fever, pain during urination, and inflammation and pain in the right knee. A culture of the joint fluid shows a bacteria that does not ferment maltose and has no polysaccharide capsule. The physician orders antibiotic therapy for the patient. The mechanism of action of the medication given blocks cell wall synthesis, which of the following was given?",
-    "options": ["Chloramphenicol", "Gentamicin", "Ciprofloxacin", "Ceftriaxone", "Trimethoprim"],
-    "answer": "Ceftriaxone",
+    "options": ["(A) Chloramphenicol", "(B) Gentamicin", "(C) Ciprofloxacin", "(D) Ceftriaxone", "(E) Trimethoprim"],
+    "answer": "(D) Ceftriaxone",
     "explanation": "Ceftriaxone is a third-generation cephalosporin that inhibits bacterial cell wall synthesis. It is the drug of choice for *Neisseria gonorrhoeae*, which fits this clinical presentation (sexually active male, migratory arthritis, gram-negative diplococci not fermenting maltose)."
   },
   {
     "question": "A 5-year-old girl is brought to the emergency department by her mother because of multiple episodes of nausea and vomiting that last about 2 hours. During this period, she has had 6–8 episodes of bilious vomiting and abdominal pain. The vomiting was preceded by fatigue. The girl feels well between these episodes. She has missed several days of school and has been hospitalized 2 times during the past 6 months for dehydration due to similar episodes of vomiting and nausea. The patient has lived with her mother since her parents divorced 8 months ago. Her immunizations are up-to-date. She is at the 60th percentile for height and 30th percentile for weight. She appears emaciated. Her temperature is 36.8°C (98.8°F), pulse is 99/min, and blood pressure is 82/52 mm Hg. Examination shows dry mucous membranes. The lungs are clear to auscultation. Abdominal examination shows a soft abdomen with mild diffuse tenderness with no guarding or rebound. The remainder of the physical examination shows no abnormalities. Which of the following is the most likely diagnosis?",
-    "options": ["Cyclic vomiting syndrome", "Gastroenteritis", "Hypertrophic pyloric stenosis", "Gastroesophageal reflux disease", "Acute intermittent porphyria"],
-    "answer": "Cyclic vomiting syndrome",
+    "options": ["(A) Cyclic vomiting syndrome", "(B) Gastroenteritis", "(C) Hypertrophic pyloric stenosis", "(D) Gastroesophageal reflux disease", "(E) Acute intermittent porphyria"],
+    "answer": "(A) Cyclic vomiting syndrome",
     "explanation": "Cyclic vomiting syndrome is characterized by recurrent, stereotypical episodes of severe nausea and vomiting, often triggered by stress. Children are well between episodes. The history of multiple hospitalizations, well periods in between, and family stressors support this diagnosis."
   },
   {
     "question": "A 40-year-old woman presents with difficulty falling asleep, diminished appetite, and tiredness for the past 6 weeks. She says that, despite going to bed early at night, she is unable to fall asleep. She denies feeling anxious or having disturbing thoughts while in bed. Even when she manages to fall asleep, she wakes up early in the morning and is unable to fall back asleep. She says she has grown increasingly irritable and feels increasingly hopeless, and her concentration and interest at work have diminished. The patient denies thoughts of suicide or death. Because of her diminished appetite, she has lost 4 kg (8.8 lb) in the last few weeks and has started drinking a glass of wine every night instead of eating dinner. She has no significant past medical history and is not on any medications. Which of the following is the best course of treatment in this patient?",
-    "options": ["Diazepam", "St. John’s Wort", "Paroxetine", "Zolpidem", "Trazodone"],
-    "answer": "Trazodone",
+    "options": ["(A) Diazepam", "(B) St. John’s Wort", "(C) Paroxetine", "(D) Zolpidem", "(E) Trazodone"],
+    "answer": "(E) Trazodone",
     "explanation": "Trazodone is an antidepressant with sedative properties and is useful in treating depression with insomnia. This patient shows signs of a major depressive episode with poor sleep and appetite, but her insomnia is prominent, making trazodone a reasonable initial treatment option."
   },
   {
     "question": "A 37-year-old female with a history of type II diabetes mellitus presents to the emergency department complaining of blood in her urine, left-sided flank pain, nausea, and fever. She also states that she has pain with urination. Vital signs include: temperature is 102 deg F (39.4 deg C), blood pressure is 114/82 mmHg, pulse is 96/min, respirations are 18, and oxygen saturation of 97% on room air. On physical examination, the patient appears uncomfortable and has tenderness on the left flank and left costovertebral angle. Which of the following is the next best step in management?",
-    "options": ["Obtain an abdominal CT scan", "Obtain blood cultures", "Obtain a urine analysis and urine culture", "Begin intravenous treatment with ceftazidime", "No treatment is necessary"],
-    "answer": "Obtain a urine analysis and urine culture",
+    "options": ["(A) Obtain an abdominal CT scan", "(B) Obtain blood cultures", "(C) Obtain a urine analysis and urine culture", "(D) Begin intravenous treatment with ceftazidime", "(E) No treatment is necessary"],
+    "answer": "(C) Obtain a urine analysis and urine culture",
     "explanation": "Urinalysis and urine culture are essential first steps in evaluating suspected pyelonephritis. Clinical findings suggest a urinary tract infection with systemic symptoms, and confirming the diagnosis via urine tests is crucial before initiating definitive treatment."
   },
   
     {
       "question": "A 19-year-old boy presents with confusion and the inability to speak properly. The patient's mother says that, a few hours ago, she noticed a change in the way he talked and that he appeared to be in a daze. He then lost consciousness, and she managed to get him to the hospital. She is also concerned about the weight he has lost over the past few months. His blood pressure is 80/55 mm Hg, pulse is 115/min, temperature is 37.2°C (98.9°F), and respiratory rate is 18/min. On physical examination, the patient is taking rapid, deep breaths, and his breath has a fruity odor. Dry mucous membranes and dry skin are noticeable. He is unable to cooperate for a mental status examination. Results of his arterial blood gas analysis are shown.\nPco2 16 mm Hg\nHCO3–  10 mEq/L\nPo2 91 mm Hg\npH 7.1\nHis glucose level is 450 mg/dL, and his potassium level is 4.1 mEq/L. Which of the following should be treated first in this patient?",
-      "options": ["Hypoperfusion", "Hyperglycemia", "Metabolic acidosis", "Hypokalemia", "Hypophosphatemia"],
-      "answer": "Hypoperfusion",
+      "options": ["(A) Hypoperfusion", "(B) Hyperglycemia", "(C) Metabolic acidosis", "(D) Hypokalemia", "(E) Hypophosphatemia"],
+      "answer": "(A) Hypoperfusion",
       "explanation": "This patient has diabetic ketoacidosis (DKA), and the most immediate threat to life is hypovolemia/hypoperfusion due to osmotic diuresis. Fluid resuscitation with isotonic saline is the first step in management, even before insulin or correcting electrolytes."
     },
     {
       "question": "A 41-year-old woman presents with fatigue and weakness. She has a history of preeclampsia, hypertension, polycystic ovarian syndrome, and hypercholesterolemia. She smokes one pack of cigarettes per day and drinks a glass of wine daily. Physical examination reveals pale complexion and bounding, irregular pulses. Laboratory data: hematocrit 27.1%, MCV 79 fL, reticulocyte count 2.0%. What is the most likely etiology of her anemia?",
-      "options": ["Vitamin B12 deficiency", "Folate deficiency", "Iron deficiency", "Infiltrative bone marrow process", "Intravascular hemolysis"],
-      "answer": "Iron deficiency",
+      "options": ["(A) Vitamin B12 deficiency", "(B) Folate deficiency", "(C) Iron deficiency", "(D) Infiltrative bone marrow process", "(E) Intravascular hemolysis"],
+      "answer": "(C) Iron deficiency",
       "explanation": "The patient's microcytic anemia (MCV 79 fL) with low hematocrit and a modest reticulocyte count suggests iron deficiency anemia, which is the most common cause of microcytic anemia. Her pale complexion and fatigue are consistent with this diagnosis. Iron deficiency anemia is often due to chronic blood loss or inadequate dietary intake."
     },
     {
       "question": "A 59-year-old woman with stage IV lung cancer presents with progressively worsening weakness and a 10.5-kg weight loss over 3 months. Her BMI is 16 kg/m², and she has bilateral temporal wasting. What is the most likely primary mechanism underlying her temporal muscle atrophy?",
-      "options": ["Lysosomal degradation of endocytosed proteins", "Cytochrome c-mediated activation of proteases", "Lipase-mediated degradation of triglycerides", "TNF-α-mediated activation of caspases", "Proteasomal degradation of ubiquitinated proteins"],
-      "answer": "Proteasomal degradation of ubiquitinated proteins",
+      "options": ["(A) Lysosomal degradation of endocytosed proteins", "(B) Cytochrome c-mediated activation of proteases", "(C) Lipase-mediated degradation of triglycerides", "(D) TNF-α-mediated activation of caspases", "(E) Proteasomal degradation of ubiquitinated proteins"],
+      "answer": "(E) Proteasomal degradation of ubiquitinated proteins",
       "explanation": "Cancer cachexia leads to muscle wasting primarily through the ubiquitin-proteasome pathway, which degrades ubiquitinated proteins in skeletal muscle. This pathway is upregulated in cancer cachexia, contributing to muscle atrophy."
     },
     {
       "question": "A 67-year-old man with Alzheimer dementia presents with fever and altered mental status. He is bedbound and was found confused with a warm, flushed complexion. Vital signs: temperature 102.9°F, BP 104/64 mmHg, pulse 170/min. Physical exam shows dry, flushed skin. Labs are unremarkable. After cooling measures, his temperature normalizes, and mental status returns to baseline. What is the most likely diagnosis?",
-      "options": ["Exertional heat stroke", "Neuroleptic malignant syndrome", "Non-exertional heat stroke", "Sepsis", "Septic shock"],
-      "answer": "Non-exertional heat stroke",
+      "options": ["(A) Exertional heat stroke", "(B) Neuroleptic malignant syndrome", "(C) Non-exertional heat stroke", "(D) Sepsis", "(E) Septic shock"],
+      "answer": "(C) Non-exertional heat stroke",
       "explanation": "Non-exertional (classic) heat stroke occurs in elderly individuals during hot weather, characterized by hyperthermia, altered mental status, and dry, flushed skin. The rapid improvement with cooling supports this diagnosis."
     },
     {
       "question": "A 32-year-old man in Cambodia presents with difficulty walking, numbness in hands and feet, weakness, muscle wasting, and pain in lower extremities. He has been subsisting on white rice for the past year. Physical exam reveals decreased deep tendon reflexes. Which enzymatic reaction is most likely affected?",
-      "options": ["Alpha-ketoglutarate dehydrogenase", "Acyl transferases", "Glycogen phosphorylase", "Homocysteine methyltransferase", "Succinate dehydrogenase"],
-      "answer": "Alpha-ketoglutarate dehydrogenase",
+      "options": ["(A) Alpha-ketoglutarate dehydrogenase", "(B) Acyl transferases", "(C) Glycogen phosphorylase", "(D) Homocysteine methyltransferase", "(E) Succinate dehydrogenase"],
+      "answer": "(A) Alpha-ketoglutarate dehydrogenase",
       "explanation": "Thiamine deficiency, common in diets relying on polished white rice, impairs enzymes like alpha-ketoglutarate dehydrogenase, leading to neurological symptoms such as peripheral neuropathy and muscle weakness."
     },
     {
       "question": "A 60-year-old woman with hypertension and a recent myocardial infarction experiences exertional angina. Vitals are stable, and physical exam is unremarkable. What is the best next step in management?",
-      "options": ["Atenolol", "Furosemide", "Hydrochlorothiazide", "Nifedipine", "Nitroglycerin"],
-      "answer": "Atenolol",
+      "options": ["(A) Atenolol", "(B) Furosemide", "(C) Hydrochlorothiazide", "(D) Nifedipine", "(E) Nitroglycerin"],
+      "answer": "(A) Atenolol",
       "explanation": "Beta-blockers like atenolol are first-line therapy post-myocardial infarction and for exertional angina, as they reduce myocardial oxygen demand and improve survival."
     },
 
     {
   "question": "A 42-year-old male presents to his primary care physician complaining of abdominal pain. He reports a 5-month history of epigastric pain that improves with meals. He has lost 15 pounds since the pain started. His past medical history is significant for a prolactinoma for which he underwent transphenoidal resection. He drinks alcohol socially and has a 10 pack-year smoking history. His family history is notable for a maternal uncle with a parathyroid adenoma. His temperature is 98.8°F (37.1°C), blood pressure is 125/80 mmHg, pulse is 85/min, and respirations are 18/min. After further workup, the patient is started on octreotide, an analogue of an endogenously produced hormone. When this hormone is produced by the hypothalamus, it has which of the following effects?",
-  "options": ["Decrease production of growth hormone", "Decrease production of cholecystokinin", "Decrease production of prolactin", "Decrease production of gastrin", "Decrease production of thyrotropin-releasing hormone"],
-  "answer": "Decrease production of growth hormone",
+  "options": ["(A) Decrease production of growth hormone", "(B) Decrease production of cholecystokinin", "(C) Decrease production of prolactin", "(D) Decrease production of gastrin", "(E) Decrease production of thyrotropin-releasing hormone"],
+  "answer": "(A) Decrease production of growth hormone",
   "explanation": "Octreotide is a somatostatin analogue, which inhibits growth hormone (GH) secretion from the anterior pituitary. Hypothalamic somatostatin also suppresses GH and thyroid-stimulating hormone (TSH) release."
   },
 
   {
   "question": "A 28-year-old female reports that, for more days than not over the past 3 years, she has felt \"down\" and, at times, \"mildly depressed.\" Over this period, she also endorses feeling fatigued, difficulty concentrating, and often sleeping more than in the past. The patient denies any manic or hypomanic periods and also reports that she did not have any periods of extreme worsening of her depressed mood beyond that described above. She also denies any suicidal ideation. What is the minimum amount of time this patient must exhibit these symptoms in order to meet the diagnostic criteria for dysthymia?",
-  "options": ["2 months", "6 months", "1 year", "2 years", "5 years"],
-  "answer": "2 years",
+  "options": ["(A) 2 months", "(B) 6 months", "(C) 1 year", "(D) 2 years", "(E) 5 years"],
+  "answer": "(D) 2 years",
   "explanation": "Dysthymia (Persistent Depressive Disorder) requires a depressed mood for most of the day, for more days than not, for at least 2 years in adults. Symptoms must not remit for more than 2 months at a time."
   },
 
   {
     
   "question": "A 42-year-old man is being treated by his female family medicine physician for chronic depression. Recently, he has been scheduling more frequent office visits. He does not report any symptoms or problems with his SSRI medication during these visits. Upon further questioning, the patient confesses that he is attracted to her and says \"You are the only one in the world who understands me\". The physician also manages his hypertension. Which of the following is the most appropriate next step in management?",
-  "options": ["Re-evaluate this patient for borderline personality disorder", "Ask closed-ended questions and use a chaperone for future visits", "Immediately tell this patient that you can not continue to treat him and avoid any further communication", "Increase the dosage of this patient’s SSRI", "Petition the medical ethics committee board that you wish to date this patient"],
-  "answer": "Ask closed-ended questions and use a chaperone for future visits",
+  "options": ["(A) Re-evaluate this patient for borderline personality disorder", "(B) Ask closed-ended questions and use a chaperone for future visits", "(C) Immediately tell this patient that you can not continue to treat him and avoid any further communication", "(D) Increase the dosage of this patient’s SSRI", "(E) Petition the medical ethics committee board that you wish to date this patient"],
+  "answer": "(B) Ask closed-ended questions and use a chaperone for future visits",
   "explanation": "The patient is exhibiting transference, and professional boundaries must be maintained. Using a chaperone and structured interactions helps prevent further inappropriate behavior while continuing necessary care."
   },
   {
     
   "question": "A 51-year-old female presents with intermittent right upper quadrant discomfort. The physician suspects she is suffering from biliary colic and recommends surgery. Following surgery, brown stones are removed from the gallbladder specimen. What is the most likely cause of the gallstone coloring?",
-  "options": ["E. coli infection; beta-glucoronidase release", "Shigella infection; HMG-CoA reductase release", "Shigella infection; beta-glucoronidase release", "Bile supersaturated with cholesterol; beta-glucoronidase release", "Ascaris lumbricoides infection; bile supersaturated with cholesterol"],
-  "answer": "E. coli infection; beta-glucoronidase release",
+  "options": ["(A) E. coli infection; beta-glucoronidase release", "(B) Shigella infection; HMG-CoA reductase release", "(C) Shigella infection; beta-glucoronidase release", "(D) Bile supersaturated with cholesterol; beta-glucoronidase release", "(E) Ascaris lumbricoides infection; bile supersaturated with cholesterol"],
+  "answer": "(A) E. coli infection; beta-glucoronidase release",
   "explanation": "Brown pigment stones are associated with bacterial infections (e.g., E. coli), which release beta-glucuronidase. This enzyme deconjugates bilirubin, leading to calcium bilirubinate stone formation."
   },
 
   {
     
   "question": "A 56-year-old man with known coronary artery disease presents to the emergency department complaining of chest discomfort and palpitations for 2 hours. On arrival, the vital signs include blood pressure 122/76 mm Hg, heart rate 180/min, respiratory rate 22/min, temperature 37.0°C (98.6°F), and blood oxygen saturation (SpO2) 98% on room air. A 12-lead electrocardiogram demonstrated ST-segment elevation in the anterolateral leads. The troponin level was 0.8 ng/mL (normal 0–0.4 ng/mL). The patient declined primary percutaneous intervention and was treated with antifibrinolytics in the coronary care unit. After 1 hour of treatment, the patient loses consciousness and the blood pressure falls to 60/40 mm Hg. Cardiac monitoring shows the electrocardiogram (ECG) pattern in lead 2 shown below. What is the most likely cause of his condition?",
-  "options": ["Premature ventricular contractions", "Monomorphic ventricular tachycardia", "Mitral regurgitation", "Third-degree heart block", "Acute pericarditis"],
-  "answer": "Monomorphic ventricular tachycardia",
+  "options": ["(A) Premature ventricular contractions", "(B) Monomorphic ventricular tachycardia", "(C) Mitral regurgitation", "(D) Third-degree heart block", "(E) Acute pericarditis"],
+  "answer": "(B) Monomorphic ventricular tachycardia",
   "explanation": "The patient's sudden hemodynamic collapse with a very high heart rate suggests ventricular tachycardia (VT), a life-threatening arrhythmia. VT is common post-MI due to ischemic myocardium acting as a re-entry circuit."
   },
 
   {
     
   "question": "A 16-year-old female high school student is brought to the physician by her parents for her repeated behavioral problems at home and school during the past 10 months. Her teachers describe her behavior as uncooperative and disruptive as she persistently refuses to answer questions, insults her teachers, and annoys her classmates on a daily basis. At home, her parents try to address her frequent violations of curfew, but attempts at discussing the issue often result in their daughter losing her temper and screaming at her parents. Her grades have deteriorated over the past year. She has no history of psychiatric illness. On questioning, the patient refuses to answer and frequently disrupts the physician’s conversation with the parents. Which of the following is the most likely diagnosis in this patient?",
-  "options": ["Reactive attachment disorder", "Conduct disorder", "Antisocial personality disorder", "Attention-deficit hyperactivity disorder", "Oppositional defiant disorder"],
-  "answer": "Oppositional defiant disorder",
+  "options": ["(A) Reactive attachment disorder", "(B) Conduct disorder", "(C) Antisocial personality disorder", "(D) Attention-deficit hyperactivity disorder", "(E) Oppositional defiant disorder"],
+  "answer": "(E) Oppositional defiant disorder",
   "explanation": "Oppositional defiant disorder (ODD) is characterized by a persistent pattern of angry/irritable mood, argumentative/defiant behavior, or vindictiveness. Unlike conduct disorder, it does not involve aggression or law-breaking."
   },
   {
     
   "question": "A 22-year-old man is brought to the emergency room with a penetrating stab injury to his left chest. He appears pale, drowsy, and diaphoretic. His pulse is feeble, systolic blood pressure is 86 mm Hg, the respirations are 22/min with an oxygen saturation of 88% at room air, and the temperature is 36.6°C (98.0°F). His jugular vein is distended. Chest auscultation reveals equal breath sounds bilaterally, with muffled heart sounds. Immediate IV fluid resuscitation is initiated. Which of the following findings indicates that the cause of shock is cardiogenic?",
-  "options": ["Urine output < 0.5 mL/kg/h", "Elevated serum creatinine", "High central venous pressure (CPV)", "Arterial blood gas (ABG) showing base deficit and metabolic acidosis", "White blood cell (WBC) count < 4000/mm3"],
-  "answer": "High central venous pressure (CPV)",
+  "options": ["(A) Urine output < 0.5 mL/kg/h", "(B) Elevated serum creatinine", "(C) High central venous pressure (CPV)", "(D) Arterial blood gas (ABG) showing base deficit and metabolic acidosis", "(E) White blood cell (WBC) count < 4000/mm3"],
+  "answer": "(C) High central venous pressure (CPV)",
   "explanation": "Cardiogenic shock is characterized by poor cardiac output with high central venous pressure (due to impaired ventricular function). The distended jugular veins and muffled heart sounds suggest cardiac tamponade, a form of obstructive cardiogenic shock."
 },
 
   {
     
   "question": "A 56-year-old woman is brought to the physician by her husband because of a two-day history of fever, malaise, headaches, and confusion. She recently immigrated from rural China and her immunization status is unknown. Her temperature is 39.1°C (102.4°F). Physical examination shows nuchal rigidity and photophobia. Cerebrospinal fluid analysis shows a neutrophil count of 1,500/mm3. Cerebrospinal fluid cultured on Thayer-Martin agar and normal sheep blood agar shows no growth. However, when the sheep blood agar sample is heated, numerous non-hemolytic, opaque, cream-colored colonies grow. Which of the following characteristics best describes the most likely causal pathogen?",
-  "options": ["Gram-negative coccobacillus", "Gram-negative, facultative intracellular bacillus", "Gram-positive, lancet-shaped diplococcus", "Gram-negative diplococcus", "Gram-positive, facultative intracellular bacillus"],
-  "answer": "Gram-negative coccobacillus",
+  "options": ["(A) Gram-negative coccobacillus", "(B) Gram-negative, facultative intracellular bacillus", "(C) Gram-positive, lancet-shaped diplococcus", "(D) Gram-negative diplococcus", "(E) Gram-positive, facultative intracellular bacillus"],
+  "answer": "(A) Gram-negative coccobacillus",
   "explanation": "The patient has bacterial meningitis caused by Haemophilus influenzae, a Gram-negative coccobacillus. It requires factor V (NAD) and factor X (hemin) for growth, which are released by heating the agar (chocolate agar)."
 },
   {
     
   "question": "A 35-year-old male presents to his primary care physician complaining of a one-month history of progressively worsening fatigue. He sought medical attention because this has affected his ability to complete his work as a graduate student. As a child, he was hospitalized for hemolytic uremic syndrome. His past medical history is also notable for diabetes mellitus and obesity. He takes metformin and glyburide. He does not smoke and drinks alcohol occasionally. His family history is notable for chronic lymphocytic leukemia in his paternal uncle and stroke in his father. His temperature is 99.9°F (37.7°C), blood pressure is 100/70 mmHg, pulse is 110/min, and respirations are 18/min. Physical examination reveals diffuse pallor. Hematologic labs are shown below:\n\nHemoglobin: 8.9 g/dL\nHematocrit: 24%\nLeukocyte count: 7,500 cells/mm^3 with normal differential\nPlatelet count: 180,000/mm^3\nMean corpuscular volume: 85 µm^3\nReticulocyte count: 0.4%\n\nHead and neck imaging is negative for neck masses. The pathogen associated with this patient’s condition is also known to cause which of the following?",
-  "options": ["Kaposi’s sarcoma", "Erythema infectiosum", "Mononucleosis", "Croup", "Myocarditis"],
-  "answer": "Erythema infectiosum",
+  "options": ["(A) Kaposi’s sarcoma", "(B) Erythema infectiosum", "(C) Mononucleosis", "(D) Croup", "(E) Myocarditis"],
+  "answer": "(B) Erythema infectiosum",
   "explanation": "The patient has parvovirus B19-induced aplastic crisis (low reticulocytes in anemia). Parvovirus B19 also causes erythema infectiosum (fifth disease), a childhood rash illness with 'slapped cheek' appearance."
 },
   {
     
   "question": "A 30-year-old man is brought to the doctor's office by his wife. She complains that over the past week there have been 3 episodes where he has fallen asleep while speaking with her. She mentioned that these events began a few months ago and have been increasing in frequency. She also says that his snoring has gotten to the point where she has a hard time sleeping next to him. When asked, the patient says that he frequently falls asleep while reading or watching television in the afternoons and feels refreshed after a short nap. The patient is worried because he sometimes hears people who aren’t in the room as he falls asleep. He is worried he might be \"going crazy.\" He has noticed that when his friends tell him a joke or he laughs at something on the TV, he drops whatever he’s holding and feels like his legs become weak. These episodes self-resolve in a few seconds. Examination shows a morbidly obese man in no acute distress. Which of the following is the best treatment for the most likely cause for this patient’s illness?",
-  "options": ["Haldol", "Modafinil", "Taking longer naps", "Continuous positive airway pressure", "Changing bedtime to earlier in the evening"],
-  "answer": "Modafinil",
+  "options": ["(A) Haldol", "(B) Modafinil", "(C) Taking longer naps", "(D) Continuous positive airway pressure", "(E) Changing bedtime to earlier in the evening"],
+  "answer": "(B) Modafinil",
   "explanation": "The patient has narcolepsy with cataplexy (sudden loss of muscle tone triggered by emotions). Modafinil is a wakefulness-promoting agent used to treat excessive daytime sleepiness in narcolepsy."
 },
 
@@ -139,142 +139,142 @@
     {
     
   "question": "A 55-year-old homeless man presents to the emergency department acutely confused. The patient was found wandering the streets with an abnormal gait. The patient has a past medical history of alcohol and IV drug abuse. His temperature is 98.5\u00b0F (36.9\u00b0C), blood pressure is 103/61 mmHg, pulse is 120/min, respirations are 16/min, and oxygen saturation is 97% on room air. Physical exam is notable for a poorly kempt man with ataxic gait. Ophthalmoplegia is noted on cranial nerve testing, and he has decreased vibration sensation in the bilateral lower extremity. Dermatologic exam reveals perifollicular hemorrhages, bleeding gums, and many bruises along the patient\u2019s upper and lower extremities. An initial ECG is notable for sinus tachycardia and the patient is given 2L of Ringer lactate. Laboratory values are ordered as seen below.\n\nHemoglobin: 8.0 g/dL\nHematocrit: 30%\nLeukocyte count: 3,500/mm^3 with normal differential\nPlatelet count: 192,000/mm^3\nMCV: 119 fL\n\nSerum:\nNa+: 139 mEq/L\nCl-: 100 mEq/L\nK+: 4.3 mEq/L\nHCO3-: 25 mEq/L\nBUN: 20 mg/dL\nGlucose: 47 mg/dL\nCreatinine: 1 mg/dL\nCa2+: 9.2 mg/dL\nMg2+: 1.2 mEq/L\nAST: 82 U/L\nALT: 70 U/L\n\nWhich of the following is the best next treatment for this patient?",
-  "options": ["Dextrose", "Folate", "Magnesium", "Thiamine", "Vitamin C"],
-  "answer": "Thiamine",
+  "options": ["(A) Dextrose", "(B) Folate", "(C) Magnesium", "(D) Thiamine", "(E) Vitamin C"],
+  "answer": "(D) Thiamine",
   "explanation": "The patient's confusion, ataxia, ophthalmoplegia, and history of alcoholism suggest Wernicke's encephalopathy, which requires immediate thiamine administration to prevent irreversible neurological damage."
 },
   
 
   {
   "question": "A 61-year-old woman is brought to the emergency department because of crushing substernal chest pain at rest for the past 2 hours. She is diaphoretic. Her temperature is 37.5°C (99.5°F), pulse is 110/min, respirations are 21/min, and blood pressure is 115/65 mm Hg. An ECG shows ST elevation in I, aVL, and V2–V4. Coronary angiography shows an 80% stenosis in the left anterior descending artery. Which of the following is the most likely initial step in the pathogenesis of this patient's coronary condition?",
-  "options": ["Intimal smooth muscle cell migration", "Intimal monocyte infiltration", "Platelet activation", "Endothelial cell dysfunction", "Fibrous plaque formation"],
-  "answer": "Endothelial cell dysfunction",
+  "options": ["(A) Intimal smooth muscle cell migration", "(B) Intimal monocyte infiltration", "(C) Platelet activation", "(D) Endothelial cell dysfunction", "(E) Fibrous plaque formation"],
+  "answer": "(D) Endothelial cell dysfunction",
   "explanation": "The initial step in atherosclerosis is endothelial dysfunction, which allows LDL infiltration and triggers inflammation, leading to plaque formation."
 },
   
   {
   "question": "A 4-year-old boy presents to the office with his mother. She states that the patient has been complaining of pain in his scrotum with swelling, abdominal pain, and nausea for the last 2 or 3 days. On exam, the abdomen is soft and nontender to palpation. The right scrotal sac is mildly enlarged without erythema. A tender mass is palpated in the right scrotal area. The mass does not transilluminate when a penlight is applied. The patient is afebrile and all vital signs are stable. What is the most likely etiology of this patient’s presentation?",
-  "options": ["Patent processus vaginalis", "Engorgement of the pampiniform plexus", "Collection of fluid in the tunica vaginalis", "Infection of the epididymis", "Neoplasm of the testicle"],
-  "answer": "Patent processus vaginalis",
+  "options": ["(A) Patent processus vaginalis", "(B) Engorgement of the pampiniform plexus", "(C) Collection of fluid in the tunica vaginalis", "(D) Infection of the epididymis", "(E) Neoplasm of the testicle"],
+  "answer": "(A) Patent processus vaginalis",
   "explanation": "A non-transilluminating, tender scrotal mass suggests testicular torsion, often due to a patent processus vaginalis allowing abnormal mobility."
 },
 
   {
   "question": "A 59-year-old man presents to his primary care physician, accompanied by his wife, who requests treatment for his 'chronic pessimism.' The patient admits to feeling tired and 'down' most of the time for the past several years but insists that it is 'just part of getting old.' His wife believes that he has become more self-critical and less confident than he used to be. Neither the patient nor his wife can identify any stressors or triggering events. He has continued to work as a librarian at a nearby college during this time and spends time with friends on the weekends. He sleeps 7 hours per night and eats 3 meals per day. He denies suicidal ideation or periods of elevated mood, excessive irritability, or increased energy. Physical exam reveals a well-dressed, well-groomed man without apparent abnormality. Basic neurocognitive testing and labs (CBC, BMP, TSH, cortisol, testosterone, and urine toxicology) are within normal limits. What is the most likely diagnosis?",
-  "options": ["Adjustment disorder with depressive features", "Bipolar disorder", "Cyclothymia", "Dysthymia", "Major depressive disorder"],
-  "answer": "Dysthymia",
+  "options": ["(A) Adjustment disorder with depressive features", "(B) Bipolar disorder", "(C) Cyclothymia", "(D) Dysthymia", "(E) Major depressive disorder"],
+  "answer": "(D) Dysthymia",
   "explanation": "Dysthymia (persistent depressive disorder) is characterized by chronic, low-grade depressive symptoms lasting ≥2 years without meeting criteria for major depression."
 },
 
   {
   "question": "A 17-month-old girl was brought to the emergency department by her mom following a fall. The mom reports that the patient was playing in the playground when she tripped and fell onto the mulch. She had an uncomplicated birth history and has been meeting developmental goals except for language delay, for which she is to receive a hearing test for further evaluation next week. Physical exam reveals bruising along the left lateral thigh, knee, and elbow; all lab tests are within normal limits. Radiograph shows a fracture of the olecranon. Serum chemistry and liver panels were within normal limits. What is the most likely explanation for the patient’s presentation?",
-  "options": ["Accidental trauma", "Child abuse", "Defective type 1 collagen gene", "Low levels of phosphate", "Low levels of vitamin D"],
-  "answer": "Defective type 1 collagen gene",
+  "options": ["(A) Accidental trauma", "(B) Child abuse", "(C) Defective type 1 collagen gene", "(D) Low levels of phosphate", "(E) Low levels of vitamin D"],
+  "answer": "(C) Defective type 1 collagen gene",
   "explanation": "Multiple fractures with minor trauma and bruising suggest osteogenesis imperfecta, caused by defective type 1 collagen leading to brittle bones."
 },
 
   {
   "question": "A 62-year-old man comes to the emergency department because of colicky pain in the lower abdomen and abdominal distension for the past 12 hours. He has chronic constipation for which he takes lactulose and senna laxatives. His temperature is 37.1°C (98.7°F), blood pressure is 110/60 mm Hg and pulse is 85/min. On physical examination, there is diffuse abdominal distension and tenderness, and bowel sounds are faint. His plain abdominal radiograph is shown. Which of the following is the most likely diagnosis?",
-  "options": ["Intussusception", "Infectious colitis", "Bowel adhesions", "Volvulus", "Acute diverticulitis"],
-  "answer": "Volvulus",
+  "options": ["(A) Intussusception", "(B) Infectious colitis", "(C) Bowel adhesions", "(D) Volvulus", "(E) Acute diverticulitis"],
+  "answer": "(D) Volvulus",
   "explanation": "Colicky pain, distension, and constipation in an older adult suggest volvulus, often involving the sigmoid colon due to torsion."
 },
 
   {
   "question": "A 73-year-old African American man comes to the physician for a routine health maintenance examination. He has type 2 diabetes mellitus, hypertension, hypercholesterolemia, and coronary artery disease. His current medications include metformin, hydrochlorothiazide, amlodipine, rosuvastatin, isosorbide mononitrate, aspirin, and dipyridamole. He is 180 cm (5 ft 11 in) tall and weighs 110 kg (242 lb); BMI is 34 kg/m2. His vital signs are within normal limits. His hemoglobin A1c concentration is 6.7%. Serum lipid studies show: Cholesterol, total 302 mg/L, HDL-cholesterol 39 mg/dL, LDL-cholesterol 197 mg/dL, Triglycerides 292 mg/dL. The physician prescribes a drug that inhibits intestinal cholesterol absorption. The addition of this drug is most likely to increase the risk of which of the following adverse effects?",
-  "options": ["Hepatotoxicity", "Hyperkalemia", "Cutaneous flushing", "Hyperuricemia", "Cholelithiasis"],
-  "answer": "Hepatotoxicity",
+  "options": ["(A) Hepatotoxicity", "(B) Hyperkalemia", "(C) Cutaneous flushing", "(D) Hyperuricemia", "(E) Cholelithiasis"],
+  "answer": "(A) Hepatotoxicity",
   "explanation": "Ezetimibe (cholesterol absorption inhibitor) can cause hepatotoxicity, especially when combined with statins."
 },
 
   {
   "question": "A 15-year-old girl is brought to the clinic by her mother because she is worried the patient has not yet had her period. The patient’s older sister had her first period at age 14. The mother had her first period at age 13. The patient reports she is doing well in school and is on the varsity basketball team. Her medical history is significant for asthma and atopic dermatitis. Her medications include albuterol and topical triamcinolone. The patient’s temperature is 98°F (36.7°C), blood pressure is 111/72 mmHg, pulse is 65/min, and respirations are 14/min with an oxygen saturation of 99% on room air. Her body mass index (BMI) is 19 kg/m^2. Physical exam shows absent breast development and external genitalia at Tanner stage 1. Serum follicle stimulating hormone (FSH) level is measured to be 38 mIU/mL. Which of the following is the next best diagnostic step?",
-  "options": ["CYP17 gene work-up", "Estrogen levels", "Gonadotrophin-releasing hormone stimulation test", "Karotype", "Luteinizing hormone levels"],
-  "answer": "Karotype",
+  "options": ["(A) CYP17 gene work-up", "(B) Estrogen levels", "(C) Gonadotrophin-releasing hormone stimulation test", "(D) Karotype", "(E) Luteinizing hormone levels"],
+  "answer": "(D) Karotype",
   "explanation": "Primary amenorrhea with absent puberty and elevated FSH suggests Turner syndrome (45,X), warranting karyotype analysis."
 },
 
   {
   "question": "A 15-month-old girl is brought to the physician by her mother for grossly bloody diarrhea for 2 days. The girl has had a few episodes of blood-tinged stools over the past 3 weeks. She has not had pain, nausea, or vomiting. She is at the 55th percentile for height and 55th percentile for weight. Examination shows conjunctival pallor. The abdomen is soft and nontender. There is a small amount of dark red blood in the diaper. Her hemoglobin concentration is 9.5 g/dL, mean corpuscular volume is 68 μm3, and platelet count is 300,000/mm3. Further evaluation is most likely to show which of the following findings?",
-  "options": ["Cobblestone mucosa on colonoscopy", "Neutrophil infiltrated crypts on colonic biopsy", "Absent ganglionic cells on rectal suction biopsy", "Target sign on abdominal ultrasound", "Ectopic gastric mucosa on Technetium-99m pertechnetate scan"],
-  "answer": "Ectopic gastric mucosa on Technetium-99m pertechnetate scan",
+  "options": ["(A) Cobblestone mucosa on colonoscopy", "(B) Neutrophil infiltrated crypts on colonic biopsy", "(C) Absent ganglionic cells on rectal suction biopsy", "(D) Target sign on abdominal ultrasound", "(E) Ectopic gastric mucosa on Technetium-99m pertechnetate scan"],
+  "answer": "(E) Ectopic gastric mucosa on Technetium-99m pertechnetate scan",
   "explanation": "Painless bloody diarrhea and iron-deficiency anemia in a toddler suggest Meckel’s diverticulum, diagnosed via technetium scan detecting ectopic gastric mucosa."
 },
 
   {
   "question": "A 3855-g (8-lb 8-oz) newborn is examined shortly after birth. She was delivered at 40 weeks' gestation by cesarean delivery because of breech presentation. Pregnancy was otherwise uncomplicated. Physical examination shows asymmetric thigh creases. The left leg is shorter than the right leg and positioned in external rotation. Which of the following is the most likely underlying cause of this patient's findings?",
-  "options": ["Avascular necrosis of the femoral head", "Fracture of the femoral neck", "Inflammation of the hip synovium", "Abnormal development of the acetabulum", "Displacement of the femoral epiphysis"],
-  "answer": "Abnormal development of the acetabulum",
+  "options": ["(A) Avascular necrosis of the femoral head", "(B) Fracture of the femoral neck", "(C) Inflammation of the hip synovium", "(D) Abnormal development of the acetabulum", "(E) Displacement of the femoral epiphysis"],
+  "answer": "(D) Abnormal development of the acetabulum",
   "explanation": "Breech presentation and leg asymmetry suggest developmental dysplasia of the hip (DDH), caused by acetabular underdevelopment."
 },
   
   {
   "question": "A 27-year-old G1P0 woman at 9 weeks estimated gestational age presents for a prenatal visit. She has no current complaints and takes no medications. She is vegetarian and emigrated from Nepal 7 years ago. She does not use tobacco, alcohol or recreational drugs. The patient\u2019s vital signs include: blood pressure 111/95 mm Hg, temperature 36.7\u00b0C (98.6\u00b0F), pulse 88/min. Laboratory results are significant for the following:\nHemoglobin 10.2 g/dL\nErythrocyte count 5.5 million/mm3\nMean corpuscular volume 65 \u03bcm3\nMean corpuscular hemoglobin 21 pg/cell\nRed cell distribution width 13.5% (ref: 11.5\u201314.5%)\nSerum ferritin 170 ng/mL\nWhich of the following is the most likely cause of this patient's anemia?",
-  "options": ["Vitamin B12 deficiency", "Zinc deficiency", "Gestational anemia", "Iron deficiency anemia", "Thalassemia trait"],
-  "answer": "Thalassemia trait",
+  "options": ["(A) Vitamin B12 deficiency", "(B) Zinc deficiency", "(C) Gestational anemia", "(D) Iron deficiency anemia", "(E) Thalassemia trait"],
+  "answer": "(E) Thalassemia trait",
   "explanation": "The patient's microcytic anemia (MCV 65 fL), normal RDW, elevated RBC count (5.5 million/mm³), and normal ferritin (170 ng/mL) are diagnostic of thalassemia trait. Iron deficiency anemia is unlikely given the normal ferritin and absence of high RDW. Vitamin B12 deficiency causes macrocytic anemia, while zinc deficiency and gestational anemia do not fit this clinical picture. Thalassemia is endemic in Nepal, further supporting the diagnosis."
 },
 
   {
   "question": "A 31-year-old woman presents to your clinic with a persistent headache. She reports she has suffered from headaches since the age of 27 when she gained 12 kg (26.4 lb) after the birth of her second child. The headache is generalized and throbbing in nature. It worsens in the morning and is aggravated with coughing, laughing, and sneezing. The patient’s blood pressure is 130/85 mm Hg, heart rate is 90/min, respiratory rate is 14/min, and the temperature is 36.6℃ (97.9℉). The patient’s weight is 101 kg (222.7 lb), height is 165 cm (5.4 ft), and BMI is 36.7 kg/m2. Examination reveals papilledema. Head CT scan does not reveal any abnormalities. Lumbar puncture shows an opening pressure of 32 cm H2O. The patient is prescribed a carbonic anhydrase inhibitor, acetazolamide, for idiopathic intracranial hypertension. What will be the change in the kinetics of the reaction catalyzed by carbonic anhydrase under the influence of acetazolamide?",
-  "options": ["Activation energy (Ea) will increase", "Activation energy (Ea) will decrease", "Free energy (G) of the reaction products will increase", "Free energy (G) of the reactants will increase", "Increase reaction free energy change (∆G) by increasing free energy (G) of reactants and decreasing G of products"],
-  "answer": "Activation energy (Ea) will increase",
+  "options": ["(A) Activation energy (Ea) will increase", "(B) Activation energy (Ea) will decrease", "(C) Free energy (G) of the reaction products will increase", "(D) Free energy (G) of the reactants will increase", "(E) Increase reaction free energy change (∆G) by increasing free energy (G) of reactants and decreasing G of products"],
+  "answer": "(A) Activation energy (Ea) will increase",
   "explanation": "Acetazolamide is a competitive inhibitor of carbonic anhydrase. By binding to the enzyme's active site, it prevents the substrate from binding, effectively increasing the activation energy (Ea) required for the reaction to proceed. It does not alter the free energy (G) of the reactants or products but raises the energy barrier for the reaction."
 },
 
   {
   "question": "A 55-year-old man comes to the emergency department because of a dry cough and severe chest pain beginning that morning. Two months ago, he was diagnosed with inferior wall myocardial infarction and was treated with stent implantation of the right coronary artery. He has a history of hypertension and hypercholesterolemia. His medications include aspirin, clopidogrel, atorvastatin, and enalapril. His temperature is 38.5°C (101.3°F), pulse is 92/min, respirations are 22/min, and blood pressure is 130/80 mm Hg. Cardiac examination shows a high-pitched scratching sound best heard while sitting upright and during expiration. The remainder of the examination shows no abnormalities. An ECG shows diffuse ST elevations. Serum studies show a troponin I of 0.2 ng/mL (N < 0.01). Which of the following is the most likely cause of this patient's symptoms?",
-  "options": ["Cardiac tamponade", "Constrictive pericarditis", "Reinfarction", "Early infarct-associated pericarditis", "Dressler syndrome"],
-  "answer": "Dressler syndrome",
+  "options": ["(A) Cardiac tamponade", "(B) Constrictive pericarditis", "(C) Reinfarction", "(D) Early infarct-associated pericarditis", "(E) Dressler syndrome"],
+  "answer": "(E) Dressler syndrome",
   "explanation": "Dressler syndrome is a delayed (weeks to months post-MI) autoimmune pericarditis characterized by fever, pleuritic chest pain, and pericardial friction rub. The elevated troponin (though mild) and diffuse ST elevations suggest pericarditis. The timing (2 months post-MI) and absence of hemodynamic instability make Dressler syndrome the most likely diagnosis."
 },
 
   {
   "question": "A 27-year-old man presents to the physician with concern for pain in both of his knees that he is unable to attribute to any activities that he has recently performed. He had an acute episode of diarrhea 2 weeks ago, prior to the onset of symptoms. He has also been experiencing a burning sensation during urination for the past week. When questioned about any other symptoms, he notes that he has also noticed that his eyes occasionally feel irritated and painful, leading to bouts of blurry vision. On physical examination, the patient is afebrile and has conjunctival injection surrounding the iris. A synovial fluid aspiration of the knee is performed and reveals a white blood cell count of 51,000/µL. Which of the following is the most appropriate treatment for this patient’s condition?",
-  "options": ["Acetaminophen", "Allopurinol", "Colchicine", "Indomethacin", "Leflunomide"],
-  "answer": "Indomethacin",
+  "options": ["(A) Acetaminophen", "(B) Allopurinol", "(C) Colchicine", "(D) Indomethacin", "(E) Leflunomide"],
+  "answer": "(D) Indomethacin",
   "explanation": "The patient has reactive arthritis (formerly Reiter's syndrome), characterized by the triad of arthritis, urethritis, and conjunctivitis/uveitis following a diarrheal or sexually transmitted infection (e.g., Chlamydia). The high synovial WBC count indicates inflammatory arthritis. NSAIDs like indomethacin are first-line therapy for symptom relief."
 },
 
   {
   "question": "A 22-year old active duty soldier presents to your clinic with complaints of intense fatigue, fevers, abdominal pain, and a nonproductive cough. Her symptoms began a few days ago, but she returned from a tour of duty in Malawi and Mozambique four weeks ago. She endorses sleeping outside, using minimal bug spray, and swimming in rivers during her tour. On physical exam, her temperature is 101.5, and she appears exhausted. She has a hive-like rash scattered over her body. Her abdominal exam is notable for hepatosplenomegaly, and her lung exam is notable for scattered crackles. Her CBC with diff is remarkable for marked eosinophilia, and she has an elevated IgE. Of the following organisms, infection with which one is most consistent with her symptoms?",
-  "options": ["Plasmodium falciparum", "Schistosoma mansoni", "Plasmodium vivax", "Mycobacterium tuberculosis", "Trypanosoma brucei rhodesiense"],
-  "answer": "Schistosoma mansoni",
+  "options": ["(A) Plasmodium falciparum", "(B) Schistosoma mansoni", "(C) Plasmodium vivax", "(D) Mycobacterium tuberculosis", "(E) Trypanosoma brucei rhodesiense"],
+  "answer": "(B) Schistosoma mansoni",
   "explanation": "The patient's symptoms (fever, hepatosplenomegaly, eosinophilia, and history of freshwater exposure in endemic regions) strongly suggest acute schistosomiasis (Katayama syndrome). Schistosoma mansoni is endemic in Africa (including Malawi/Mozambique) and causes hepatic and pulmonary involvement. The eosinophilia and IgE elevation are classic for helminthic infections."
 },
 
   {
   "question": "A 72-year-old man comes to the emergency room because of a 4-day history of progressively worsening pain and swelling on the right side of his face. The patient was diagnosed with multiple myeloma 8 months ago and is currently undergoing treatment. His vital signs are within normal limits. Physical exam shows erythema and swelling over the right cheek and mandible. An orofacial fistula is present. Which of the following best describes the mechanism of action of the drug that is most likely responsible for this patient's symptoms?",
-  "options": ["Inhibition of angiogenesis", "Cross-linking DNA at guanine", "Inhibition of proteosome activity", "Stimulation of PTH receptor", "Binding to hydroxyapatite"],
-  "answer": "Binding to hydroxyapatite",
+  "options": ["(A) Inhibition of angiogenesis", "(B) Cross-linking DNA at guanine", "(C) Inhibition of proteosome activity", "(D) Stimulation of PTH receptor", "(E) Binding to hydroxyapatite"],
+  "answer": "(E) Binding to hydroxyapatite",
   "explanation": "The patient's symptoms (osteonecrosis of the jaw with fistula formation) are a classic complication of bisphosphonates (e.g., zoledronate), which are used to treat myeloma-associated bone lesions. Bisphosphonates work by binding to hydroxyapatite in bone, inhibiting osteoclast activity. Prolonged use can lead to avascular necrosis of the jaw."
 },
 
   {
   "question": "A 12-month-old girl is brought to the physician because she is unable to sit and has not learned how to crawl. She keeps her hips and elbows flexed and her parents have to use considerable force to passively extend her joints. She attained neck control at 4 months and could roll from front to back at 5 months of age. She does not engage in play, reach for toys, or maintain eye contact. She babbles and does not mimic sounds. She does not follow simple instructions. She has difficulty swallowing solid foods and often coughs at meal times. Her maternal cousin has Down syndrome. Her vital signs are within normal limits. She is at the 25th percentile for length and 10th percentile for weight. Neurological examination shows increased muscle tone in all extremities. The ankle clonus and extensor plantar responses are present bilaterally. The Moro reflex is present. An MRI of the head shows periventricular leukomalacia. Which of the following is the most important risk factor for the development of this condition?",
-  "options": ["Maternal smoking during pregnancy", "Premature birth", "Congenital rubella infection", "Congenital CMV infection", "Advanced maternal age"],
-  "answer": "Premature birth",
+  "options": ["(A) Maternal smoking during pregnancy", "(B) Premature birth", "(C) Congenital rubella infection", "(D) Congenital CMV infection", "(E) Advanced maternal age"],
+  "answer": "(B) Premature birth",
   "explanation": "The clinical picture (spasticity, developmental delay, periventricular leukomalacia on MRI) is consistent with cerebral palsy (spastic diplegic type). Periventricular leukomalacia is the most common cause of cerebral palsy in preterm infants due to ischemia in the watershed zones of the immature brain. Prematurity is the strongest risk factor."
 },
 
   {
   "question": "A 31-year-old male presents with a 2-day history of watery diarrhea that began 8 days after his arrival from Africa. None of the other members of his family became ill. He reports symptoms of malaise, anorexia, and abdominal cramps followed by watery diarrhea. He denies tenesmus, urgency, and bloody diarrhea. His temperature is 98.6°F (37°C), respiratory rate is 15/min, pulse is 107/min, and blood pressure is 90/68 mm Hg. A physical examination is performed and is within normal limits. Intravenous fluids are started, and a stool sample is sent to the lab, which comes out to be negative for any ova/parasites, blood cells, or pus cells. What is the most likely diagnosis?",
-  "options": ["Giardiasis", "C. difficile colitis", "Irritable bowel syndrome (IBS)", "Traveler’s diarrhea due to Norovirus", "Traveler’s diarrhea due to ETEC"],
-  "answer": "Traveler’s diarrhea due to ETEC",
+  "options": ["(A) Giardiasis", "(B) C. difficile colitis", "(C) Irritable bowel syndrome (IBS)", "(D) Traveler’s diarrhea due to Norovirus", "(E) Traveler’s diarrhea due to ETEC"],
+  "answer": "(E) Traveler’s diarrhea due to ETEC",
   "explanation": "The patient's symptoms (acute watery diarrhea without blood/pus, onset during travel to Africa) are classic for enterotoxigenic E. coli (ETEC), the most common cause of traveler's diarrhea. ETEC produces heat-labile (LT) and heat-stable (ST) enterotoxins, leading to secretory diarrhea. The absence of blood/pus and fever rules out invasive pathogens."
 },
 
   {
   "question": "A 46-year-old woman presents to the emergency department with progressive dyspnea and chest pain. She reports that her symptoms started 1 week ago and have gotten progressively worse. The chest pain is left-sided and is exacerbated by coughing or deep breaths. She also endorses a 6-month history of joint pains involving her knees, elbows, and digits. She does not have a significant medical or surgical history. She takes ibuprofen as needed. She works as a pre-school teacher. The patient’s temperature is 99°F (37.2°C), blood pressure is 120/78 mmHg, pulse is 89/min, and respirations are 17/min with an oxygen saturation of 93% on room air. On physical examination, a friction rub upon inspiration/expiration and crackles are appreciated at the base of the left lung. She has an erythematous rash that spans the bilateral cheeks and nose. There are also scattered ecchymoses on her arms and legs. A chest radiograph shows a small left-sided pleural effusion. A complete blood count is obtained, as shown below:\n\nHemoglobin: 9 g/dL\nHematocrit: 28%\nLeukocyte count: 1,500/mm^3 with normal differential\nPlatelet count: 80,000/mm^3\n\nA urinalysis shows elevated protein levels. Serologic antibodies are pending. Which of the following is the primary cause of the patient’s lab results?",
-  "options": ["Hematologic malignancy", "Immune-mediated destruction", "Mechanical shearing", "Splenic sequestration", "Viral infection"],
-  "answer": "Immune-mediated destruction",
+  "options": ["(A) Hematologic malignancy", "(B) Immune-mediated destruction", "(C) Mechanical shearing", "(D) Splenic sequestration", "(E) Viral infection"],
+  "answer": "(B) Immune-mediated destruction",
   "explanation": "The patient has systemic lupus erythematosus (SLE) based on her malar rash, pleuritis, arthritis, cytopenias, and proteinuria. The pancytopenia (anemia, leukopenia, thrombocytopenia) in SLE is caused by immune-mediated destruction of blood cells via autoantibodies (e.g., anti-erythrocyte, anti-neutrophil, anti-platelet antibodies)."
 },
 
   {
   "question": "A 48-year-old patient is recovering from acute lung injury following a diffuse pulmonary viral infection. The cell type responsible for the regeneration of the patient's alveolar epithelium is also functions in:",
-  "options": ["Protease release", "Phagocytosis", "Mucus secretion", "Surfactant secretion", "Recruitment of neutrophils"],
-  "answer": "Surfactant secretion",
+  "options": ["(A) Protease release", "(B) Phagocytosis", "(C) Mucus secretion", "(D) Surfactant secretion", "(E) Recruitment of neutrophils"],
+  "answer": "(D) Surfactant secretion",
   "explanation": "Type II pneumocytes are the progenitor cells responsible for regenerating alveolar epithelium after lung injury. Their primary functions include surfactant production (reduces surface tension) and differentiation into Type I pneumocytes (gas exchange). They do not participate in phagocytosis, mucus secretion, or neutrophil recruitment."
 }
 ]

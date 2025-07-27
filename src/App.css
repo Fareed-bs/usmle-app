@@ -317,42 +317,66 @@
   line-height: 1.6;
 }
 
+/* Enhanced dashboard container styles */
 .dashboard-container {
-  --container-max-width: min(600px, 90vw); /* Responsive clamp */
+  --container-max-width: min(600px, 90vw);
+  --surface-gradient: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
   --surface-color: #fff;
-  --shadow-color: rgba(0, 0, 0, 0.07);
-  --border-radius: 0.625rem; /* 10px */
-  --transition-time: 0.2s;
+  --shadow-color: rgba(44, 62, 80, 0.12);
+  --border-radius: 1.25rem; /* 20px */
+  --transition-time: 0.3s;
 
   width: 100%;
   max-width: var(--container-max-width);
-  margin: 2rem auto;
-  padding: 2rem;
-  background: var(--surface-color);
+  margin: 2.5rem auto;
+  padding: 2.5rem 2rem;
+  background: var(--surface-gradient);
   border-radius: var(--border-radius);
-  box-shadow: 
-    0 0.125rem 0.5rem var(--shadow-color);
-  transition: 
-    box-shadow var(--transition-time) ease-out,
-    transform var(--transition-time) ease-out;
+  box-shadow:
+    0 4px 24px var(--shadow-color),
+    0 1.5px 6px rgba(52, 152, 219, 0.08);
+  transition:
+    box-shadow var(--transition-time) cubic-bezier(0.4, 0.2, 0.2, 1),
+    transform var(--transition-time) cubic-bezier(0.4, 0.2, 0.2, 1);
+  border: 1px solid #dde6f1;
+  position: relative;
+  overflow: hidden;
+}
+
+.dashboard-container::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, #a7c7e7 40%, transparent 70%);
+  opacity: 0.25;
+  z-index: 0;
 }
 
 .dashboard-container:hover {
-  box-shadow: 
-    0 0.25rem 1rem rgba(0, 0, 0, 0.1);
-  transform: translateY(-0.125rem);
+  box-shadow:
+    0 8px 32px rgba(44, 62, 80, 0.18),
+    0 2px 8px rgba(52, 152, 219, 0.12);
+  transform: translateY(-0.25rem) scale(1.01);
 }
 
 .dashboard-section {
-  margin-bottom: 1.5rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1.5px solid rgba(44, 62, 80, 0.07);
+  position: relative;
+  z-index: 1;
+  background: rgba(255,255,255,0.85);
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 4px rgba(44, 62, 80, 0.04);
 }
 
 .dashboard-section:last-child {
   margin-bottom: 0;
   padding-bottom: 0;
-  border-bottom: none;
+  border: none;
 }
 
 /* Progress Bar Styles */

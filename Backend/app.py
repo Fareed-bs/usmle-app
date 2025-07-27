@@ -2,8 +2,8 @@ from functools import wraps
 from flask import Flask, jsonify, request, session, redirect, url_for
 from flask_cors import CORS
 from chatbot import get_chat_response
-from basic_questions import get_basic_questions, get_basic_questions_public  # type: ignore
-from core import get_dataset_questions, get_dataset_qa  # type: ignore
+from step1_basic import get_basic_questions, get_basic_questions_public  # type: ignore
+from step1_core import get_dataset_questions, get_dataset_qa  # type: ignore
 from step2basic import step2_basic_questions, step2_basic_questions_ans  # type: ignore
 from step2core import get_sampletest_questions, get_sampletest_qa  # type: ignore
 from step3basic import step3_basic_questions, step3_basic_full  # type: ignore

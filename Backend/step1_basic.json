@@ -1,122 +1,122 @@
 [
     {
       "question": "A 10-year-old boy presents with difficulty walking and calf hypertrophy. Genetic testing reveals a mutation in the dystrophin gene. Which of the following is the most likely diagnosis?",
-      "options": ["Becker muscular dystrophy", "Duchenne muscular dystrophy", "Myotonic dystrophy", "Facioscapulohumeral dystrophy"],
-      "answer": "Duchenne muscular dystrophy",
+      "options": ["(A) Becker muscular dystrophy", "(B) Duchenne muscular dystrophy", "(C) Myotonic dystrophy", "(D) Facioscapulohumeral dystrophy"],
+      "answer": "(B) Duchenne muscular dystrophy",
       "explanation": "Duchenne muscular dystrophy is an X-linked recessive disorder caused by dystrophin mutations, leading to progressive muscle weakness and calf pseudohypertrophy."
     },
     {
       "question": "A 60-year-old woman with a history of hypertension presents with sudden-onset severe headache and nuchal rigidity. CT scan shows subarachnoid hemorrhage. Which vessel is most likely affected?",
-      "options": ["Middle cerebral artery", "Anterior cerebral artery", "Posterior communicating artery", "Basilar artery"],
-      "answer": "Posterior communicating artery",
+      "options": ["(A) Middle cerebral artery", "(B) Anterior cerebral artery", "(C) Posterior communicating artery", "(D) Basilar artery"],
+      "answer": "(C) Posterior communicating artery",
       "explanation": "Rupture of a posterior communicating artery aneurysm is a common cause of subarachnoid hemorrhage, often presenting with 'thunderclap' headache and meningismus."
     },
     {
       "question": "A 30-year-old woman presents with fatigue, weight gain, and cold intolerance. Lab tests show elevated TSH and low free T4. Which of the following is the most likely cause?",
-      "options": ["Graves' disease", "Hashimoto thyroiditis", "Subacute thyroiditis", "Pituitary adenoma"],
-      "answer": "Hashimoto thyroiditis",
+      "options": ["(A) Graves' disease", "(B) Hashimoto thyroiditis", "(C) Subacute thyroiditis", "(D) Pituitary adenoma"],
+      "answer": "(B) Hashimoto thyroiditis",
       "explanation": "Hashimoto thyroiditis is an autoimmune condition causing hypothyroidism, characterized by elevated TSH, low T4, and anti-TPO antibodies."
     },
     {
       "question": "A 25-year-old man presents with hemoptysis, hematuria, and hearing loss. Renal biopsy shows crescentic glomerulonephritis. Which antibody is most likely involved?",
-      "options": ["Anti-glomerular basement membrane (anti-GBM)", "Anti-neutrophil cytoplasmic (ANCA)", "Anti-dsDNA", "Anti-Smith"],
-      "answer": "Anti-glomerular basement membrane (anti-GBM)",
+      "options": ["(A) Anti-glomerular basement membrane (anti-GBM)", "(B) Anti-neutrophil cytoplasmic (ANCA)", "(C) Anti-dsDNA", "(D) Anti-Smith"],
+      "answer": "(A) Anti-glomerular basement membrane (anti-GBM)",
       "explanation": "Goodpasture syndrome is caused by anti-GBM antibodies, leading to pulmonary hemorrhage, glomerulonephritis, and basement membrane damage."
     },
     {
       "question": "A 55-year-old man with a history of alcohol use disorder presents with confusion, ataxia, and ophthalmoplegia. Which vitamin deficiency is most likely responsible?",
-      "options": ["Vitamin B1 (thiamine)", "Vitamin B12", "Vitamin C", "Vitamin D"],
-      "answer": "Vitamin B1 (thiamine)",
+      "options": ["(A) Vitamin B1 (thiamine)", "(B) Vitamin B12", "(C) Vitamin C", "(D) Vitamin D"],
+      "answer": "(A) Vitamin B1 (thiamine)",
       "explanation": "Wernicke encephalopathy is caused by thiamine deficiency and presents with the classic triad of confusion, ataxia, and ophthalmoplegia."
     },
     {
       "question": "A 40-year-old woman presents with episodic severe unilateral headaches with photophobia and nausea. Which neurotransmitter is most implicated in the pathophysiology?",
-      "options": ["Dopamine", "Serotonin", "Acetylcholine", "GABA"],
-      "answer": "Serotonin",
+      "options": ["(A) Dopamine", "(B) Serotonin", "(C) Acetylcholine", "(D) GABA"],
+      "answer": "(B) Serotonin",
       "explanation": "Migraines are associated with serotonin (5-HT) dysfunction, leading to vasodilation and trigeminal nerve activation."
     },
     {
       "question": "A 70-year-old man presents with resting tremor, bradykinesia, and cogwheel rigidity. Which brain region is most affected?",
-      "options": ["Substantia nigra", "Caudate nucleus", "Globus pallidus", "Putamen"],
-      "answer": "Substantia nigra",
+      "options": ["(A) Substantia nigra", "(B) Caudate nucleus", "(C) Globus pallidus", "(D) Putamen"],
+      "answer": "(A) Substantia nigra",
       "explanation": "Parkinson's disease is caused by dopaminergic neuron degeneration in the substantia nigra pars compacta."
     },
     {
       "question": "A 5-year-old boy presents with recurrent bacterial infections. Lab tests show absent lymph nodes and low T and B cells. Which enzyme deficiency is most likely?",
-      "options": ["Adenosine deaminase", "Hexosaminidase A", "Glucocerebrosidase", "Pyruvate kinase"],
-      "answer": "Adenosine deaminase",
+      "options": ["(A) Adenosine deaminase", "(B) Hexosaminidase A", "(C) Glucocerebrosidase", "(D) Pyruvate kinase"],
+      "answer": "(A) Adenosine deaminase",
       "explanation": "Adenosine deaminase deficiency causes severe combined immunodeficiency (SCID) due to toxic metabolite accumulation in lymphocytes."
     },
     {
       "question": "A 50-year-old man presents with postprandial RUQ pain. Ultrasound reveals gallstones. Which component is most likely responsible for stone formation?",
-      "options": ["Cholesterol", "Bilirubin", "Calcium", "Urate"],
-      "answer": "Cholesterol",
+      "options": ["(A) Cholesterol", "(B) Bilirubin", "(C) Calcium", "(D) Urate"],
+      "answer": "(A) Cholesterol",
       "explanation": "Cholesterol gallstones are the most common type, forming due to bile supersaturation with cholesterol."
     },
     {
       "question": "A 20-year-old woman presents with fever, pharyngitis, and lymphadenopathy. Peripheral smear shows atypical lymphocytes. Which virus is most likely responsible?",
-      "options": ["Epstein-Barr virus", "Cytomegalovirus", "HIV", "Herpes simplex virus"],
-      "answer": "Epstein-Barr virus",
+      "options": ["(A) Epstein-Barr virus", "(B) Cytomegalovirus", "(C) HIV", "(D) Herpes simplex virus"],
+      "answer": "(A) Epstein-Barr virus",
       "explanation": "Infectious mononucleosis is caused by EBV, presenting with fever, pharyngitis, lymphadenopathy, and atypical lymphocytes."
     },
     {
       "question": "A 65-year-old man presents with hematuria and weight loss. CT reveals a renal mass. Which tumor suppressor gene is most likely mutated?",
-      "options": ["BRCA1", "TP53", "VHL", "APC"],
-      "answer": "VHL",
+      "options": ["(A) BRCA1", "(B) TP53", "(C) VHL", "(D) APC"],
+      "answer": "(C) VHL",
       "explanation": "Von Hippel-Lindau (VHL) gene mutations are associated with clear cell renal cell carcinoma."
     },
     {
       "question": "A 30-year-old woman presents with weakness and fatigue. Lab tests show hypercalcemia and hypophosphatemia. Which hormone is most likely elevated?",
-      "options": ["Parathyroid hormone", "Calcitonin", "Vitamin D", "Thyroxine"],
-      "answer": "Parathyroid hormone",
+      "options": ["(A) Parathyroid hormone", "(B) Calcitonin", "(C) Vitamin D", "(D) Thyroxine"],
+      "answer": "(A) Parathyroid hormone",
       "explanation": "Primary hyperparathyroidism causes hypercalcemia and hypophosphatemia due to excessive PTH secretion."
     },
     {
       "question": "A 60-year-old man presents with painless hematuria. Cytology reveals high-grade urothelial carcinoma. Which carcinogen is most likely responsible?",
-      "options": ["Aflatoxin", "Asbestos", "Cigarette smoke", "Vinyl chloride"],
-      "answer": "Cigarette smoke",
+      "options": ["(A) Aflatoxin", "(B) Asbestos", "(C) Cigarette smoke", "(D) Vinyl chloride"],
+      "answer": "(C) Cigarette smoke",
       "explanation": "Smoking is the most common risk factor for urothelial (transitional cell) carcinoma of the bladder."
     },
     {
       "question": "A 4-year-old boy presents with a barking cough and stridor. Which virus is most likely responsible?",
-      "options": ["Respiratory syncytial virus", "Parainfluenza virus", "Influenza virus", "Adenovirus"],
-      "answer": "Parainfluenza virus",
+      "options": ["(A) Respiratory syncytial virus", "(B) Parainfluenza virus", "(C) Influenza virus", "(D) Adenovirus"],
+      "answer": "(B) Parainfluenza virus",
       "explanation": "Croup (laryngotracheobronchitis) is most commonly caused by parainfluenza virus, leading to subglottic swelling and stridor."
     },
     {
       "question": "A 25-year-old woman presents with cyclic breast pain and nodularity. Biopsy shows cystic dilation and stromal fibrosis. Which hormone imbalance is most likely?",
-      "options": ["Excess estrogen", "Excess progesterone", "Excess prolactin", "Excess androgens"],
-      "answer": "Excess estrogen",
+      "options": ["(A) Excess estrogen", "(B) Excess progesterone", "(C) Excess prolactin", "(D) Excess androgens"],
+      "answer": "(A) Excess estrogen",
       "explanation": "Fibrocystic breast changes are due to estrogen dominance, leading to cystic dilation and fibrosis."
     },  
     {
       "question": "A 28-year-old woman presents with amenorrhea, galactorrhea, and bitemporal hemianopsia. MRI reveals a pituitary mass. Which hormone is most likely elevated?",
-      "options": ["Prolactin", "Growth hormone", "Adrenocorticotropic hormone", "Thyroid-stimulating hormone"],
-      "answer": "Prolactin",
+      "options": ["(A) Prolactin", "(B) Growth hormone", "(C) Adrenocorticotropic hormone", "(D) Thyroid-stimulating hormone"],
+      "answer": "(A) Prolactin",
       "explanation": "Prolactin-secreting pituitary adenomas (prolactinomas) cause amenorrhea, galactorrhea, and visual field defects due to compression of the optic chiasm."
     },
     {
       "question": "A 6-month-old infant presents with failure to thrive, steatorrhea, and recurrent respiratory infections. Sweat chloride test is positive. Which ion channel is defective?",
-      "options": ["Sodium channel (ENaC)", "Chloride channel (CFTR)", "Potassium channel (KCNQ1)", "Calcium channel (CACNA1S)"],
-      "answer": "Chloride channel (CFTR)",
+      "options": ["(A) Sodium channel (ENaC)", "(B) Chloride channel (CFTR)", "(C) Potassium channel (KCNQ1)", "(D) Calcium channel (CACNA1S)"],
+      "answer": "(B) Chloride channel (CFTR)",
       "explanation": "Cystic fibrosis is caused by CFTR chloride channel mutations, leading to thick secretions in the lungs, pancreas, and sweat glands."
     },
     {
       "question": "A 50-year-old man with chronic alcoholism presents with asterixis and confusion. Ammonia levels are elevated. Which liver function is most impaired?",
-      "options": ["Conjugation of bilirubin", "Synthesis of albumin", "Detoxification of ammonia", "Production of bile acids"],
-      "answer": "Detoxification of ammonia",
+      "options": ["(A) Conjugation of bilirubin", "(B) Synthesis of albumin", "(C) Detoxification of ammonia", "(D) Production of bile acids"],
+      "answer": "(C) Detoxification of ammonia",
       "explanation": "Hepatic encephalopathy in cirrhosis results from impaired ammonia detoxification (urea cycle dysfunction), leading to asterixis and confusion."
     },
     {
       "question": "A 35-year-old woman presents with muscle weakness that improves with repetitive stimulation. Antibodies against acetylcholine receptors are detected. Which treatment is most appropriate?",
-      "options": ["Pyridostigmine", "Levodopa", "Propranolol", "Diazepam"],
-      "answer": "Pyridostigmine",
+      "options": ["(A) Pyridostigmine", "(B) Levodopa", "(C) Propranolol", "(D) Diazepam"],
+      "answer": "(A) Pyridostigmine",
       "explanation": "Myasthenia gravis is caused by anti-AChR antibodies; pyridostigmine (an acetylcholinesterase inhibitor) improves symptoms by increasing acetylcholine availability."
     },
     {
       "question": "A 60-year-old man presents with painless jaundice, weight loss, and a palpable gallbladder. CT shows a pancreatic head mass. Which sign is most associated with this condition?",
-      "options": ["Courvoisier's sign", "Murphy's sign", "McBurney's sign", "Rovsing's sign"],
-      "answer": "Courvoisier's sign",
+      "options": ["(A) Courvoisier's sign", "(B) Murphy's sign", "(C) McBurney's sign", "(D) Rovsing's sign"],
+      "answer": "(A) Courvoisier's sign",
       "explanation": "Courvoisier's sign (painless jaundice with a palpable gallbladder) suggests pancreatic head cancer obstructing the common bile duct."
     }
 ]

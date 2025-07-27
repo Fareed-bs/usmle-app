@@ -1,10 +1,12 @@
 import json
 
 # Load all 20 questions from the JSON file
-with open('basic.json') as f:
+with open('step1_basic.json') as f:
     data = json.load(f)
 
 # 1. Return full questions with answers and explanations (for result evaluation)
+
+
 def get_basic_questions():
     return [
         {
@@ -18,6 +20,8 @@ def get_basic_questions():
     ]
 
 # 2. Return only questions and options (for quiz display)
+
+
 def get_basic_questions_public():
     return [
         {
