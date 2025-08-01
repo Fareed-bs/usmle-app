@@ -2,13 +2,7 @@ from functools import wraps
 from flask import Flask, jsonify, request, session, redirect, url_for
 from flask_cors import CORS
 from chatbot import get_chat_response
-from step1_basic import get_basic_questions, get_basic_questions_public  # type: ignore
-from step1_core import get_dataset_questions, get_dataset_qa  # type: ignore
-from step2basic import step2_basic_questions, step2_basic_questions_ans  # type: ignore
-from step2core import get_sampletest_questions, get_sampletest_qa  # type: ignore
-from step3basic import step3_basic_questions, step3_basic_full  # type: ignore
-from fip import get_fip_questions, get_fip_qa  # type: ignore
-from acm import acm_questions, acm_qa  # type: ignore
+from all_questions import get_basic_questions, get_basic_questions_public, get_dataset_questions, get_dataset_qa, step2_basic_questions_ans, step2_basic_questions, get_sampletest_questions, get_sampletest_qa, step3_basic_questions, step3_basic_full, get_fip_questions, get_fip_qa, acm_questions, acm_qa  # type: ignore
 import datetime
 import os
 from pymongo import MongoClient
@@ -208,11 +202,11 @@ def get_basic_quiz_questions():
 
 @app.route('/api/step1/basic/submit', methods=['POST'])
 def submit_basic_quiz():
-    data = request.get_json()
-    if not data or "answers" not in data:
+    submitted_data = request.get_json()
+    if not submitted_data or "answers" not in submitted_data:
         return jsonify({"message": "Missing answers in request body"}), 400
 
-    user_answers = data.get("answers", {})
+    user_answers = submitted_data.get("answers", {})
     full_data = get_basic_questions()
     results = []
     score = 0
@@ -264,11 +258,11 @@ def get_questions():
 @app.route('/api/submit', methods=['POST'])
 @login_required
 def submit():
-    data = request.get_json()
-    if not data or "answers" not in data:
+    submitted_data = request.get_json()
+    if not submitted_data or "answers" not in submitted_data:
         return jsonify({"message": "Missing answers in request body"}), 400
 
-    user_answers = data.get("answers", {})
+    user_answers = submitted_data.get("answers", {})
     full_data = get_dataset_qa()
     results = []
     incorrect_answers_details = []
@@ -355,10 +349,10 @@ def get_step2_basic_quiz_questions():
 # Create an endpoint to get user answers and evaluate
 @app.route('/api/step2/basic/submit', methods=['POST'])
 def submit_step2_basic_quiz():
-    data = request.get_json()
-    if not data or "answers" not in data:
+    submitted_data = request.get_json()
+    if not submitted_data or "answers" not in submitted_data:
         return jsonify({"message": "Missing answers in request body"}), 400
-    user_answers = data.get("answers", {})
+    user_answers = submitted_data.get("answers", {})
     full_data = step2_basic_questions_ans()
     results = []
     score = 0
@@ -406,11 +400,11 @@ def get_sample_questions():
 
 @app.route('/api/step2core/submit', methods=['POST'])
 def step2_core_submit():
-    data = request.get_json()
-    if not data or "answers" not in data:
+    submitted_data = request.get_json()
+    if not submitted_data or "answers" not in submitted_data:
         return jsonify({"message": "Missing answers in request body"}), 400
 
-    user_answers = data.get("answers", {})
+    user_answers = submitted_data.get("answers", {})
     full_data = get_sampletest_qa()
     results = []
     incorrect_answers_details_step2 = []
@@ -502,10 +496,10 @@ def get_step3_basic_quiz_questions():
 # Create an endpoint to get user answers and evaluate
 @app.route('/api/step3/basic/submit', methods=['POST'])
 def submit_step3_basic_quiz():
-    data = request.get_json()
-    if not data or "answers" not in data:
+    submitted_data = request.get_json()
+    if not submitted_data or "answers" not in submitted_data:
         return jsonify({"message": "Missing answers in request body"}), 400
-    user_answers = data.get("answers", {})
+    user_answers = submitted_data.get("answers", {})
     full_data = step3_basic_full()
     results = []
     score = 0
@@ -552,10 +546,10 @@ def get_fip_quiz_questions():
 # Create an endpoint to get user answers and evaluate
 @app.route('/api/fip/submit', methods=['POST'])
 def submit_fip_quiz():
-    data = request.get_json()
-    if not data or "answers" not in data:
+    submitted_data = request.get_json()
+    if not submitted_data or "answers" not in submitted_data:
         return jsonify({"message": "Missing answers in request body"}), 400
-    user_answers = data.get("answers", {})
+    user_answers = submitted_data.get("answers", {})
     full_data = get_fip_qa()
 
     results = []
@@ -641,10 +635,10 @@ def get_acm_quiz_questions():
 # Create an endpoint to get user answers and evaluate
 @app.route('/api/acm/submit', methods=['POST'])
 def submit_acm_quiz():
-    data = request.get_json()
-    if not data or "answers" not in data:
+    submitted_data = request.get_json()
+    if not submitted_data or "answers" not in submitted_data:
         return jsonify({"message": "Missing answers in request body"}), 400
-    user_answers = data.get("answers", {})
+    user_answers = submitted_data.get("answers", {})
     full_data = acm_qa()
     results = []
     incorrect_answers_details_acm = []

@@ -141,8 +141,8 @@
 
 {
   "question": " A 2-year-old girl is brought to the office by her parents for a well-child examination. She was adopted 2 months ago. She has no history of serious illness and receives no medications. Vital signs are within normal limits. Examination shows no abnormalities. After the examination, the parents ask when they should tell their daughter about the adoption. Which of the following is the most appropriate advice regarding the best time to tell this patient?",
-  "options": ["(A) fter she turns 18 years of age","As early as possible, even if she cannot process the whole experience ","(B) Once the seal on the adoption records has been lifted","Right before she is enrolled in kindergarten","When she learns that she is not biologically related to her parents"],
-  "answer": "As early as possible, even if she cannot process the whole experience",
+  "options": ["(A) After she turns 18 years of age","(B) As early as possible, even if she cannot process the whole experience ","(C) Once the seal on the adoption records has been lifted","(D) Right before she is enrolled in kindergarten","(E) When she learns that she is not biologically related to her parents"],
+  "answer": "(B) As early as possible, even if she cannot process the whole experience",
   "explanation": "Open and age-appropriate discussions about adoption from an early age help build trust and normalize the child's story, preventing feelings of secrecy or shame later in life"
 },
 
