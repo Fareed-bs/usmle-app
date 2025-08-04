@@ -1,0 +1,236 @@
+/* Home Page Container */
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  color: #2c3e50;
+}
+
+/* Header Section */
+.home-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.home-header h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.home-header p {
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Features Section */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.feature-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #eaeaea;
+  text-align: center;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.feature-card p {
+  color: #666;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+/* Quick Links Section */
+.quick-links {
+  background: #f8fafc;
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.quick-links h2 {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+}
+
+.link-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn-step {
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 200px;
+  color: white;
+  font-size: 1rem;
+}
+
+.btn-step-1 {
+  background: linear-gradient(135deg, #4b6cb7, #182848);
+}
+
+.btn-step-2 {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+}
+
+.btn-step-3 {
+  background: linear-gradient(135deg, #1a2980, #26d0ce);
+}
+
+.btn-step:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Auth CTA Section */
+.auth-cta {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+
+.auth-cta h2 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.auth-cta p {
+  color: #666;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.auth-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Button Styles */
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #4b6cb7;
+  color: white;
+  border: 2px solid #4b6cb7;
+}
+
+.btn-primary:hover {
+  background: #3a5a9a;
+  border-color: #3a5a9a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary {
+  background: #2c3e50;
+  color: white;
+  border: 2px solid #2c3e50;
+}
+
+.btn-secondary:hover {
+  background: #1a252f;
+  border-color: #1a252f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-tertiary {
+  background: #3498db;
+  color: white;
+  border: 2px solid #3498db;
+}
+
+.btn-tertiary:hover {
+  background: #2980b9;
+  border-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-outline {
+  background: transparent;
+  color: #4b6cb7;
+  border: 2px solid #4b6cb7;
+}
+
+.btn-outline:hover {
+  background: rgba(75, 108, 183, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .home-header h1 {
+    font-size: 2rem;
+  }
+  
+  .home-header p {
+    font-size: 1rem;
+  }
+  
+  .features {
+    grid-template-columns: 1fr;
+  }
+  
+  .btn-step {
+    width: 100%;
+  }
+  
+  .auth-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .auth-buttons .btn {
+    width: 100%;
+    max-width: 250px;
+  }
+}

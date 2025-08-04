@@ -1,5 +1,12 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link, Navigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate, Link } from "react-router-dom";
+import { AuthProvider, useAuth } from "./AuthContext";
+import "./App.css";
+
+// Main Portal
+import MainPortal from "./MainPortal";
+
+// USMLE Assistant Components
 import HomePage from "./HomePage";
 import QuizPage from "./QuizPage";
 import ChatPage from "./ChatPage";
@@ -11,12 +18,9 @@ import FipQuizPage from "./FipQuizPage";
 import ACMQuiz from "./ACMQuiz";
 import Login from "./Login";
 import Register from "./Register";
-import { AuthProvider, useAuth } from "./AuthContext";
 import AnalyzeWithAI from "./AnalyzeWithAI";
 import IncorrectAnswersViewer from './IncorrectAnswersViewer';
 import Dashboard from "./Dashboard";
-import GoogleLogin from "./GoogleLogin";
-import "./App.css";
 
 // Protected Route component
 const ProtectedRoute = ({ children }) => {
@@ -29,7 +33,8 @@ const ProtectedRoute = ({ children }) => {
   return user ? children : <Navigate to="/login" replace />;
 };
 
-const AppContent = () => {
+// USMLE Layout Component
+const USMLEApp = () => {
   const { user, logout } = useAuth();
 
   return (
@@ -37,11 +42,12 @@ const AppContent = () => {
       {/* Top navbar */}
       <nav className="navbar">
         <div className="navbar-left">
-          <Link to="/">Home</Link>
-          <Link to="/chat">Chat Support</Link>
-          <Link to="/analyze-with-ai">Analyze With AI</Link>
-          <Link to="/incorrect-answers">Incorrect Answers</Link>
-          <Link to="/dashboard">Dashboard</Link>
+          <Link to="/">AI Portal</Link>
+          <Link to="/usmle">USMLE Home</Link>
+          <Link to="/usmle/chat">Chat Support</Link>
+          <Link to="/usmle/analyze-with-ai">Analyze With AI</Link>
+          <Link to="/usmle/incorrect-answers">Incorrect Answers</Link>
+          <Link to="/usmle/dashboard">Dashboard</Link>
         </div>
         <div className="navbar-right">
           {user ? (
@@ -53,7 +59,6 @@ const AppContent = () => {
             <>
               <Link to="/login" className="auth-button">Login</Link>
               <Link to="/register" className="auth-button">Register</Link>
-              <GoogleLogin />
             </>
           )}
         </div>
@@ -65,80 +70,76 @@ const AppContent = () => {
         <aside className="sidebar">
           <h3 className="sidebar-title">📝 Practice Sections</h3>
           <h4 className="sidebar-subtitle"><strong>Step-1</strong></h4>
-          <Link to="/basicquiz" className="sidebar-link">1.Basic</Link>
-          <Link to="/quiz" className="sidebar-link">2.Core</Link>
+          <Link to="/usmle/basicquiz" className="sidebar-link">1.Basic</Link>
+          <Link to="/usmle/quiz" className="sidebar-link">2.Core</Link>
           <h4 className="sidebar-subtitle"><strong>Step-2</strong></h4>
-          <Link to="/step2basic" className="sidebar-link">1.Basic</Link>
-          <Link to="/step2core" className="sidebar-link">2.Core</Link>
+          <Link to="/usmle/step2basic" className="sidebar-link">1.Basic</Link>
+          <Link to="/usmle/step2core" className="sidebar-link">2.Core</Link>
           <h4 className="sidebar-subtitle"><strong>Step-3</strong></h4>
-          <Link to="/step3basic" className="sidebar-link">1.Basic</Link>
-          <Link to="/fipquiz" className="sidebar-link">2.FIP</Link>
-          <Link to="/acmquiz" className="sidebar-link">3.ACM</Link>
+          <Link to="/usmle/step3basic" className="sidebar-link">1.Basic</Link>
+          <Link to="/usmle/fipquiz" className="sidebar-link">2.FIP</Link>
+          <Link to="/usmle/acmquiz" className="sidebar-link">3.ACM</Link>
         </aside>
 
         {/* Page content */}
         <div className="container">
           <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-            
-            {/* Protected routes */}
-            <Route path="/quiz" element={
-              <ProtectedRoute>
-                <QuizPage />
-              </ProtectedRoute>
-            } />
-            <Route path="/chat" element={
+            <Route index element={<HomePage />} />
+            <Route path="chat" element={
               <ProtectedRoute>
                 <ChatPage />
               </ProtectedRoute>
             } />
-            <Route path="/basicquiz" element={
+            <Route path="basicquiz" element={
               <ProtectedRoute>
                 <BasicQuiz />
               </ProtectedRoute>
             } />
-            <Route path="/step2basic" element={
+            <Route path="quiz" element={
+              <ProtectedRoute>
+                <QuizPage />
+              </ProtectedRoute>
+            } />
+            <Route path="step2basic" element={
               <ProtectedRoute>
                 <Step2Basic />
               </ProtectedRoute>
             } />
-            <Route path="/step2core" element={
+            <Route path="step2core" element={
               <ProtectedRoute>
                 <Step2Core />
               </ProtectedRoute>
             } />
-            <Route path="/step3basic" element={
+            <Route path="step3basic" element={
               <ProtectedRoute>
                 <Step3Basic />
               </ProtectedRoute>
             } />
-            <Route path="/fipquiz" element={
+            <Route path="fipquiz" element={
               <ProtectedRoute>
                 <FipQuizPage />
               </ProtectedRoute>
             } />
-            <Route path="/acmquiz" element={
+            <Route path="acmquiz" element={
               <ProtectedRoute>
                 <ACMQuiz />
               </ProtectedRoute>
             } />
-              <Route path="/analyze-with-ai" element={
+            <Route path="analyze-with-ai" element={
               <ProtectedRoute>
-                <AnalyzeWithAI /> 
+                <AnalyzeWithAI />
               </ProtectedRoute>
             } />
-              <Route path="/incorrect-answers" element={
+            <Route path="incorrect-answers" element={
               <ProtectedRoute>
-                <IncorrectAnswersViewer /> 
-              </ProtectedRoute> 
-            } />
-            <Route path="/dashboard" element={
-              <ProtectedRoute>
-                <Dashboard /> 
+                <IncorrectAnswersViewer />
               </ProtectedRoute>
-            } />      
+            } />
+            <Route path="dashboard" element={
+              <ProtectedRoute>
+                <Dashboard />
+              </ProtectedRoute>
+            } />
           </Routes>
         </div>
       </div>
@@ -146,25 +147,30 @@ const AppContent = () => {
   );
 };
 
-function QuizResultsPage() {
-  return (
-    <div>
-      <h2>Review Your Mistakes</h2>
-      <IncorrectAnswersViewer quizType="step1" />
-      {/* or */}
-      <IncorrectAnswersViewer quizType="step2" />
-    </div>
-  );
-}
-
-
+// Main App Component
 const App = () => {
   return (
-    <Router>
-      <AuthProvider>
-        <AppContent />
-      </AuthProvider>
-    </Router>
+    <AuthProvider>
+      <Router>
+        <Routes>
+          {/* Main Portal */}
+          <Route path="/" element={<MainPortal />} />
+          
+          {/* Auth Routes */}
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          
+          {/* USMLE Assistant */}
+          <Route path="/usmle/*" element={<USMLEApp />} />
+          
+          {/* Future assistants can be added here */}
+          {/* Example: <Route path="/code-assistant/*" element={<CodeAssistantApp />} /> */}
+          
+          {/* 404 Route */}
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </Router>
+    </AuthProvider>
   );
 };
 
