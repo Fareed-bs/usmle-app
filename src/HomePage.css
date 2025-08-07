@@ -29,89 +29,64 @@
   margin: 0 auto;
 }
 
-/* Features Section */
-.features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+/* Main Content Area */
+.home-main {
+  display: flex;
+  flex-direction: column;
   gap: 2rem;
-  margin-bottom: 3rem;
 }
 
-.feature-card {
+/* Features & Analyze Sections */
+.features,
+.analyze-with-ai {
   background: white;
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 1px solid #eaeaea;
-  text-align: center;
 }
 
-.feature-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-}
-
-.feature-card h3 {
+.features h2,
+.analyze-with-ai h2 {
   color: #2c3e50;
-  margin-bottom: 1rem;
-  font-size: 1.4rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  border-bottom: 2px solid #4b6cb7;
+  padding-bottom: 0.5rem;
+  display: inline-block;
 }
 
-.feature-card p {
+.features ul,
+.analyze-with-ai ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.features li,
+.analyze-with-ai li {
   color: #666;
-  margin-bottom: 1.5rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.features li::before,
+.analyze-with-ai li::before {
+  content: '✓';
+  color: #4b6cb7;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.analyze-with-ai p {
+  color: #666;
   line-height: 1.6;
-}
-
-/* Quick Links Section */
-.quick-links {
-  background: #f8fafc;
-  padding: 2rem;
-  border-radius: 10px;
-  margin-bottom: 3rem;
-  text-align: center;
-}
-
-.quick-links h2 {
-  color: #2c3e50;
   margin-bottom: 1.5rem;
-}
-
-.link-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.btn-step {
-  padding: 1rem 1.5rem;
-  border: none;
-  border-radius: 6px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  min-width: 200px;
-  color: white;
-  font-size: 1rem;
-}
-
-.btn-step-1 {
-  background: linear-gradient(135deg, #4b6cb7, #182848);
-}
-
-.btn-step-2 {
-  background: linear-gradient(135deg, #1e3c72, #2a5298);
-}
-
-.btn-step-3 {
-  background: linear-gradient(135deg, #1a2980, #26d0ce);
-}
-
-.btn-step:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 1.1rem;
 }
 
 /* Auth CTA Section */
@@ -168,32 +143,6 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.btn-secondary {
-  background: #2c3e50;
-  color: white;
-  border: 2px solid #2c3e50;
-}
-
-.btn-secondary:hover {
-  background: #1a252f;
-  border-color: #1a252f;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.btn-tertiary {
-  background: #3498db;
-  color: white;
-  border: 2px solid #3498db;
-}
-
-.btn-tertiary:hover {
-  background: #2980b9;
-  border-color: #2980b9;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
 .btn-outline {
   background: transparent;
   color: #4b6cb7;
@@ -214,14 +163,6 @@
   
   .home-header p {
     font-size: 1rem;
-  }
-  
-  .features {
-    grid-template-columns: 1fr;
-  }
-  
-  .btn-step {
-    width: 100%;
   }
   
   .auth-buttons {

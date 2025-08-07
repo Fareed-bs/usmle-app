@@ -17,47 +17,22 @@ const HomePage = () => {
 
       <main className="home-main">
         <section className="features">
-          <div className="feature-card">
-            <h3>📚 Practice Questions</h3>
-            <p>Access thousands of high-yield practice questions for all USMLE steps.</p>
-            <Link to="/usmle/quiz" className="btn btn-primary">Start Practicing</Link>
-          </div>
-          
-          <div className="feature-card">
-            <h3>💬 AI Chat Support</h3>
-            <p>Get instant explanations and study help from our AI assistant.</p>
-            <Link to="/usmle/chat" className="btn btn-secondary">Chat Now</Link>
-          </div>
-          
-          <div className="feature-card">
-            <h3>📊 Performance Analytics</h3>
-            <p>Track your progress and identify areas for improvement.</p>
-            <Link to="/usmle/dashboard" className="btn btn-tertiary">View Dashboard</Link>
-          </div>
+          <h2>Overview of Features</h2>
+          <ul className="feature-list">
+            <li>Practice Exams: Take quizzes for Step 1, 2, and 3 to test your knowledge.</li>
+            <li>AI Tutor: Get personalized feedback, study tips, and custom questions based on your weak spots</li>         
+            <li>Progress Tracking: View your quiz scores and monitor improvement with a personal dashboard.</li>
+            <li>Check left sidebar for practice questions</li>
+          </ul>
         </section>
 
-        <section className="quick-links">
-          <h2>Quick Access</h2>
-          <div className="link-buttons">
-            <button 
-              className="btn btn-step btn-step-1"
-              onClick={() => navigate('/usmle/basicquiz')}
-            >
-              Step 1: Basic Sciences
-            </button>
-            <button 
-              className="btn btn-step btn-step-2"
-              onClick={() => navigate('/usmle/step2basic')}
-            >
-              Step 2: Clinical Knowledge
-            </button>
-            <button 
-              className="btn btn-step btn-step-3"
-              onClick={() => navigate('/usmle/step3basic')}
-            >
-              Step 3: Patient Care
-            </button>
-          </div>
+        <section className="analyze-with-ai">
+          <h2>Analyze with AI</h2>
+          <p>The AI analyzes the results dynamically using the Gemini LLM and suggests areas where the student needs improvement.</p>
+          <ul>
+            <li>The AI analyzes your incorrect answers and provides direct links to free resources that explain the exact concepts you missed.</li>
+            <li>Based on your weak areas, the AI generates brand-new, USMLE-style questions, giving you focused practice where you need it most.</li>
+          </ul>
         </section>
 
         {!user && (
