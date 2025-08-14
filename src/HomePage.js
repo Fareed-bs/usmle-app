@@ -34,14 +34,14 @@ const HomePage = () => {
             <li>Based on your weak areas, the AI generates brand-new, USMLE-style questions, giving you focused practice where you need it most.</li>
           </ul>
         </section>
-
-        {!user && (
+        
+         {!user && (
           <section className="auth-cta">
             <h2>Ready to boost your USMLE preparation?</h2>
-            <p>Create a free account to save your progress and unlock premium features.</p>
+            <p>Create an account by registering to save your progress.</p>
             <div className="auth-buttons">
-              <Link to="/register" className="btn btn-primary">Sign Up Free</Link>
-              <Link to="/login" className="btn btn-outline">Log In</Link>
+              <Link to="/register" className="btn btn-primary">Register</Link>
+              <Link to="/login" className="btn btn-outline" placeholder="If already registered">Log In</Link>
             </div>
           </section>
         )}
