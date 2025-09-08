@@ -1,6 +1,12 @@
-# USMLE Quiz App
+# AI Portal Application
 
-- A full-stack USMLE (United States Medical Licensing Examination) quiz application designed to help medical students practice quizzes for different USMLE steps (Step 1, Step 2, Step 3) to test their knowledge.
+- A central hub for multiple AI assistants.
+- User can select the desired assistant on the main portal.
+- Current version: Includes USMLE Assistant.
+
+# 1. USMLE Quiz App
+
+- An online platform where medical students can take a variety of practice quizzes for different USMLE steps (Step 1, Step 2, Step 3) to test their knowledge.
 
 ## Features
 
@@ -20,6 +26,7 @@
 
 ## Tech Stack
 
-- Frontend: React.js
+- Frontend: React.js (MainPortal.js)
 - Backend: Flask (Python)
-- Database: MongoDB
+- Database: MongoDB (for storing sessions / users / chat history)
+- LLM Integration: Gemini API

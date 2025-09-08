@@ -15,7 +15,6 @@ app = Flask(__name__)
 oauth = OAuth(app)
 
 # --- Configuration ---
-# IMPORTANT: Use environment variables for sensitive data in production!
 app.config['SECRET_KEY'] = os.environ.get(
     'FLASK_SECRET_KEY', 'your_very_secret_key_for_dev')
 app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(
@@ -339,14 +338,14 @@ def get_user_incorrect_answers():
 # --------------------------
 # Step 2 Basic Quiz
 # --------------------------
-# Create an endpoint to get all questions from the step2basic.json file
+# Endpoint to get all questions from the step2basic.json file
 @app.route('/api/step2/basic', methods=['GET'])
 @login_required
 def get_step2_basic_quiz_questions():
     return jsonify(step2_basic_questions())
 
 
-# Create an endpoint to get user answers and evaluate
+# Endpoint to get user answers and evaluate
 @app.route('/api/step2/basic/submit', methods=['POST'])
 def submit_step2_basic_quiz():
     submitted_data = request.get_json()
@@ -382,7 +381,7 @@ def submit_step2_basic_quiz():
         "score": score,
         "total": len(full_data),
         "results": results,
-        "feedback_message": feedback_message  # Add the message here
+        "feedback_message": feedback_message
     })
 
 
@@ -486,14 +485,14 @@ def get_user_incorrect_answers_step2():
 # --------------------------
 
 
-# Create an endpoint to get all questions from the step3basic.json file
+# Endpoint to get all questions from the step3basic.json file
 @app.route('/api/step3/basic', methods=['GET'])
 @login_required
 def get_step3_basic_quiz_questions():
     return jsonify(step3_basic_questions())
 
 
-# Create an endpoint to get user answers and evaluate
+# Endpoint to get user answers and evaluate
 @app.route('/api/step3/basic/submit', methods=['POST'])
 def submit_step3_basic_quiz():
     submitted_data = request.get_json()
@@ -536,14 +535,14 @@ def submit_step3_basic_quiz():
 # --------------------------
 
 
-# Create an endpoint to get all questions from the fip.json file
+# Endpoint to get all questions from the fip.json file
 @app.route('/api/fip', methods=['GET'])
 @login_required
 def get_fip_quiz_questions():
     return jsonify(get_fip_questions())
 
 
-# Create an endpoint to get user answers and evaluate
+# Endpoint to get user answers and evaluate
 @app.route('/api/fip/submit', methods=['POST'])
 def submit_fip_quiz():
     submitted_data = request.get_json()
@@ -625,14 +624,14 @@ def get_user_incorrect_answers_fip():
 # --------------------------
 # Step 3 ACM (Advanced Clinical Medicine)
 # --------------------------
-# Create an endpoint to get all questions from the acm.json file
+# Endpoint to get all questions from the acm.json file
 @app.route('/api/acm', methods=['GET'])
 @login_required
 def get_acm_quiz_questions():
     return jsonify(acm_questions())
 
 
-# Create an endpoint to get user answers and evaluate
+# Endpoint to get user answers and evaluate
 @app.route('/api/acm/submit', methods=['POST'])
 def submit_acm_quiz():
     submitted_data = request.get_json()
@@ -677,7 +676,7 @@ def submit_acm_quiz():
             "total_questions": len(full_data)
         }
         user_answers_acm_collection.insert_one(document)
-    # --- Generate AI Feedback ---
+    # AI Feedback
     ai_feedback = ""
     if incorrect_answers_details_acm:
         prompt = """ As a USMLE tutor, please analyze the following incorrect answers from a practice quiz and provide feedback on specific topics or concepts the student should focus on for improvement. Be concise and actionable.\n\nIncorrect Answers:\n"""
